@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+.logos-slider.slick-initialized .slick-slide {
+  margin: 0 12px;
+}
+/* momento start here  */
+#momentodrawer.open {
+  transform: translateX(0);
+}
+#momentodrawer {
+  z-index: 999;
+}
+.sdw-card {
+  box-shadow: 0px 4px 62px -3px rgba(158, 164, 180, 0.2);
+}
+.seamlessCard {
+  background-position: bottom center;
+}
+
+.choose-slider .slick-slide,
+.testimonial-slider .slick-slide {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.revenue-slider .slick-dots {
+  bottom: -20px;
+}
+
+.revenue-slider .slick-dots li {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+}
+
+.revenue-slider .slick-dots li button {
+  background-color: #00e98036;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: static;
+}
+
+.revenue-slider .slick-dots li.slick-active button {
+  background-color: #00e980;
+}
+.revenue-slider .slick-dots li button::before {
+  display: none !important;
+}
+
+.private-checkbox-custom {
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 1px solid #9ea4b4;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: block;
+}
+.private-checkbox-input:checked + .private-checkbox-custom {
+  background-color: #00e980;
+  border-color: #00e980;
+  position: relative;
+}
+.private-checkbox-input:checked + .private-checkbox-custom::before {
+  content: '\2713';
+  color: #384b5d;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+#mobileMenu .opacity-100 {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#mobileMenu .opacity-0 {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

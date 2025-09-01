@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.min.css" />
+  <title>Monetumo | Validate</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./images/fav.svg" sizes="16x16 32x32 48x48" type="image/x-icon" />
+  <link rel="icon" href="./images/fav-16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="./images/fav-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="./images/fav-32.png" sizes="192x192" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: "Avenir Next Cyr Medium";
+      src: url("./font/Avenir Next Cyr Medium.ttf") format("truetype");
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    .bg-custom-white {
+      background-color: #fcfefd !important;
+    }
+
+    #profileMenu {
+      z-index: 999 !important;
+    }
+  </style>
+</head>
+
+<body class="h-screen overflow-hidden bg-[#F1F5F8]">
+  <!-- Header -->
+  <header id="header"
+    class="fixed top-0 left-0 right-0 h-[92px] bg-custom-white z-50 flex items-center justify-between px-4 md:px-5 border-b border-gray-200 transition-transform duration-300">
+    <div class="w-full flex justify-between items-center h-[76px] md:h-[92px]">
+      <!-- logo -->
+      <div class="flex flex-row items-center gap-4">
+        <button id="menuBtn" class="md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M21 12H3" stroke="#132D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M21 6H3" stroke="#132D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M21 18H3" stroke="#132D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <a href="#" class="inline-block md:hidden"><img src="./images/mobile-logos.png" alt="dashboard-logo" /></a>
+        <a href="#" class="hidden md:inline-block"><img src="./images/dashboard-logo.png" alt="dashboard-logo" /></a>
+      </div>
+      <!-- dropdown -->
+      <div class="relative w-64" id="dropdownWrapper">
+        <!-- Dropdown Button -->
+        <button id="dropdownBtn"
+          class="flex items-center justify-between w-full px-1.5 md:px-3 py-1.5 md:py-2 bg-white border md:border-[#F1F5F8] border-[#0DB368] rounded-lg text-gray-700 max-w-[170px] md:max-w-[256px] md:border-none ml-auto">
+          <div id="dropdownLabel" class="flex items-center justify-start">
+            <div class="md:mr-3 mr-1.5 w-7 h-7 md:w-[44px] md:h-[44px]">
+              <img src="./images/profile.png" class="w-7 h-7 md:w-[44px] md:h-[44px] rounded-full" alt="" />
+            </div>
+            <div class="flex flex-col items-start gap-1 md:gap-[8px]">
+              <span class="text-[#9EA4B4] text-xs md:text-sm font-medium text-start leading-none">Select website</span>
+              <span
+                class="text-[#132D46] text-sm md:text-base font-medium text-start leading-none underline decoration decoration-offset-6">Monetumo.com</span>
+            </div>
+          </div>
+          <svg id="dropdownIcon" class="w-6 h-6 text-gray-500 transform transition-transform duration-200" fill="none"
+            stroke="currentColor" viewBox="0 0 28 28">
+            <path d="M7 10.5L14 17.5L21 10.5" stroke="#132D46" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div id="dropdownMenu" class="absolute left-0 w-full mt-2 bg-custom-white rounded-lg shadow-lg hidden z-10">
+          <!-- Option -->
+          <button class="flex items-center justify-start gap-3 rounded-t-lg w-full p-3 hover:bg-gray-100">
+            <div class="">
+              <img src="./images/profile.png" class="w-7 h-7 md:w-[44px] md:h-[44px] rounded-full" alt="" />
+            </div>
+            <div class="flex flex-col items-start gap-[8px]">
+              <span class="text-[#6A6E79] text-sm md:text-base font-normal text-start leading-none">Monetumo.com</span>
+            </div>
+          </button>
+
+          <button class="flex items-center gap-3 w-full p-3 bg-[#9EA4B4]/10 hover:bg-[#9EA4B4]/10">
+            <div class="">
+              <img src="./images/profile.png" class="w-7 h-7 md:w-[44px] md:h-[44px] rounded-full" alt="" />
+            </div>
+            <div class="flex flex-col items-start gap-[8px]">
+              <span
+                class="text-[#132D46] text-sm md:text-base font-medium text-start leading-none underline decoration decoration-offset-6">Monetumo.com</span>
+            </div>
+          </button>
+
+          <button class="flex items-center gap-3 w-full p-3 hover:bg-gray-100">
+            <div class="">
+              <img src="./images/profile.png" class="w-7 h-7 md:w-[44px] md:h-[44px] rounded-full" alt="" />
+            </div>
+            <div class="flex flex-col items-start gap-[8px]">
+              <span class="text-[#6A6E79] text-sm md:text-base font-normal text-start leading-none">Monetumo.com</span>
+            </div>
+          </button>
+
+          <!-- Add New -->
+          <button
+            class="w-full px-3 py-2 text-sm md:text-base text-[#ffffff] bg-[#0DB368] rounded-lg hover:bg-green-600">
+            + Add New
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!-- Mobile Off-Canvas Menu -->
+  <div id="mobileMenu" class="fixed inset-0 bg-custom-white hidden z-50">
+    <div id="offcanvasBackdrop"
+      class="absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity duration-500 pointer-events-none">
+    </div>
+    <!-- Menu Panel -->
+    <div id="menuPanel"
+      class="absolute top-0 left-0 h-screen w-full bg-white transform -translate-x-full transition-transform duration-300 flex flex-col px-4 pb-4 pt-4">
+      <!-- Header inside Menu Panel -->
+      <div
+        class="relative flex justify-between items-center min-h-[76px] w-full pb-4 border-b border-[#E6EFF7]/70 gap-2">
+        <!-- Logo and Close Button -->
+        <div class="flex flex-row items-center gap-2 md:gap-4">
+          <button id="closeMenu" class="w-6 h-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M18 6L6 18" stroke="#132D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6 6L18 18" stroke="#132D46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <a href="#" class="inline-block md:hidden">
+            <img src="./images/mobile-logos.png" alt="dashboard-logo" class="h-8" />
+          </a>
+        </div>
+
+        <!-- Profile Dropdown -->
+        <div class="relative">
+          <button id="profileBtn" class="rounded-full">
+            <div>
+              <img src="./images/property-profile.png" class="w-[44px] h-[44px] rounded-full" alt="" />
+            </div>
+          </button>
+          <div id="profileMenu"
+            class="absolute right-0 mt-3 w-40 bg-custom-white rounded-lg shadow-lg hidden transition-all duration-200">
+            <button class="w-full py-3 px-4 text-sm bg-custom-white hover:bg-gray-100 rounded-t-lg text-left">
+              Profile
+            </button>
+            <button class="w-full py-3 px-4 text-sm bg-custom-white hover:bg-gray-100 rounded-b-lg text-left">
+              Settings
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Links -->
+      <nav class="pt-8 pb-4 h-full relative">
+        <div class="flex flex-col space-y-3">
+          <a href="#"
+            class="block text-lg text-[#0DB368] hover:text-[#9EA4B4] group px-4 py-2 rounded-[4px] bg-[rgb(13_179_104_/_6%)]"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17" fill="none"
+              class="w-4 h-4 stroke-[#0DB368] inline-block mr-[4px]">
+              <path d="M5.3335 4.5H14.0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M5.3335 8.5H14.0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M5.3335 12.5H14.0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 4.5H2.00667" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 8.5H2.00667" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 12.5H2.00667" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg><span class="font-avenir">Onboarding</span></a>
+          <a href="#"
+            class="block text-lg text-[#9EA4B4] hover:text-[#0DB368] group px-4 py-2 rounded-[4px] hover:bg-[rgb(13_179_104_/_6%)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17" fill="none"
+              class="w-4 h-4 stroke-[#9EA4B4] group-hover:stroke-[#0DB368] inline-block mr-[4px]">
+              <path d="M6.66667 2.5H2V7.16667H6.66667V2.5Z" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M14.0002 2.5H9.3335V7.16667H14.0002V2.5Z" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M14.0002 9.83337H9.3335V14.5H14.0002V9.83337Z" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M6.66667 9.83337H2V14.5H6.66667V9.83337Z" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <span class="font-avenir">Dashboard</span></a>
+          <a href="#"
+            class="block text-lg text-[#9EA4B4] hover:text-[#0DB368] group px-4 py-2 rounded-[4px] hover:bg-[rgb(13_179_104_/_6%)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17" fill="none"
+              class="w-4 h-4 stroke-[#9EA4B4] group-hover:stroke-[#0DB368] inline-block mr-[4px]">
+              <path
+                d="M8.00016 15.1667C11.6821 15.1667 14.6668 12.1819 14.6668 8.50004C14.6668 4.81814 11.6821 1.83337 8.00016 1.83337C4.31826 1.83337 1.3335 4.81814 1.3335 8.50004C1.3335 12.1819 4.31826 15.1667 8.00016 15.1667Z"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8 5.83337V11.1667" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M5.3335 8.5H10.6668" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="font-avenir">Add Banner</span></a>
+        </div>
+        <div class="mt-8 absolute left-0 bottom-4 w-full">
+          <div class="border border-[#F1F5F8] p-4 rounded-lg bg-white w-full flex flex-col items-center gap-[12px]">
+            <div class="flex flex-col items-center">
+              <div>
+                <img src="./images/profile-picture.png" alt="rocket" />
+              </div>
+              <h4 class="text-[#243C53] text-base font-medium mt-[12px] mb-[4px]">
+                Hi Jacob
+              </h4>
+              <p class="text-[#6A6E79] text-sm font-normal text-center">
+                My name is Marchin And ..
+              </p>
+            </div>
+            <div class="space-y-[6px] text-center w-full">
+              <a href="#"
+                class="bg-[#0DB368] text-[#ffffff] font-medium text-sm text-white rounded-lg py-2 w-full text-center block border border-[#0DB368]">
+                Support
+              </a>
+              <a href="#"
+                class="bg-white text-[#0DB368] font-medium text-sm text-white rounded-lg py-2 w-full text-center block border border-[#0DB368]">
+                Support
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- main -->
+  <div class="flex pt-[92px] h-full">
+    <!-- Sidebar -->
+    <aside
+      class="hidden md:block w-[186px] fixed top-[76px] md:top-[92px] left-0 h-[calc(100vh-76px)] md:h-[calc(100vh-92px)] bg-custom-white overflow-y-auto z-10">
+      <nav class="px-[14px] py-[32px] h-full relative">
+        <div class="flex flex-col space-y-4">
+          <a href="#"
+            class="block text-base text-[#0DB368] hover:text-[#0DB368] group px-4 py-2 rounded-[4px] bg-[rgb(13_179_104_/_6%)]"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17" fill="none"
+              class="w-4 h-4 stroke-[#0DB368] inline-block mr-[4px]">
+              <path d="M5.3335 4.5H14.0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M5.3335 8.5H14.0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M5.3335 12.5H14.0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 4.5H2.00667" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 8.5H2.00667" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 12.5H2.00667" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg><span class="font-avenir">Onboarding</span></a>
+          <a href="#"
+            class="block text-base text-[#9EA4B4] hover:text-[#0DB368] group px-4 py-2 rounded-[4px] hover:bg-[rgb(13_179_104_/_6%)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17" fill="none"
+              class="w-4 h-4 stroke-[#9EA4B4] group-hover:stroke-[#0DB368] inline-block mr-[4px]">
+              <path d="M6.66667 2.5H2V7.16667H6.66667V2.5Z" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M14.0002 2.5H9.3335V7.16667H14.0002V2.5Z" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M14.0002 9.83337H9.3335V14.5H14.0002V9.83337Z" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M6.66667 9.83337H2V14.5H6.66667V9.83337Z" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <span class="font-avenir">Dashboard</span></a>
+          <a href="#"
+            class="block text-base text-[#9EA4B4] hover:text-[#0DB368] group px-4 py-2 rounded-[4px] hover:bg-[rgb(13_179_104_/_6%)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17" fill="none"
+              class="w-4 h-4 stroke-[#9EA4B4] group-hover:stroke-[#0DB368] inline-block mr-[4px]">
+              <path
+                d="M8.00016 15.1667C11.6821 15.1667 14.6668 12.1819 14.6668 8.50004C14.6668 4.81814 11.6821 1.83337 8.00016 1.83337C4.31826 1.83337 1.3335 4.81814 1.3335 8.50004C1.3335 12.1819 4.31826 15.1667 8.00016 15.1667Z"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8 5.83337V11.1667" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M5.3335 8.5H10.6668" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="font-avenir">Add Banner</span></a>
+        </div>
+        <div class="mt-8 absolute left-0 bottom-[142px] w-full px-4">
+          <div class="border border-[#F1F5F8] p-3 rounded-lg bg-white w-full flex flex-col items-center gap-[14px]">
+            <div class="flex flex-col items-center">
+              <div>
+                <img src="./images/profile-picture.png" alt="rocket" />
+              </div>
+              <h4 class="text-[#243C53] text-base font-medium mt-[10px] mb-[6px]">
+                Hi Jacob
+              </h4>
+              <p class="text-[#6A6E79] text-sm font-normal text-center">
+                My name is Marchin And ..
+              </p>
+            </div>
+            <div class="space-y-[6px] text-center w-full">
+              <a href="#"
+                class="bg-[#0DB368] text-[#ffffff] font-medium text-sm text-white rounded-lg py-2 w-full text-center block border border-[#0DB368]">
+                Support
+              </a>
+              <a href="#"
+                class="bg-white text-[#0DB368] font-medium text-sm text-white rounded-lg py-2 w-full text-center block border border-[#0DB368]">
+                Support
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main
+      class="flex-1 ml-0 md:ml-[186px] overflow-y-auto h-[calc(100vh-76px)] md:h-[calc(100vh-92px)] px-4 py-5 md:px-[32px] md:py-[36px]">
+      <section class="w-full">
+        <div class="relative mb-6 md:mb-[32px] flex items-center justify-between max-w-[600px] mx-auto">
+          <!-- horizontal line -->
+          <div class="absolute top-[25%] left-[20%] right-[20%] h-[2px] md:h-[3px] bg-[#0DB368] -z-9"></div>
+          <div class="absolute top-[25%] left-[50%] right-[20%] h-[2px] md:h-[3px] bg-[#CFD6DC] z-10"></div>
+
+          <!-- 1 -->
+          <div class="flex flex-col items-center gap-3 md:gap-4 w-1/3 md:min-w-[200px]">
+            <div
+              class="bg-[rgba(158_164_180/_0.20)] min-w-8 min-h-8 md:min-h-10 rounded-full md:min-w-10 z-10 flex justify-center items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
+                <path
+                  d="M4.99997 8.58603L1.70697 5.29303L0.292969 6.70703L4.99997 11.414L14.707 1.70703L13.293 0.29303L4.99997 8.58603Z"
+                  fill="#243C53" />
+              </svg>
+            </div>
+            <span class="text-sm text-[#243C53] font-medium">Add website</span>
+          </div>
+
+          <!-- 2 -->
+          <div class="flex flex-col items-center gap-3 md:gap-4 w-1/3 md:min-w-[200px]">
+            <div
+              class="bg-[rgba(158_164_180/_0.20)] min-w-8 min-h-8 md:min-h-10 md:min-w-10 rounded-full z-10 flex justify-center items-center">
+              <img src="./images/plus-success.png" alt="" class="w-8 h-8 md:h-10 md:w-10" />
+            </div>
+            <span class="text-sm md:text-base text-[#0DB368] font-medium">Add Scripts</span>
+          </div>
+
+          <!-- 3 -->
+          <div class="flex flex-col items-center gap-3 md:gap-4 w-1/3 md:min-w-[200px]">
+            <div
+              class="bg-[rgba(158_164_180/_0.20)] min-w-8 min-h-8 md:min-h-10 rounded-full md:min-w-10 z-10 flex justify-center items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M15.3505 1.36517C15.4066 1.43778 15.4555 1.51567 15.4966 1.59774L15.6621 1.92854C16.0186 2.64105 16.8114 3.02283 17.5907 2.85731L17.9525 2.78046C18.718 2.61788 19.4704 3.10663 19.6329 3.87211C19.652 3.96188 19.6623 4.05329 19.6637 4.14506L19.6693 4.51491C19.6813 5.31153 20.23 5.99947 21.0039 6.18848L21.3633 6.27624C22.1235 6.46189 22.5892 7.22866 22.4036 7.98888C22.3818 8.07803 22.3514 8.16486 22.3129 8.24814L22.1574 8.58379C21.8227 9.30675 22.0185 10.1646 22.6338 10.6707L22.9194 10.9057C23.5238 11.4028 23.6108 12.2957 23.1137 12.9001C23.0554 12.971 22.9903 13.036 22.9194 13.0943L22.6338 13.3293C22.0185 13.8354 21.8227 14.6932 22.1574 15.4162L22.3129 15.7519C22.6417 16.462 22.3326 17.3042 21.6225 17.633C21.5392 17.6716 21.4524 17.702 21.3633 17.7238L21.0039 17.8115C20.23 18.0005 19.6813 18.6885 19.6693 19.4851L19.6637 19.8549C19.6519 20.6374 19.008 21.2621 18.2255 21.2503C18.1337 21.2489 18.0423 21.2386 17.9525 21.2195L17.5907 21.1427C16.8114 20.9772 16.0186 21.359 15.6621 22.0715L15.4966 22.4023C15.1465 23.1021 14.2953 23.3856 13.5954 23.0354C13.5133 22.9943 13.4354 22.9454 13.3628 22.8893L13.0702 22.6631C12.4399 22.1758 11.5599 22.1758 10.9296 22.6631L10.637 22.8893C10.0178 23.3679 9.12793 23.254 8.64932 22.6348C8.59319 22.5622 8.54425 22.4843 8.50319 22.4023L8.33768 22.0715C7.98118 21.359 7.18841 20.9772 6.40908 21.1427L6.04725 21.2195C5.28177 21.3821 4.52943 20.8934 4.36686 20.1279C4.34779 20.0381 4.33749 19.9467 4.3361 19.8549L4.33051 19.4851C4.31846 18.6885 3.76985 18.0005 2.99587 17.8115L2.63654 17.7238C1.87633 17.5381 1.41055 16.7713 1.59621 16.0111C1.61798 15.922 1.64836 15.8351 1.68693 15.7519L1.84236 15.4162C2.17715 14.6932 1.98135 13.8354 1.36603 13.3293L1.08036 13.0943C0.475981 12.5972 0.389024 11.7043 0.886134 11.0999C0.944433 11.029 1.00948 10.964 1.08036 10.9057L1.36603 10.6707C1.98135 10.1646 2.17715 9.30675 1.84236 8.58379L1.68693 8.24814C1.35809 7.53803 1.66717 6.69579 2.37728 6.36696C2.46056 6.32839 2.54739 6.29801 2.63654 6.27624L2.99587 6.18848C3.76985 5.99947 4.31846 5.31153 4.33051 4.51491L4.3361 4.14506C4.34794 3.36259 4.99184 2.73787 5.77431 2.74971C5.86607 2.75109 5.95748 2.76139 6.04725 2.78046L6.40908 2.85731C7.18841 3.02283 7.98118 2.64105 8.33768 1.92854L8.50319 1.59774C8.85335 0.897901 9.70454 0.614428 10.4044 0.964588C10.4865 1.00565 10.5644 1.05459 10.637 1.11072L10.9296 1.33695C11.5599 1.82422 12.4399 1.82422 13.0702 1.33695L13.3628 1.11072C13.982 0.632117 14.8719 0.746035 15.3505 1.36517ZM16.6323 9.05247C16.2834 8.74034 15.7534 8.74821 15.4139 9.07057L11.7345 12.5645C11.3332 12.9456 10.705 12.9497 10.2987 12.574L8.75804 11.1494C8.37289 10.7933 7.77415 10.8088 7.40794 11.1844C7.39063 11.2021 7.3741 11.2206 7.35838 11.2398C7.05553 11.6091 7.10943 12.154 7.47877 12.4569L9.98093 14.5086C10.6696 15.0732 11.6725 15.0307 12.3108 14.4097L16.656 10.1827C16.6688 10.1703 16.6812 10.1574 16.6931 10.144C16.9777 9.82584 16.9505 9.33713 16.6323 9.05247Z"
+                  fill="#ABB7C2" />
+              </svg>
+            </div>
+            <span class="text-sm text-[#ABB7C2] font-medium">Verification</span>
+          </div>
+        </div>
+
+        <!-- card 1 -->
+        <div class="w-full bg-[#ffffff] rounded-2xl p-4 md:p-[28px]">
+          <div class="w-full mx-auto flex flex-col items-center justify-center gap-5 md:gap-8">
+            <div class="w-full text-start space-y-3">
+              <h1 class="text-lg md:text-xl font-semibold text-[#243C53]">
+                Redirct/ads.txt to Monetumo
+              </h1>
+              <p class="text-[#6A6E79] text-sm md:text-base">
+                To set up ads.txt header bidding, you need to redirect your
+                ads.txt file to Monetumo
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="w-full bg-[#ffffff] rounded-2xl p-4 md:p-[28px] mt-5">
+          <div class="w-full mx-auto flex flex-col items-center justify-center gap-6">
+            <div class="w-full max-w-[300px]">
+              <!-- Tabs -->
+              <div class="flex bg-[#F1F5F8] border border-[#E6EFF7] rounded-full px-3 py-2 w-fit mx-auto">
+                <button class="tab-btn px-4 py-2 rounded-full text-[#6A6E79] font-medium transition-all duration-200"
+                  data-tab="apache">
+                  Apache
+                </button>
+                <button class="tab-btn px-4 py-2 rounded-full text-[#6A6E79] font-medium transition-all duration-200"
+                  data-tab="nginx">
+                  Nginx
+                </button>
+                <button class="tab-btn px-4 py-2 rounded-full text-[#6A6E79] font-medium transition-all duration-200"
+                  data-tab="manual">
+                  Manual
+                </button>
+              </div>
+            </div>
+            <!-- Tab Content -->
+            <div class="w-full">
+              <!-- 1 -->
+              <div class="tab-content w-full hidden space-y-6 validator-group" id="apache">
+                <!-- content -->
+                <div class="w-full p-5 md:px-10 md:py-[28px] bg-[rgba(230_239_247/_0.40)] rounded-xl">
+                  <div class="text-start space-y-[12px] w-full">
+                    <label for="websiteDomain" class="text-sm text-[#243C53] font-medium">
+                      Make /ads.txt redirect to:
+                    </label>
+
+                    <div
+                      class="flex flex-col md:flex-row items-center md:justify-center gap-6 md:gap-8 w-full max-w-full mx-auto">
+                      <div class="relative w-full">
+                        <input type="text" placeholder="https://ads.monetumo.com/yourdomain.txt"
+                          class="websiteDomain w-full rounded-md px-3 py-4 pr-12 text-base text-[#243C53] border border-[#BEC2CC] placeholder:text-[#BEC2CC] focus:outline-none focus:ring-2 focus:ring-[#0DB368] focus:border-transparent flex-1" />
+
+                        <button
+                          class="copy-btn absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center justify-center text-[#0DB368] p-1">
+                          <!-- Copy SVG -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                            fill="none">
+                            <g clip-path="url(#clip0_766_1659)">
+                              <path
+                                d="M16.6667 7.5H9.16667C8.24619 7.5 7.5 8.24619 7.5 9.16667V16.6667C7.5 17.5871 8.24619 18.3333 9.16667 18.3333H16.6667C17.5871 18.3333 18.3333 17.5871 18.3333 16.6667V9.16667C18.3333 8.24619 17.5871 7.5 16.6667 7.5Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M4.16699 12.5H3.33366C2.89163 12.5 2.46771 12.3244 2.15515 12.0118C1.84259 11.6992 1.66699 11.2753 1.66699 10.8333V3.33329C1.66699 2.89127 1.84259 2.46734 2.15515 2.15478C2.46771 1.84222 2.89163 1.66663 3.33366 1.66663H10.8337C11.2757 1.66663 11.6996 1.84222 12.0122 2.15478C12.3247 2.46734 12.5003 2.89127 12.5003 3.33329V4.16663"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_766_1659">
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="flex flex-col md:flex-row items-center justify-end gap-3 md:gap-6 w-full">
+                  <p class="ads-msg hidden text-[#0DB368] font-medium text-sm order-2 md:order-1">
+                    Checking the ads.txt redirect…
+                  </p>
+                  <button
+                    class="validateBtn bg-[#0DB368] hover:bg-green-600 text-[#ffffff] px-6 py-[10px] text-base font-medium rounded-lg w-full md:w-auto order-1 md:order-2">
+                    Validate the change
+                  </button>
+                </div>
+              </div>
+              <!-- 2 -->
+              <div class="tab-content w-full hidden space-y-6 validator-group" id="nginx">
+                <!-- content -->
+                <div class="w-full p-5 md:px-10 md:py-[28px] bg-[rgba(230_239_247/_0.40)] rounded-xl">
+                  <div class="text-start space-y-[12px] w-full">
+                    <label for="websiteDomain" class="text-sm text-[#243C53] font-medium">
+                      Make /ads.txt redirect to:
+                    </label>
+
+                    <div
+                      class="flex flex-col md:flex-row items-center md:justify-center gap-6 md:gap-8 w-full max-w-full mx-auto">
+                      <div class="relative w-full">
+                        <input type="text" placeholder="https://ads.monetumo.com/yourdomain.txt"
+                          class="websiteDomain w-full rounded-md px-3 py-4 pr-12 text-base text-[#243C53] border border-[#BEC2CC] placeholder:text-[#BEC2CC] focus:outline-none focus:ring-2 focus:ring-[#0DB368] focus:border-transparent flex-1" />
+
+                        <button
+                          class="copy-btn absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center justify-center text-[#0DB368] p-1">
+                          <!-- Copy SVG -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                            fill="none">
+                            <g clip-path="url(#clip0_766_1659)">
+                              <path
+                                d="M16.6667 7.5H9.16667C8.24619 7.5 7.5 8.24619 7.5 9.16667V16.6667C7.5 17.5871 8.24619 18.3333 9.16667 18.3333H16.6667C17.5871 18.3333 18.3333 17.5871 18.3333 16.6667V9.16667C18.3333 8.24619 17.5871 7.5 16.6667 7.5Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M4.16699 12.5H3.33366C2.89163 12.5 2.46771 12.3244 2.15515 12.0118C1.84259 11.6992 1.66699 11.2753 1.66699 10.8333V3.33329C1.66699 2.89127 1.84259 2.46734 2.15515 2.15478C2.46771 1.84222 2.89163 1.66663 3.33366 1.66663H10.8337C11.2757 1.66663 11.6996 1.84222 12.0122 2.15478C12.3247 2.46734 12.5003 2.89127 12.5003 3.33329V4.16663"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_766_1659">
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="flex flex-col md:flex-row items-center justify-end gap-3 md:gap-6 w-full">
+                  <p class="ads-msg hidden text-[#0DB368] font-medium text-sm order-2 md:order-1">
+                    Checking the ads.txt redirect…
+                  </p>
+                  <button
+                    class="validateBtn bg-[#0DB368] hover:bg-green-600 text-[#ffffff] px-6 py-[10px] text-base font-medium rounded-lg w-full md:w-auto order-1 md:order-2">
+                    Validate the change
+                  </button>
+                </div>
+              </div>
+              <!-- 3 -->
+              <div class="tab-content w-full hidden space-y-6 validator-group" id="manual">
+                <!-- content -->
+                <div class="w-full p-5 md:px-10 md:py-[28px] bg-[rgba(230_239_247/_0.40)] rounded-xl">
+                  <div class="text-start space-y-[12px] w-full">
+                    <label for="websiteDomain" class="text-sm text-[#243C53] font-medium">
+                      Make /ads.txt redirect to:
+                    </label>
+
+                    <div
+                      class="flex flex-col md:flex-row items-center md:justify-center gap-6 md:gap-8 w-full max-w-full mx-auto">
+                      <div class="relative w-full">
+                        <input type="text" placeholder="https://ads.monetumo.com/yourdomain.txt"
+                          class="websiteDomain w-full rounded-md px-3 py-4 pr-12 text-base text-[#243C53] border border-[#BEC2CC] placeholder:text-[#BEC2CC] focus:outline-none focus:ring-2 focus:ring-[#0DB368] focus:border-transparent flex-1" />
+
+                        <button
+                          class="copy-btn absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center justify-center text-[#0DB368] p-1">
+                          <!-- Copy SVG -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                            fill="none">
+                            <g clip-path="url(#clip0_766_1659)">
+                              <path
+                                d="M16.6667 7.5H9.16667C8.24619 7.5 7.5 8.24619 7.5 9.16667V16.6667C7.5 17.5871 8.24619 18.3333 9.16667 18.3333H16.6667C17.5871 18.3333 18.3333 17.5871 18.3333 16.6667V9.16667C18.3333 8.24619 17.5871 7.5 16.6667 7.5Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M4.16699 12.5H3.33366C2.89163 12.5 2.46771 12.3244 2.15515 12.0118C1.84259 11.6992 1.66699 11.2753 1.66699 10.8333V3.33329C1.66699 2.89127 1.84259 2.46734 2.15515 2.15478C2.46771 1.84222 2.89163 1.66663 3.33366 1.66663H10.8337C11.2757 1.66663 11.6996 1.84222 12.0122 2.15478C12.3247 2.46734 12.5003 2.89127 12.5003 3.33329V4.16663"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_766_1659">
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="flex flex-col md:flex-row items-center justify-end gap-3 md:gap-6 w-full">
+                  <p class="ads-msg hidden text-[#0DB368] font-medium text-sm order-2 md:order-1">
+                    Checking the ads.txt redirect…
+                  </p>
+                  <button
+                    class="validateBtn bg-[#0DB368] hover:bg-green-600 text-[#ffffff] px-6 py-[10px] text-base font-medium rounded-lg w-full md:w-auto order-1 md:order-2">
+                    Validate the change
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- Toast -->
+  <div id="toast"
+    class="fixed bottom-5 right-5 bg-white border border-[#BEC2CC] text-[#243C53] px-4 py-2 rounded-md shadow-md opacity-0 pointer-events-none transition-all duration-300">
+  </div>
+  <!-- js -->
+
+  <script>
+    const dropdownBtn = document.getElementById("dropdownBtn");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    const dropdownIcon = document.getElementById("dropdownIcon");
+
+    dropdownBtn.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("hidden");
+      dropdownIcon.classList.toggle("rotate-180");
+    });
+
+    // Optional: close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (
+        !dropdownBtn.contains(e.target) &&
+        !dropdownMenu.contains(e.target)
+      ) {
+        dropdownMenu.classList.add("hidden");
+        dropdownIcon.classList.remove("rotate-180");
+      }
+    });
+
+    // Find all dropdown wrappers
+    document.querySelectorAll(".dropdown-wrapper").forEach((wrapper) => {
+      const btn = wrapper.querySelector(".dropdown-btn");
+      const menu = wrapper.querySelector(".dropdown-menu");
+      const icon = wrapper.querySelector(".dropdown-icon");
+
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent closing immediately
+        menu.classList.toggle("hidden");
+        icon.classList.toggle("rotate-180");
+      });
+
+      // Close when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!wrapper.contains(e.target)) {
+          menu.classList.add("hidden");
+          icon.classList.remove("rotate-180");
+        }
+      });
+    });
+
+    // Off-Canvas Menu
+    const menuBtn = document.getElementById("menuBtn");
+    const closeMenu = document.getElementById("closeMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuPanel = document.getElementById("menuPanel");
+    const header = document.getElementById("header");
+    const offcanvasBackdrop = document.getElementById("offcanvasBackdrop");
+
+    // Open menu
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("hidden");
+      setTimeout(() => {
+        menuPanel.classList.remove("-translate-x-full");
+        menuPanel.classList.add("translate-x-0");
+        offcanvasBackdrop.classList.remove("opacity-0", "pointer-events-none");
+        offcanvasBackdrop.classList.add("opacity-100");
+        document.body.classList.add("overflow-hidden");
+        header.classList.add("-translate-y-full");
+      }, 10);
+    });
+
+    // Close menu function
+    const close = () => {
+      menuPanel.classList.remove("translate-x-0");
+      menuPanel.classList.add("-translate-x-full");
+      offcanvasBackdrop.classList.remove("opacity-100");
+      offcanvasBackdrop.classList.add("opacity-0", "pointer-events-none");
+      header.classList.remove("-translate-y-full");
+      document.body.classList.remove("overflow-hidden");
+      setTimeout(() => mobileMenu.classList.add("hidden"), 300);
+    };
+
+    closeMenu.addEventListener("click", close);
+    offcanvasBackdrop.addEventListener("click", close);
+
+    // Prevent click inside menu from closing
+    menuPanel.addEventListener("click", e => e.stopPropagation());
+
+
+
+    // Profile Dropdown
+    const profileBtn = document.getElementById("profileBtn");
+    const profileMenu = document.getElementById("profileMenu");
+
+    profileBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent closing menu
+      profileMenu.classList.toggle("hidden");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!profileBtn.contains(e.target) && !profileMenu.contains(e.target)) {
+        profileMenu.classList.add("hidden");
+      }
+    });
+  </script>
+  <script>
+    const buttons = document.querySelectorAll(".tab-btn");
+    const contents = document.querySelectorAll(".tab-content");
+
+    function activateTab(tab) {
+      // button styles
+      buttons.forEach((btn) => {
+        if (btn.dataset.tab === tab) {
+          btn.classList.add(
+            "bg-[#E6EFF7]",
+            "!text-[#243C53]",
+            "font-semibold"
+          );
+        } else {
+          btn.classList.remove(
+            "bg-[#E6EFF7]",
+            "!text-[#243C53]",
+            "font-semibold"
+          );
+          btn.classList.add("text-gray-500");
+        }
+      });
+
+      // content switch
+      contents.forEach((content) => {
+        if (content.id === tab) {
+          content.classList.remove("hidden");
+        } else {
+          content.classList.add("hidden");
+        }
+      });
+    }
+
+    // default active tab = Manual
+    activateTab("manual");
+
+    // listeners
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        activateTab(btn.dataset.tab);
+      });
+    });
+  </script>
+  <script>
+    // Select all input groups
+    const groups = document.querySelectorAll(".validator-group");
+
+    groups.forEach((group) => {
+      const input = group.querySelector(".websiteDomain");
+      const adsMsg = group.querySelector(".ads-msg");
+      const validateBtn = group.querySelector(".validateBtn");
+
+      function setButtonState(disabled) {
+        if (disabled) {
+          validateBtn.disabled = true;
+          validateBtn.classList.remove(
+            "bg-[#0DB368]",
+            "hover:bg-green-600",
+            "text-[#ffffff]"
+          );
+          validateBtn.classList.add("bg-[#BEC2CC]", "text-[#6A6E79]");
+        } else {
+          validateBtn.disabled = false;
+          validateBtn.classList.remove("bg-[#BEC2CC]", "text-[#6A6E79]");
+          validateBtn.classList.add(
+            "bg-[#0DB368]",
+            "hover:bg-green-600",
+            "text-[#ffffff]"
+          );
+        }
+      }
+
+      function validateAdsTxt(url) {
+        const txtRegex = /^https?:\/\/.+\.txt$/i;
+        adsMsg.classList.remove("hidden");
+        adsMsg.textContent = "Checking the ads.txt redirect…";
+        adsMsg.classList.remove("text-red-500");
+        adsMsg.classList.add("text-[#0DB368]");
+
+        setButtonState(true);
+
+        if (txtRegex.test(url)) {
+          setTimeout(() => {
+            adsMsg.textContent = "Checking complete!";
+            adsMsg.classList.remove("text-red-500");
+            adsMsg.classList.add("text-[#0DB368]");
+            setButtonState(false);
+          }, 1500);
+        } else {
+          setTimeout(() => {
+            adsMsg.textContent =
+              "The redirect was not in place. Please try again.";
+            adsMsg.classList.remove("text-[#0DB368]");
+            adsMsg.classList.add("text-red-500");
+            setButtonState(false);
+          }, 1000);
+        }
+      }
+
+      // Validate on button click
+      validateBtn.addEventListener("click", () => {
+        const url = input.value.trim();
+        if (url) {
+          validateAdsTxt(url);
+        }
+      });
+
+      // Auto validate on paste
+      input.addEventListener("paste", () => {
+        setTimeout(() => {
+          const url = input.value.trim();
+          if (url) {
+            validateAdsTxt(url);
+          }
+        }, 100);
+      });
+    });
+  </script>
+
+  <script>
+    const toast = document.getElementById("toast");
+
+    function showToast(message, type = "success") {
+      let icon = "";
+
+      if (type === "success") {
+        icon = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
+          <path d="M4.99997 8.58603L1.70697 5.29303L0.292969 6.70703L4.99997 11.414L14.707 1.70703L13.293 0.29303L4.99997 8.58603Z" fill="#0DB368"/>
+        </svg>`;
+      } else if (type === "error") {
+        icon = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>`;
+      }
+
+      toast.innerHTML = `<div class="flex items-center gap-2">${icon}<span>${message}</span></div>`;
+      toast.classList.remove("opacity-0", "pointer-events-none");
+      toast.classList.add("opacity-100");
+
+      setTimeout(() => {
+        toast.classList.remove("opacity-100");
+        toast.classList.add("opacity-0", "pointer-events-none");
+      }, 2000);
+    }
+
+    // Copy for multiple inputs with .websiteDomain
+    document.querySelectorAll(".copy-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const input = btn.closest("div").querySelector(".websiteDomain");
+
+        if (input) {
+          const text = input.value;
+          navigator.clipboard
+            .writeText(text)
+            .then(() => {
+              showToast(`✅ Copied: ${text}`, "success");
+            })
+            .catch(() => {
+              showToast("❌ Failed to copy!", "error");
+            });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
