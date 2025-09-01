@@ -36,7 +36,7 @@
   </style>
 </head>
 
-<body class="h-screen overflow-hidden bg-[#F1F5F8]">
+<body class="min-h-screen bg-[#F1F5F8]">
   <!-- Header -->
   <header id="header"
     class="fixed top-0 left-0 right-0 h-[92px] bg-custom-white z-50 flex items-center justify-between px-4 md:px-5 border-b border-gray-200 transition-transform duration-300">
@@ -302,32 +302,27 @@
     </aside>
 
     <!-- Main content -->
-    <main
-      class="flex-1 ml-0 md:ml-[186px] overflow-y-auto h-[calc(100vh-76px)] md:h-[calc(100vh-92px)] px-4 py-5 md:px-[32px] md:py-[36px]">
+    <main class="flex-1 ml-0 md:ml-[186px] px-4 py-5 md:px-[32px] md:py-[36px]">
       <section class="w-full">
         <div class="relative mb-6 md:mb-[32px] flex items-center justify-between max-w-[600px] mx-auto">
           <!-- horizontal line -->
-          <div class="absolute top-[25%] left-[20%] right-[20%] h-[2px] md:h-[3px] bg-[#0DB368] -z-9"></div>
-          <div class="absolute top-[25%] left-[50%] right-[20%] h-[2px] md:h-[3px] bg-[#CFD6DC] z-10"></div>
 
+          <div class="absolute top-[25%] left-[48%] right-[18%] h-[2px] md:h-[3px] bg-[#CFD6DC] z-10"></div>
+          <div class="absolute top-[25%] left-[18%] right-[18%] h-[2px] md:h-[3px] bg-[#0DB368] z-11"></div>
           <!-- 1 -->
           <div class="flex flex-col items-center gap-3 md:gap-4 w-1/3 md:min-w-[200px]">
             <div
-              class="bg-[rgba(158_164_180/_0.20)] min-w-8 min-h-8 md:min-h-10 rounded-full md:min-w-10 z-10 flex justify-center items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
-                <path
-                  d="M4.99997 8.58603L1.70697 5.29303L0.292969 6.70703L4.99997 11.414L14.707 1.70703L13.293 0.29303L4.99997 8.58603Z"
-                  fill="#243C53" />
-              </svg>
+              class="bg-[rgba(158_164_180/_0.20)] min-w-8 min-h-8 md:min-h-10 rounded-full md:min-w-10 !z-20 flex justify-center items-center">
+              <img src="./images/check-success.svg" alt="" class="w-8 h-8 md:h-10 md:w-10" />
             </div>
-            <span class="text-sm  text-[#243C53] font-medium">Add website</span>
+            <span class="text-sm text-[#243C53] font-medium">Add website</span>
           </div>
 
           <!-- 2 -->
           <div class="flex flex-col items-center gap-3 md:gap-4 w-1/3 md:min-w-[200px]">
             <div
-              class="bg-[rgba(158_164_180/_0.20)] min-w-8 min-h-8 md:min-h-10 md:min-w-10 rounded-full z-10 flex justify-center items-center">
-              <img src="./images/plus-success.png" alt="" class="w-8 h-8 md:h-10 md:w-10" />
+              class="bg-[rgba(158_164_180/_0.20)] min-w-8 min-h-8 md:min-h-10 md:min-w-10 rounded-full z-20 flex justify-center items-center">
+              <img src="./images/plus-success.svg" alt="" class="w-8 h-8 md:h-10 md:w-10" />
             </div>
             <span class="text-sm md:text-base text-[#0DB368] font-medium">Add Scripts</span>
           </div>
@@ -335,12 +330,8 @@
           <!-- 3 -->
           <div class="flex flex-col items-center gap-3 md:gap-4 w-1/3 md:min-w-[200px]">
             <div
-              class="bg-[rgba(158_164_180/_0.20)] min-w-8 min-h-8 md:min-h-10 rounded-full md:min-w-10 z-10 flex justify-center items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M15.3505 1.36517C15.4066 1.43778 15.4555 1.51567 15.4966 1.59774L15.6621 1.92854C16.0186 2.64105 16.8114 3.02283 17.5907 2.85731L17.9525 2.78046C18.718 2.61788 19.4704 3.10663 19.6329 3.87211C19.652 3.96188 19.6623 4.05329 19.6637 4.14506L19.6693 4.51491C19.6813 5.31153 20.23 5.99947 21.0039 6.18848L21.3633 6.27624C22.1235 6.46189 22.5892 7.22866 22.4036 7.98888C22.3818 8.07803 22.3514 8.16486 22.3129 8.24814L22.1574 8.58379C21.8227 9.30675 22.0185 10.1646 22.6338 10.6707L22.9194 10.9057C23.5238 11.4028 23.6108 12.2957 23.1137 12.9001C23.0554 12.971 22.9903 13.036 22.9194 13.0943L22.6338 13.3293C22.0185 13.8354 21.8227 14.6932 22.1574 15.4162L22.3129 15.7519C22.6417 16.462 22.3326 17.3042 21.6225 17.633C21.5392 17.6716 21.4524 17.702 21.3633 17.7238L21.0039 17.8115C20.23 18.0005 19.6813 18.6885 19.6693 19.4851L19.6637 19.8549C19.6519 20.6374 19.008 21.2621 18.2255 21.2503C18.1337 21.2489 18.0423 21.2386 17.9525 21.2195L17.5907 21.1427C16.8114 20.9772 16.0186 21.359 15.6621 22.0715L15.4966 22.4023C15.1465 23.1021 14.2953 23.3856 13.5954 23.0354C13.5133 22.9943 13.4354 22.9454 13.3628 22.8893L13.0702 22.6631C12.4399 22.1758 11.5599 22.1758 10.9296 22.6631L10.637 22.8893C10.0178 23.3679 9.12793 23.254 8.64932 22.6348C8.59319 22.5622 8.54425 22.4843 8.50319 22.4023L8.33768 22.0715C7.98118 21.359 7.18841 20.9772 6.40908 21.1427L6.04725 21.2195C5.28177 21.3821 4.52943 20.8934 4.36686 20.1279C4.34779 20.0381 4.33749 19.9467 4.3361 19.8549L4.33051 19.4851C4.31846 18.6885 3.76985 18.0005 2.99587 17.8115L2.63654 17.7238C1.87633 17.5381 1.41055 16.7713 1.59621 16.0111C1.61798 15.922 1.64836 15.8351 1.68693 15.7519L1.84236 15.4162C2.17715 14.6932 1.98135 13.8354 1.36603 13.3293L1.08036 13.0943C0.475981 12.5972 0.389024 11.7043 0.886134 11.0999C0.944433 11.029 1.00948 10.964 1.08036 10.9057L1.36603 10.6707C1.98135 10.1646 2.17715 9.30675 1.84236 8.58379L1.68693 8.24814C1.35809 7.53803 1.66717 6.69579 2.37728 6.36696C2.46056 6.32839 2.54739 6.29801 2.63654 6.27624L2.99587 6.18848C3.76985 5.99947 4.31846 5.31153 4.33051 4.51491L4.3361 4.14506C4.34794 3.36259 4.99184 2.73787 5.77431 2.74971C5.86607 2.75109 5.95748 2.76139 6.04725 2.78046L6.40908 2.85731C7.18841 3.02283 7.98118 2.64105 8.33768 1.92854L8.50319 1.59774C8.85335 0.897901 9.70454 0.614428 10.4044 0.964588C10.4865 1.00565 10.5644 1.05459 10.637 1.11072L10.9296 1.33695C11.5599 1.82422 12.4399 1.82422 13.0702 1.33695L13.3628 1.11072C13.982 0.632117 14.8719 0.746035 15.3505 1.36517ZM16.6323 9.05247C16.2834 8.74034 15.7534 8.74821 15.4139 9.07057L11.7345 12.5645C11.3332 12.9456 10.705 12.9497 10.2987 12.574L8.75804 11.1494C8.37289 10.7933 7.77415 10.8088 7.40794 11.1844C7.39063 11.2021 7.3741 11.2206 7.35838 11.2398C7.05553 11.6091 7.10943 12.154 7.47877 12.4569L9.98093 14.5086C10.6696 15.0732 11.6725 15.0307 12.3108 14.4097L16.656 10.1827C16.6688 10.1703 16.6812 10.1574 16.6931 10.144C16.9777 9.82584 16.9505 9.33713 16.6323 9.05247Z"
-                  fill="#ABB7C2" />
-              </svg>
+              class="bg-[rgba(158_164_180/_0.20)] min-w-8 min-h-8 md:min-h-10 rounded-full md:min-w-10 z-20 flex justify-center items-center">
+              <img src="./images/success-verify-grays.svg" alt="" class="w-8 h-8 md:h-10 md:w-10" />
             </div>
             <span class="text-sm text-[#ABB7C2] font-medium">Verification</span>
           </div>
