@@ -133,9 +133,9 @@
             </button>
           </div>
           <!-- Sidebar Content -->
-          <ul class="flex flex-col gap-4 mt-10">
+          <ul class="flex flex-col gap-4 mt-10 items-center">
             <!-- ...existing code... -->
-            <li class="dropdown relative flex flex-col items-start text-center">
+            <li class="dropdown relative flex flex-col items-start items-center">
               <button
                 class="dropdown-toggle flex gap-2 items-center text-[#FCFEFD] font-medium text-sm xl:text-base  hover:text-[#00E980] capitalize tracking-[.50px] aria-expanded:text-[#00E980]"
                 aria-expanded="false" aria-controls="features-dropdown" type="button">
@@ -147,18 +147,18 @@
                 </svg>
               </button>
               <div id="features-dropdown"
-                class="dropDownItem min-w-[180px] bg-[#243C53] rounded-lg shadow-lg mt-1 z-10 hidden">
+                class="dropDownItem min-w-[180px] bg-[#243C53] rounded-lg shadow-lg mt-1 z-10 hidden text-center">
                 <ul class="py-2">
                   <li><a href="#"
-                      class="text-start block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                      class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
                       1</a>
                   </li>
                   <li><a href="#"
-                      class="text-start block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                      class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
                       2</a>
                   </li>
                   <li><a href="#"
-                      class="text-start block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                      class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
                       3</a>
                   </li>
                 </ul>
@@ -170,6 +170,13 @@
             </li>
             <li><a href="#"
                 class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Results</a>
+            </li>
+            <li>
+              <a href="#"
+                class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-sm xl:text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 w-fit">
+                <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                    class="w-6 mt-1" alt="arrow-right"></span>
+              </a>
             </li>
           </ul>
         </div>
@@ -207,12 +214,12 @@
             <div
               class="flex md:flex-row flex-col justify-center lg:justify-between gap-4 max-w-[490px] w-full lg:mx-0 mx-auto">
               <a href="#"
-                class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-sm xl:text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 w-full max-h-full justify-center border border-transparent hover:border-[#00E980]">
+                class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 w-full max-h-full justify-center border border-transparent hover:border-[#00E980]">
                 <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
                     class="w-6 mt-1" alt="arrow-right"></span>
               </a>
               <a href="#"
-                class="bg-transparent hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-sm xl:text-base font-medium rounded-lg flex items-center gap-2 text-[#0DB368] hover:text-[#132D46] transition-colors duration-300 w-full max-h-full justify-center border border-[#00e980]">
+                class="bg-transparent hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#0DB368] hover:text-[#132D46] transition-colors duration-300 w-full max-h-full justify-center border border-[#00e980]">
                 <span>Get Revenue Estimation</span>
               </a>
             </div>
@@ -231,8 +238,7 @@
                                             ./images/landing/hero-mobile-1x.png 1x,
                                             ./images/landing/hero-mobile-2x.png 2x,
                                             ./images/landing/hero-mobile-3x.png 3x
-                                        "
-              class="xl:max-w-[586px] relative xl:-right-10 lg:hidden block sm:mx-auto -ml-7 mr-0" alt="google-adsenes">
+                                        " class="lg:hidden block sm:ml-auto sm:mr-auto -ml-7" alt="google-adsenes">
           </div>
         </div>
         <div class="md:pt-20 pt-6 text-center flex flex-col gap-4">
@@ -536,7 +542,7 @@
             with header bidding + AdX
           </p>
           <a href="#"
-            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-sm xl:text-lg font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 w-full max-h-full justify-center border border-transparent hover:border-[#00E980]">
+            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base xl:text-lg font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 w-full max-h-full justify-center border border-transparent hover:border-[#00E980]">
             <span>Calculate Your Potential Revenue</span> <span><img loading="lazy"
                 src="./images/landing/arrow-right.svg" class="w-6 mt-1" alt="arrow-right"></span>
           </a>
@@ -790,7 +796,7 @@
                     ./images/landing/how-header-bidding-works-1x.png 1x,
                     ./images/landing/how-header-bidding-works-2x.png 2x,
                     ./images/landing/how-header-bidding-works-3x.png 3x
-                " class="rounded-lg xl:-ml-[96px] xl:max-w-[797px] w-full max-w-full" alt="Logo">
+                " class="rounded-lg 2xl:-ml-16 2xl:max-w-[797px] 2xl:w-auto w-full max-w-full" alt="Logo">
             </div>
           </div>
           <div class="lg:col-span-4 flex flex-col gap-5 lg:order-2 order-1">
@@ -917,7 +923,7 @@
             Want results like this? Start your 30-day free trial!
           </p>
           <a href="#"
-            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-sm xl:text-lg font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 justify-center border border-transparent hover:border-[#00E980] sm:w-fit w-full mx-auto">
+            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-lg font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 justify-center border border-transparent hover:border-[#00E980] sm:w-fit w-full mx-auto">
             <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
                 class="w-6 mt-1" alt="arrow-right"></span>
           </a>
@@ -1163,7 +1169,7 @@
         <div
           class="flex flex-col gap-5 md:gap-9 max-w-[865px] mx-auto p-5 md:p-9 bg-[#F1F5F8] bg-opacity-5 rounded-xl outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
           <div class="text-center flex flex-col gap-4">
-            <h2 class="text-[28px] md:text-5xl font-avenir leading-tight md:leading-10 font-bold">Ready to <span
+            <h2 class="text-[28px] md:text-5xl font-avenir leading-snug lg:leading-10 font-bold">Ready to <span
                 class="text-emerald-500">Boost Your
                 Revenue?</span></h2>
             <p class="text-sm md:text-lg font-normal font-['Inter'] leading-relaxed">
