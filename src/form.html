@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./images/fav.svg" sizes="16x16 32x32 48x48" type="image/x-icon" />
+  <link rel="icon" href="./images/fav-16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="./images/fav-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="./images/fav-32.png" sizes="192x192" type="image/png" />
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <title>Monetumo</title>
+
+  <style>
+    @font-face {
+      font-family: "Avenir Next Cyr Medium";
+      src: url("./font/Avenir Next Cyr Medium.ttf") format("truetype");
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #132D46;
+      color: #fff;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- header start here  -->
+  <header class="sticky top-0 left-0 z-50 bg-[#132D46] momentoheader">
+    <!-- Navbar -->
+    <div class="flex items-center justify-between px-5 max-w-[1240px] mx-auto py-5 lg:py-9 relative bg-[#132D46]"
+      id="nav-main">
+      <!-- Desktop Logo -->
+      <div class="block text-xl flex-1 lg:flex-none font-semibold text-center lg:text-left">
+        <a href="index.html" class="block">
+
+          <img loading="lazy" src="./images/logo-2x.png" srcset="
+                              ./images/logo-1x.png 1x,
+                              ./images/logo-2x.png 2x,
+                              ./images/logo-3x.png 3x
+                          " class="w-[124px] sm:w-[174px]" alt="Logo">
+        </a>
+      </div>
+      <div class="">
+        <!-- Desktop Menu Items (Visible on large screens) -->
+        <ul class="hidden lg:flex items-center gap-9">
+          <!-- ...existing code... -->
+          <li class="dropdown relative flex flex-col items-center">
+            <button
+              class="dropdown-toggle flex gap-2 items-center text-[#FCFEFD] font-medium text-sm xl:text-base  hover:text-[#00E980] capitalize tracking-[.50px] py-3 aria-expanded:text-[#00E980]"
+              aria-expanded="false" aria-controls="features-dropdown" type="button">
+              Features
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none" class="mt-1"
+                stroke="currentColor">
+                <path d="M1.5 0.75L6 5.25L10.5 0.75" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div id="features-dropdown"
+              class="dropDownItem min-w-[180px] bg-[#243C53] rounded-lg shadow-lg absolute left-0 top-full mt-2 z-10 hidden">
+              <ul class="py-2">
+                <li><a href="#"
+                    class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                    1</a>
+                </li>
+                <li><a href="#"
+                    class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                    2</a>
+                </li>
+                <li><a href="#"
+                    class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                    3</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- ...existing code... -->
+          <li><a href="#"
+              class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Pricing</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Results</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex justify-end lg:space-x-4 2xl:space-x-9 items-center">
+        <!-- Hamburger Icon (Visible only on mobile) -->
+        <button id="momentodrawer-button" class="lg:hidden me-3" aria-label="open sidebar">
+          <img loading="lazy" src="./images/hamburger.png" alt="Menu Icon">
+        </button>
+
+        <!-- Sign Up Button -->
+        <div class="hidden lg:flex lg:items-center lg:gap-4">
+          <a href="#"
+            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-sm xl:text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300">
+            <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                class="w-6 mt-1" alt="arrow-right"></span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar Drawer -->
+    <div id="momentodrawer"
+      class="w-full fixed top-0 left-0 h-full bg-[#132D46] shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
+      <div class="p-5 h-screen flex flex-col">
+        <div class="flex-1">
+          <div class="flex items-center justify-between">
+            <div class="block text-xl flex-1 lg:flex-none font-semibold text-center lg:text-left">
+              <a href="index.html" class="block">
+                <img loading="lazy" src="./images/logo.svg" class="w-[124px]" alt="Logo">
+              </a>
+            </div>
+            <!-- Close Button -->
+            <button class="w-9" aria-label="close sidebar" onclick="closeMomentoDrawer()">
+              <img loading="lazy" src="./images/close.svg" alt="">
+            </button>
+          </div>
+          <!-- Sidebar Content -->
+          <ul class="flex flex-col items-center gap-9">
+            <!-- ...existing code... -->
+            <li class="dropdown relative flex flex-col items-center text-center">
+              <button
+                class="dropdown-toggle flex gap-2 items-center text-[#FCFEFD] font-medium text-sm xl:text-base  hover:text-[#00E980] capitalize tracking-[.50px] py-3 aria-expanded:text-[#00E980]"
+                aria-expanded="false" aria-controls="features-dropdown" type="button">
+                Features
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                  class="mt-1" stroke="currentColor">
+                  <path d="M1.5 0.75L6 5.25L10.5 0.75" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="features-dropdown"
+                class="dropDownItem min-w-[180px] bg-[#243C53] rounded-lg shadow-lg mt-1 z-10 hidden">
+                <ul class="py-2">
+                  <li><a href="#"
+                      class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                      1</a>
+                  </li>
+                  <li><a href="#"
+                      class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                      2</a>
+                  </li>
+                  <li><a href="#"
+                      class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                      3</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- ...existing code... -->
+            <li><a href="#"
+                class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Pricing</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Results</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- main content  -->
+  <main class="">
+
+    <!-- Get Your Free Ad Revenue Estimation start -->
+    <section class="lg:py-[100px] py-12">
+      <div class="px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[58px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[794px] mx-auto">
+          <div class="p-[10px] bg-[#37E4792E] rounded flex w-fit mx-auto">
+            <h3 class="text-center justify-start text-[#0DB368] text-sm font-bold uppercase leading-none tracking-wide">
+              Check if we can boost your ad revenue by up to 60%
+            </h3>
+          </div>
+          <h2 class="text-whitePure lg:text-[42px] text-3xl font-avenir leading-tight text-center font-bold">
+            Get Your <strong class="text-[#0DB368]">Free Ad Revenue</strong> Estimation
+          </h2>
+          <p class="text-center justify-start text-whitePure lg:text-lg text-sm font-normal leading-relaxed">Enter your
+            website URL and receive a personalized ad revenue estimation within 24 hours. 100% free and no strings
+            attached.</p>
+        </div>
+        <form action="#" method="POST"
+          class="bg-[#F1F5F8] bg-opacity-5 p-9 rounded-xl flex flex-col gap-6 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md max-w-full w-[794px] mx-auto">
+          <div class="">
+            <h2 class="text-white text-3xl font-medium font-['Inter'] leading-loose">Get Started</h2>
+            <p class="text-[#9EA4B4] text-base font-normal font-['Inter'] leading-snug">Fill
+              out the
+              form below and our specialists will analyze your website.</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <!-- signle item start  -->
+            <div class="flex flex-col gap-[10px]">
+              <label for="website" class="text-white text-lg font-normal font-['Inter'] leading-snug"><span>Website
+                  URL</span><span class="text-[#DF1212]"> *</span></label>
+              <input type="url" id="website" name="website" placeholder="https://your-website.com ..."
+                class="border border-[#6a6e79] rounded-lg bg-[#1A3248] px-[14px] py-3 placeholder:text-[#9EA4B4] focus:border-[#0DB368] focus:outline-none"
+                required>
+            </div>
+            <!-- signle item end  -->
+
+            <!-- signle item start  -->
+            <div class="flex flex-col gap-[10px]">
+              <label for="email" class="text-white text-lg font-normal font-['Inter'] leading-snug"><span>Email
+                  Address </span><span class="text-[#DF1212]"> *</span></label>
+              <input type="email" id="email" name="email" placeholder="your@email.com ..."
+                class="border border-[#6a6e79] rounded-lg bg-[#1A3248] px-[14px] py-3 placeholder:text-[#9EA4B4] focus:border-[#0DB368] focus:outline-none"
+                required>
+            </div>
+            <!-- signle item end  -->
+
+            <!-- signle item start  -->
+            <div class="flex flex-col gap-[10px]">
+              <label for="name" class="text-white text-lg font-normal font-['Inter'] leading-snug">Full Name
+                (Optional)</label>
+              <input type="text" id="name" name="name" placeholder="John Doe ..."
+                class="border border-[#6a6e79] rounded-lg bg-[#1A3248] px-[14px] py-3 placeholder:text-[#9EA4B4] focus:border-[#0DB368] focus:outline-none">
+            </div>
+            <!-- signle item end  -->
+
+
+          </div>
+          <div class="">
+            <button type="submit"
+              class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-sm xl:text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 w-full max-h-full justify-center border border-transparent hover:border-[#00E980]">
+              <span>Get My Free Estimation</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                  class="w-6 mt-1" alt="arrow-right"></span>
+            </button>
+          </div>
+        </form>
+        <div class="">
+          <ul class="flex flex-row justify-center items-center gap-3">
+            <li
+              class="border border-[#0DB368] border-opacity-20 backdrop-blur-md bg-[#0DB368] bg-opacity-10 flex justify-center items-center px-4 py-2 rounded-full w-fit gap-1">
+              <img loading="lazy" src="./images/landing/check-green.svg" alt="check">
+              <span>Used by 200+ publishers worldwide</span>
+            </li>
+            <li
+              class="border border-[#0DB368] border-opacity-20 backdrop-blur-md bg-[#0DB368] bg-opacity-10 flex justify-center items-center px-4 py-2 rounded-full w-fit gap-1">
+              <img loading="lazy" src="./images/landing/check-green.svg" alt="check">
+              <span>No hidden fees, only results</span>
+            </li>
+
+            <li
+              class="border border-[#0DB368] border-opacity-20 backdrop-blur-md bg-[#0DB368] bg-opacity-10 flex justify-center items-center px-4 py-2 rounded-full w-fit gap-1">
+              <img loading="lazy" src="./images/landing/check-green.svg" alt="check">
+              <span>Works with any website setup</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Get Your Free Ad Revenue Estimation end -->
+    <!-- What Our Publishers Say start  -->
+    <section class="lg:py-[100px] py-12">
+      <div class="px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[72px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[794px] mx-auto">
+          <h2 class="text-whitePure lg:text-5xl text-3xl font-avenir leading-tight text-center font-bold">
+            What Our
+            <strong class="text-[#0DB368]">Publishers Say</strong>
+
+          </h2>
+
+        </div>
+        <!-- card item start  -->
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-5 items-center">
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+            <div class="flex flex-row gap-3 items-center">
+              <img loading="lazy" src="./images/landing/user.png" alt="user" class="w-7 h-7 rounded-full">
+              <h4 class="text-whitePure text-2xl font-semibold leading-relaxed">Rentumo</h4>
+            </div>
+            <div class="">
+              <p class="text-[#9EA4B4] text-base font-normal leading-snug">"Monetumo helped
+                us increase our monthly revenue by 50% compared to our previous setup. The integration was seamless, and
+                their support
+                is unmatched."</p>
+            </div>
+            <div class="flex flex-row gap-3 items-center">
+              <img loading="lazy" src="./images/landing/user.png" alt="user" class="w-7 h-7 rounded-full">
+              <div class="flex flex-col gap-1">
+                <h5 class="text-sm font-semibold leading-none">J.Lund</h5>
+                <p class="text-[#BEC2CC] text-xs font-normal leading-3">CEO</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+            <div class="flex flex-row gap-3 items-center">
+              <img loading="lazy" src="./images/landing/user.png" alt="user" class="w-7 h-7 rounded-full">
+              <h4 class="text-whitePure text-2xl font-semibold leading-relaxed">ARONO</h4>
+            </div>
+            <div class="">
+              <p class="text-[#9EA4B4] text-base font-normal leading-snug min-h-[66px]">"After having
+                worked with a
+                handful of services that was not at all built for SPAs like ours, it was such a pleasure to
+                implement Monetumo."</p>
+            </div>
+            <div class="flex flex-row gap-3 items-center">
+              <img loading="lazy" src="./images/landing/user.png" alt="user" class="w-7 h-7 rounded-full">
+              <div class="flex flex-col gap-1">
+                <h5 class="text-sm font-semibold leading-none">N. Gram</h5>
+                <p class="text-[#BEC2CC] text-xs font-normal leading-3">CTO</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- CTA start  -->
+        <div class="text-center flex flex-col gap-4 w-[455px] justify-center max-w-full mx-auto">
+          <p class=" text-lg font-semibold  leading-relaxed">
+            Want results like this? Start your 30-day free trial!
+          </p>
+          <a href="#"
+            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-sm xl:text-lg font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 justify-center border border-transparent hover:border-[#00E980] w-fit mx-auto">
+            <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                class="w-6 mt-1" alt="arrow-right"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- What Our Publishers Say This end -->
+
+
+
+
+
+    <!-- Key Benefits start  -->
+    <section class="lg:py-[100px] py-12">
+      <div class="px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[72px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[794px] mx-auto">
+          <h2 class="text-whitePure lg:text-5xl text-3xl font-avenir leading-tight text-center font-bold">
+            Key Benefits
+          </h2>
+          <p class="text-center justify-start text-whitePure lg:text-lg text-sm font-normal leading-relaxed">AdSense
+            alone limits your revenue potential. Discover why thousands of publishers are switching to Monetumo for
+            higher
+            earnings.</p>
+        </div>
+        <!-- card item start  -->
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 items-center">
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-14 h-14 rounded-xl flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/trending-up-green.svg" alt="trending" class="w-8 h-8">
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Boost Your
+                Revenue (Up to +60%)</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">More demand
+                sources + header bidding = higher CPMs & fill rates.</p>
+            </div>
+          </div>
+
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-14 h-14 rounded-xl flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/instant.svg" alt="instant" class="w-8 h-8">
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Instant Results</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Start seeing
+                revenue lift within 24 hours of implementation.</p>
+            </div>
+          </div>
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-14 h-14 rounded-xl flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/seamless.svg" alt="trending" class="w-8 h-8">
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Seamless Integration</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Out-of-the-box
+                setup, no coding required, works with any site.</p>
+            </div>
+          </div>
+
+
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-14 h-14 rounded-xl flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/transparent.svg" alt="trending" class="w-8 h-8">
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Transparent Partnership</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">No hidden fees,
+                clear reporting, and performance-based pricing.</p>
+            </div>
+          </div>
+
+
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-14 h-14 rounded-xl flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/seamless.svg" alt="seamless" class="w-8 h-8">
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Flexible Requirements</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">We support
+                publishers of all sizes, not just the top 1%.</p>
+            </div>
+          </div>
+
+
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-14 h-14 rounded-xl flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/global.svg" alt="global" class="w-8 h-8">
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Global Access</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">No geo restrictions
+                – Monetumo works worldwide.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- Key Benefits end -->
+
+
+    <!-- Meet the Founders start  -->
+    <section class="lg:py-[100px] py-12">
+      <div class="px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[72px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[794px] mx-auto">
+          <h2 class="text-whitePure lg:text-5xl text-3xl font-avenir leading-tight text-center font-bold">
+            Meet the <strong class="text-[#0DB368]">Founders</strong>
+          </h2>
+          <p class="text-center justify-start text-whitePure lg:text-lg text-sm font-normal leading-relaxed">The team
+            behind Monetumo.</p>
+        </div>
+        <div class="flex flex-col gap-14">
+          <!-- card item start  -->
+          <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 items-center">
+
+            <!-- single item start  -->
+            <div
+              class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <div class="">
+                <img loading="lazy" src="./images/landing/Iliya-Yanakiev-1x.png" alt="/Iliya-Yanakiev"
+                  class="rounded-full w-[200px] h-[200px] mx-auto">
+              </div>
+              <div class="flex flex-col gap-3 text-center">
+                <h2 class="text-2xl font-semibold leading-relaxed">
+                  Iliya Yanakiev</h2>
+                <p class=" text-emerald-500 text-sm font-medium uppercase leading-tight">
+                  Co-Founder & Head of Monetization</p>
+              </div>
+
+              <ul class="flex flex-col gap-3 list-disc pl-5">
+                <li class="text-[#9EA4B4] text-base font-normal leading-snug">8+ years
+                  hands-on AdTech experience (yield management, SSP integrations, strategy)</li>
+                <li class="text-[#9EA4B4] text-base font-normal leading-snug">Worked with hundreds of publishers
+                  worldwide
+                  → deep insight into what drives performance</li>
+                <li class="text-[#9EA4B4] text-base font-normal leading-snug">Ensures Monetumo publishers maximize
+                  revenue
+                  and stay ahead in a fast-moving industry</li>
+              </ul>
+            </div>
+
+            <!-- single item start  -->
+            <div
+              class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <div class="">
+                <img loading="lazy" src="./images/landing/Nilas-Gram-1x.png" alt="Nilas-Gram"
+                  class="rounded-full w-[200px] h-[200px] mx-auto">
+              </div>
+              <div class="flex flex-col gap-3 text-center">
+                <h2 class="text-2xl font-semibold leading-relaxed">
+                  Nilas Gram</h2>
+                <p class=" text-emerald-500 text-sm font-medium uppercase leading-tight">
+                  Co-Founder & CTO</p>
+              </div>
+
+              <ul class="flex flex-col gap-3 list-disc pl-5">
+                <li class="text-[#9EA4B4] text-base font-normal leading-snug">15+ years in SaaS development; technical
+                  brain behind Monetumo</li>
+                <li class="text-[#9EA4B4] text-base font-normal leading-snug">Built "the best header bidding tool I've
+                  ever seen" (Iliya) → boosted our own brands' revenue +100%</li>
+                <li class="text-[#9EA4B4] text-base font-normal leading-snug">Turns complexity into smooth, scalable
+                  systems; sharp eye for detail and design</li>
+              </ul>
+            </div>
+
+            <!-- single item start  -->
+            <div
+              class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <div class="">
+                <img loading="lazy" src="./images/landing/Jacob-Lund-1x.png" alt="Jacob Lund"
+                  class="rounded-full w-[200px] h-[200px] mx-auto">
+              </div>
+              <div class="flex flex-col gap-3 text-center">
+                <h2 class="text-2xl font-semibold leading-relaxed">
+                  Jacob Lund</h2>
+                <p class=" text-emerald-500 text-sm font-medium uppercase leading-tight">
+                  Co-Founder & Strategic Advisor</p>
+              </div>
+
+              <ul class="flex flex-col gap-3 list-disc pl-5">
+                <li class="text-[#9EA4B4] text-base font-normal leading-snug">10+ years building & scaling SaaS brands
+                  as
+                  CEO and Growth Hacker</li>
+                <li class="text-[#9EA4B4] text-base font-normal leading-snug">Expert in growth, strategy, ops, talent
+                  recruitment, and scaling with SOPs</li>
+                <li class="text-[#9EA4B4] text-base font-normal leading-snug">Combines leadership with a creative Growth
+                  Hacker mindset to push Monetumo forward</li>
+              </ul>
+            </div>
+
+
+
+
+
+          </div>
+          <div>
+            <p class="text-center text-xl font-normal font-['Inter'] leading-7 italic w-[992px] max-w-full mx-auto">"We
+              originally built Monetumo for our own brands to solve a real problem: how to earn more from ads
+              without relying
+              solely on AdSense. When the results blew us away, we decided to make the platform available to every
+              publisher. That's
+              how Monetumo was born."</p>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+    <!-- Meet the Founders end -->
+
+
+    <!-- Ready to Boost Your Revenue? start  -->
+    <section class="lg:py-[100px] py-12">
+      <div class="px-5 xl:max-w-[1240px] mx-auto ">
+        <div
+          class="flex flex-col gap-9 max-w-[865px] mx-auto p-9 bg-[#F1F5F8] bg-opacity-5 rounded-xl outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+          <div class="text-center flex flex-col gap-4">
+            <h2 class="text-5xl font-avenir leading-10 font-bold">Ready to <span class="text-emerald-500">Boost Your
+                Revenue?</span></h2>
+            <p class="text-lg font-normal font-['Inter'] leading-relaxed">
+              Join
+              10,000+ publishers already earning up to 60% more with Monetumo.</p>
+          </div>
+          <div class="flex flex-col gap-5">
+            <div class="flex flex-row justify-between gap-4 max-w-full w-[585px] mx-auto">
+              <a href="#"
+                class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-sm xl:text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 w-full max-h-full justify-center border border-transparent hover:border-[#00E980]">
+                <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                    class="w-6 mt-1" alt="arrow-right"></span>
+              </a>
+              <a href="#"
+                class="bg-transparent hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-sm xl:text-base font-medium rounded-lg flex items-center gap-2 text-[#0DB368] hover:text-[#132D46] transition-colors duration-300 w-full max-h-full justify-center border border-[#00e980]">
+                <span>Get Revenue Estimation</span>
+              </a>
+            </div>
+            <ul class="flex flex-row justify-center items-center gap-3">
+              <li
+                class="border border-[#0DB368] border-opacity-20 backdrop-blur-md bg-[#0DB368] bg-opacity-10 flex justify-center items-center px-4 py-2 rounded-full w-fit gap-1">
+                <img loading="lazy" src="./images/landing/check-green.svg" alt="check">
+                <span>Free setup</span>
+              </li>
+              <li
+                class="border border-[#0DB368] border-opacity-20 backdrop-blur-md bg-[#0DB368] bg-opacity-10 flex justify-center items-center px-4 py-2 rounded-full w-fit gap-1">
+                <img loading="lazy" src="./images/landing/check-green.svg" alt="check">
+                <span>No hidden fees</span>
+              </li>
+
+              <li
+                class="border border-[#0DB368] border-opacity-20 backdrop-blur-md bg-[#0DB368] bg-opacity-10 flex justify-center items-center px-4 py-2 rounded-full w-fit gap-1">
+                <img loading="lazy" src="./images/landing/check-green.svg" alt="check">
+                <span>Cancel anytime</span>
+              </li>
+            </ul>
+          </div>
+          <div class="text-center ">
+
+            <a href="" class="text-[#0DB368] text-lg font-medium font-['Inter'] leading-none tracking-wide">
+              Start earning
+              more today</a>
+
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+    </section>
+    <!-- Ready to Boost Your Revenue? end -->
+
+  </main>
+
+  <!-- footer start  -->
+  <footer class="pt-10 md:pt-[100px] pb-9 bg-[#F7FBFF] text-[#243C53]">
+    <div class="px-5 xl:max-w-[1240px] mx-auto">
+      <div
+        class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-5 lg:gap-[52px] pb-9 md:pb-11 border-b border-[#9EA4B4]">
+        <div class="md:col-span-4">
+          <div class="flex flex-col gap-4 ">
+            <a href="index.html"><img loading="lazy" src="./images/footer-logo.svg" class="w-[175px]" alt=""></a>
+            <p class="text-[#243C53] text-base font-normal leading-tight">The #1 ad
+              monetization platform helping publishers maximize their revenue with header bidding and premium demand
+              partners.</p>
+            <ul class="flex flex-col gap-2">
+              <li class="text-[#243C53] text-base font-normal leading-tight">Monetumo ApS
+              </li>
+              <li class="text-[#243C53] text-base leading-tight"> <span class="font-semibold">Copenhagen</span>, Denmark
+              </li>
+              <li class="text-[#243C53] text-base font-normal leading-tight">
+                CVR:
+                <span class="font-semibold"> 12345678</span>
+              </li>
+            </ul>
+            <ul class="flex flex-row gap-3 ">
+              <li>
+                <a href="">
+                  <img loading="lazy" src="./images/landing/facebook.svg" alt="facebook">
+                </a>
+              </li>
+
+              <li>
+                <a href="">
+                  <img loading="lazy" src="./images/landing/twitter.svg" alt="twitter">
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img loading="lazy" src="./images/landing/linkedin.svg" alt="linkedin">
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img loading="lazy" src="./images/landing/youtube.svg" alt="youtube">
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="md:col-span-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-4 md:gap-4 gap-6">
+            <!-- single item start  -->
+            <div class="flex flex-col gap-4">
+              <h4 class="text-[#243C53] text-base font-semibold leading-none">Solutions</h4>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Header
+                    Bidding Setup</a>
+                </li>
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Revenue
+                    Dashboard
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Ad
+                    Optimization</a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <div class="flex flex-col gap-4">
+              <h4 class="text-[#243C53] text-base font-semibold leading-none">Compare with</h4>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Header
+                    Bidding Setup</a>
+                </li>
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Revenue
+                    Dashboard
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Ad
+                    Optimization</a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <div class="flex flex-col gap-4">
+              <h4 class="text-[#243C53] text-base font-semibold leading-none">Resources</h4>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Header
+                    Bidding Setup</a>
+                </li>
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Revenue
+                    Dashboard
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Ad
+                    Optimization</a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <div class="flex flex-col gap-4">
+              <h4 class="text-[#243C53] text-base font-semibold leading-none">Company</h4>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Header
+                    Bidding Setup</a>
+                </li>
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Revenue
+                    Dashboard
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Ad
+                    Optimization</a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- single item end  -->
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="pt-9 md:pt-11 flex flex-row lg:justify-between md:justify-center flex-wrap gap-4 items-center">
+        <p class="text-sm md:text-sm">© 2025 Monetumo ApS. All rights reserved. | <a href="mailto:info@monetumo.com"
+            class="hover:text-[#0DB368] transition-all duration-200">info@monetumo.com</a> | <a href="tel:+45 1234 5678"
+            class="hover:text-[#0DB368] transition-all duration-200">+45 1234 5678</a></p>
+        <ul class="flex flex-row gap-8 items-center">
+          <li><a href="" class="hover:text-[#0DB368] transition-all duration-200 underline">Privacy Policy</a></li>
+          <li><a href="" class="hover:text-[#0DB368] transition-all duration-200 underline">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Script  -->
+  <script src="./script/momentuNavbar.js"></script>
+  <script>
+    // Dropdown toggler for Features menu
+    document.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const dropdown = btn.parentElement.querySelector('.dropDownItem');
+        const isOpen = dropdown.classList.contains('block');
+        // Close all dropdowns first
+        document.querySelectorAll('.dropDownItem').forEach(function (d) {
+          d.classList.add('hidden');
+          d.classList.remove('block');
+        });
+        // Toggle current dropdown
+        if (!isOpen) {
+          dropdown.classList.remove('hidden');
+          dropdown.classList.add('block');
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          dropdown.classList.add('hidden');
+          dropdown.classList.remove('block');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+  </script>
+</body>
+
+</html>
