@@ -33,7 +33,7 @@ module.exports = {
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
-        avenir: ['Avenir Next Cyr Medium', 'sans-serif'],
+        avenir: ['Avenir Next Cyr'],
       },
       backgroundImage: {
         gettingPrintumo: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1170' height='350' viewBox='0 0 1170 350' fill='none'%3E%3Cpath opacity='0.15' d='M0 0H1170V350H0V0Z' fill='url(%23paint0_linear_658_6023)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_658_6023' x1='-20.3125' y1='34.528' x2='978.73' y2='744.957' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%235799EB'/%3E%3Cstop offset='1' stop-color='%239F74FB'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E")`,
