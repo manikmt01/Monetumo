@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./images/fav.svg" sizes="16x16 32x32 48x48" type="image/x-icon" />
+  <link rel="icon" href="./images/fav-16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="./images/fav-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="./images/fav-32.png" sizes="192x192" type="image/png" />
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <title>Monetumo</title>
+
+  <style>
+    @font-face {
+      font-family: "Avenir Next Cyr";
+      src: url("./font/Avenir Next Cyr Medium.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "Avenir Next Cyr";
+      src: url("./font/avenir-next-cyr-bold.ttf") format("truetype");
+    }
+
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #132D46;
+      color: #fff;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- header start here  -->
+  <header class="sticky top-0 left-0 z-50 bg-[#132D46] momentoheader">
+    <!-- Navbar -->
+    <div class="flex items-center justify-between px-5 max-w-[1240px] mx-auto py-5 lg:py-9 relative bg-[#132D46]"
+      id="nav-main">
+      <!-- Desktop Logo -->
+      <div class="block text-xl flex-1 lg:flex-none font-semibold text-center lg:text-left">
+        <a href="index.html" class="block">
+
+          <img loading="lazy" src="./images/logo-2x.png" srcset="
+                            ./images/logo-1x.png 1x,
+                            ./images/logo-2x.png 2x,
+                            ./images/logo-3x.png 3x
+                        " class="w-[124px] sm:w-[174px]" alt="Logo">
+        </a>
+      </div>
+      <div class="">
+        <!-- Desktop Menu Items (Visible on large screens) -->
+        <ul class="hidden lg:flex items-center gap-9">
+          <!-- ...existing code... -->
+          <li class="dropdown relative flex flex-col items-center">
+            <button
+              class="dropdown-toggle flex gap-2 items-center text-[#FCFEFD] font-medium text-sm xl:text-base  hover:text-[#00E980] capitalize tracking-[.50px] py-3 aria-expanded:text-[#00E980]"
+              aria-expanded="false" aria-controls="features-dropdown" type="button">
+              Features
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none" class="mt-1"
+                stroke="currentColor">
+                <path d="M1.5 0.75L6 5.25L10.5 0.75" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div id="features-dropdown"
+              class="dropDownItem min-w-[180px] bg-[#243C53] rounded-lg shadow-lg absolute left-0 top-full mt-2 z-10 hidden">
+              <ul class="py-2">
+                <li><a href="#"
+                    class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                    1</a>
+                </li>
+                <li><a href="#"
+                    class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                    2</a>
+                </li>
+                <li><a href="#"
+                    class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                    3</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- ...existing code... -->
+          <li><a href="#"
+              class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Pricing</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Results</a>
+          </li>
+
+          <li><a href="#"
+              class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Agency</a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="flex justify-end lg:space-x-4 2xl:space-x-9 items-center">
+        <!-- Hamburger Icon (Visible only on mobile) -->
+        <button id="momentodrawer-button" class="lg:hidden me-3" aria-label="open sidebar">
+          <img loading="lazy" src="./images/hamburger.png" alt="Menu Icon">
+        </button>
+
+        <!-- Sign Up Button -->
+        <div class="hidden lg:flex lg:items-center lg:gap-4">
+          <a href="#"
+            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 border border-[#00E980]">
+            <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                class="w-6 mt-1" alt="arrow-right"></span>
+          </a>
+          <a href="#"
+            class="bg-transparent hover:bg-[#00E980] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#00E980] hover:text-[#132D46] transition-colors duration-300 border border-[#00E980]">
+            <span>Get Revenue Estimation</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar Drawer -->
+    <div id="momentodrawer"
+      class="w-full fixed top-0 left-0 h-full bg-[#132D46] shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
+      <div class="p-5 h-screen flex flex-col">
+        <div class="flex-1">
+          <div class="flex items-center justify-between">
+            <div class="block text-xl flex-1 lg:flex-none font-semibold text-center lg:text-left">
+              <a href="index.html" class="block">
+                <img loading="lazy" src="./images/logo.svg" class="w-[124px]" alt="Logo">
+              </a>
+            </div>
+            <!-- Close Button -->
+            <button class="w-9" aria-label="close sidebar" onclick="closeMomentoDrawer()">
+              <img loading="lazy" src="./images/close.svg" alt="">
+            </button>
+          </div>
+          <!-- Sidebar Content -->
+          <ul class="flex flex-col gap-4 mt-10 items-center">
+            <!-- ...existing code... -->
+            <li class="dropdown relative flex flex-col items-center">
+              <button
+                class="dropdown-toggle flex gap-2 items-center text-[#FCFEFD] font-medium text-sm xl:text-base  hover:text-[#00E980] capitalize tracking-[.50px] aria-expanded:text-[#00E980]"
+                aria-expanded="false" aria-controls="features-dropdown" type="button">
+                Features
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                  class="mt-1" stroke="currentColor">
+                  <path d="M1.5 0.75L6 5.25L10.5 0.75" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="features-dropdown"
+                class="dropDownItem min-w-[180px] bg-[#243C53] rounded-lg shadow-lg mt-1 z-10 hidden text-center">
+                <ul class="py-2">
+                  <li><a href="#"
+                      class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                      1</a>
+                  </li>
+                  <li><a href="#"
+                      class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                      2</a>
+                  </li>
+                  <li><a href="#"
+                      class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                      3</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- ...existing code... -->
+            <li><a href="#"
+                class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Pricing</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Results</a>
+            </li>
+
+            <li><a href="#"
+                class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Agency</a>
+            </li>
+
+            <li>
+              <a href="#"
+                class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 w-fit">
+                <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                    class="w-6 mt-1" alt="arrow-right"></span>
+              </a>
+
+            </li>
+            <li>
+              <a href="#"
+                class="bg-transparent hover:bg-[#00E980] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#00E980] hover:text-[#132D46] transition-colors duration-300 border border-[#00E980]">
+                <span>Get Revenue Estimation</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- main content  -->
+  <main class="">
+    <!-- hero section start here  -->
+    <section class="lg:pt-14 pt-12 pb-9 lg:pb-[100px]">
+      <div class="px-8 md:px-5 xl:max-w-[1240px] mx-auto">
+        <div class="grid lg:grid-cols-2 items-center xl:gap-0 lg:gap-8 gap-12">
+          <!-- hero left text item start  -->
+          <div class="flex flex-col md:gap-9 gap-6">
+            <div class="flex flex-col gap-4 xl:max-w-[610px] xl:w-[610px] lg:mx-0 mx-auto lg:text-start text-center">
+
+              <h1
+                class="text-whitePure text-[28px] md:text-5xl lg:text-[50px] xl:text-[64px] leading-tight font-medium font-avenir">
+                Join the Monetumo
+                <strong class="text-[#0DB368] lg:inline-block block">Affiliate Program</strong>
+              </h1>
+              <p class="text-whitePure text-sm md:text-base lg:text-lg font-normal">Earn recurring revenue
+                by
+                referring website publishers to Monetumo.</p>
+            </div>
+            <div
+              class="flex md:flex-row flex-col justify-center lg:justify-between gap-4 md:max-w-[236px] w-full lg:mx-0 mx-auto">
+              <a href="#"
+                class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 justify-center border border-transparent hover:border-[#00E980] lg:w-[236px] w-full max-w-full">
+                <span>Apply Now</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg" class="w-6 mt-1"
+                    alt="arrow-right"></span>
+              </a>
+
+            </div>
+          </div>
+          <!-- hero image item start  -->
+          <div class="relative animate-wiggle">
+            <img loading="lazy" src="./images/landing/google-adsenes-1x.png" srcset="
+                            ./images/landing/google-adsenes-1x.png 1x,
+                            ./images/landing/google-adsenes-2x.png 2x,
+                            ./images/landing/google-adsenes-3x.png 3x
+                        " class="xl:max-w-[586px] relative xl:-right-10 lg:block hidden" alt="google-adsenes">
+            <img loading="lazy" src="./images/landing/google-adsense-bg.svg" alt="google-adsense-bg"
+              class="absolute xl:-left-[70px] left-0 top-1/2 -translate-y-1/2 -z-10 lg:block hidden">
+            <!-- hero mobile  -->
+            <img loading="lazy" src="./images/landing/hero-mobile-1x.png" srcset="
+                                            ./images/landing/hero-mobile-1x.png 1x,
+                                            ./images/landing/hero-mobile-2x.png 2x,
+                                            ./images/landing/hero-mobile-3x.png 3x
+                                        " class="lg:hidden block sm:ml-auto sm:mr-auto -ml-7" alt="google-adsenes">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Our Affiliate Program start  -->
+    <section class="lg:py-[100px] py-12">
+      <div class="px-8 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[72px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[320px] md:w-[770px] mx-auto">
+          <h2 class="text-whitePure lg:text-[42px] text-[28px] font-avenir leading-tight text-center font-bold">
+            Our Affiliate Program
+          </h2>
+          <p class="text-center justify-start text-whitePure lg:text-lg text-base font-normal leading-relaxed">Simple,
+            transparent, and built for sustainable partnerships.</p>
+        </div>
+        <!-- profit start  -->
+        <div
+          class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-10 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500 max-w-[940px] mx-auto">
+          <div class="text-center">
+            <h3 class="font-roboto text-xl lg:text-4xl font-bold gap-4 mb-4 lg:w-auto w-[280px]"><span
+                class="text-[#0DB368]">30%</span> of
+              Monetumo's
+              <span class="text-[#0DB368]">Profit</span>
+              for 12 Months
+            </h3>
+            <p class="text-[#9EA4B4] md:text-base text-sm"><span class="block text-[#0DB368]">Earn sustainable,
+                predictable income for one
+                full year.</span>
+              Get 30% of Monetumo's profit margin from every publisher you refer, paid monthly for 12 consecutive months
+              from
+              activation.</p>
+          </div>
+          <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+            <div
+              class="bg-[#F1F5F8] bg-opacity-5 p-4 lg:p-6 rounded-3xl outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] duration-500 outline">
+              <ul class="flex flex-col gap-4">
+                <li class="text-sm flex gap-2 items-start">
+                  <img src="./images/landing/agency/check-circle.svg" alt="check">
+                  <span>Earn 30% of Monetumo's profit from each referred publisher</span>
+                </li>
+                <li class="text-sm flex gap-2 items-start">
+                  <img src="./images/landing/agency/check-circle.svg" alt="check">
+                  <span>Monthly payouts (net 30) via PayPal, Wise, or bank transfer</span>
+                </li>
+                <li class="text-sm flex gap-2 items-start">
+                  <img src="./images/landing/agency/check-circle.svg" alt="check">
+                  <span>60-day cookie window (double industry standard)</span>
+                </li>
+                <li class="text-sm flex gap-2 items-start">
+                  <img src="./images/landing/agency/check-circle.svg" alt="check">
+                  <span>No limit on number of publishers you can refer</span>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-6 rounded-3xl outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] duration-500 outline">
+              <ul class="flex flex-col gap-4">
+                <li class="text-sm flex gap-2 items-start">
+                  <img src="./images/landing/agency/check-circle.svg" alt="check">
+                  <span>12-month earning period from publisher activation</span>
+                </li>
+                <li class="text-sm flex gap-2 items-start">
+                  <img src="./images/landing/agency/check-circle.svg" alt="check">
+                  <span>€25 minimum payout threshold</span>
+                </li>
+                <li class="text-sm flex gap-2 items-start">
+                  <img src="./images/landing/agency/check-circle.svg" alt="check">
+                  <span>Full transparency with monthly earnings reports</span>
+                </li>
+                <li class="text-sm flex gap-2 items-start">
+                  <img src="./images/landing/agency/check-circle.svg" alt="check">
+                  <span>Dedicated partner support via Slack/Discord</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+            <div class="">
+              <a href="#"
+                class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 border border-[#00E980] w-full justify-center">
+                <span>View Full Program Details</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                    class="w-6 mt-1" alt="arrow-right"></span>
+              </a>
+            </div>
+
+            <div class="">
+              <a href="#"
+                class="bg-transparent hover:bg-[#00E980] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#00E980] hover:text-[#132D46] transition-colors duration-300 border border-[#00E980] w-full justify-center">
+                <span>Get Revenue Estimation</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <!-- Prefer Upfront payemtn  -->
+        <div
+          class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-6 rounded-xl flex flex-row flex-wrap justify-between items-center gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500 max-w-[940px] mx-auto w-full">
+          <div class="max-w-[582px] w-full flex flex-row md:items-center md:mt-0 mt-1 gap-6">
+            <div class="">
+              <img src="./images/landing/agency/chat.svg" alt="chat">
+            </div>
+            <div class="">
+              <h4 class="font-semibold text-lg md:text-2xl text-white-1">Prefer Upfront Payment?</h4>
+              <p class="text-[#9EA4B4] text-sm max-w-[478px] w-full">Interested in an upfront payment instead? Contact
+                us to discuss custom
+                terms that work for you.</p>
+            </div>
+          </div>
+          <div class="lg:max-w-[236px] w-full">
+            <a href="#"
+              class="bg-transparent hover:bg-[#00E980] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#00E980] hover:text-[#132D46] transition-colors duration-300 border border-[#00E980] w-full justify-center">
+              <span>Contact Us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Affiliate Program end -->
+
+    <!-- calculate start  -->
+    <section class=" lg:py-[100px] py-12">
+      <div class="px-8 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[72px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[690px] mx-auto">
+          <h2 class="text-whitePure lg:text-5xl text-[28px] font-avenir leading-tight text-center font-bold">
+            <strong class="text-[#0DB368]">Calculate</strong> Your <br>
+            12-Month Earning Potential
+
+          </h2>
+          <p class="text-center justify-start text-whitePure lg:text-lg text-base font-normal leading-relaxed">Estimate
+            your potential earnings based on the publishers you refer.</p>
+        </div>
+        <div
+          class="bg-[#151515] bg-opacity-10 p-5 md:p-10 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md rounded-2xl max-w-[1000px] mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
+            <!-- range start  -->
+            <div class="">
+              <!-- single item start    -->
+              <div class="">
+                <h4 class="mb-8 text-lg md:text-xl">Your Estimated Earnings</h4>
+                <!-- grray bar  -->
+                <div class="relative h-1 bg-[#6A6E79] w-full">
+                  <!-- green bar  -->
+                  <span class="w-[20%] h-1 bg-[#0DB368] block"></span>
+                  <span
+                    class="w-7 h-7 rounded-full bg-white-1 block absolute top-1/2 -translate-y-1/2 left-[20%]"></span>
+                </div>
+                <div class="text-[#9EA4B4] flex flex-row justify-between items-center mt-3">
+                  <span>1</span>
+                  <span>20</span>
+                </div>
+              </div>
+              <!-- single item start    -->
+
+              <!-- single item start    -->
+              <div class="mt-6">
+                <h4 class="mb-8 text-lg md:text-xl">Average Monthly Page Views per <br class="lg:block hidden">
+                  Publisher: 100,000</h4>
+                <!-- grray bar  -->
+                <div class="relative h-1 bg-[#6A6E79] w-full">
+                  <!-- green bar  -->
+                  <span class="w-[5%] h-1 bg-[#0DB368] block"></span>
+                  <span
+                    class="w-7 h-7 rounded-full bg-white-1 block absolute top-1/2 -translate-y-1/2 left-[5%]"></span>
+                </div>
+                <div class="text-[#9EA4B4] flex flex-row justify-between items-center mt-3">
+                  <span>100k</span>
+                  <span>5M</span>
+                </div>
+              </div>
+              <!-- single item start    -->
+              <!-- How earnings are calculated  -->
+              <div
+                class="border rounded-2xl border-[#0DB368] bg-[#0DB368] bg-opacity-10 p-4 md:p-6 flex flex-row gap-2 items-start mt-5 md:mt-7">
+                <div class="min-w-5">
+                  <img src="./images/landing/agency/alert-circle.svg" alt="aleart" class="w-5 h-5 mt-1">
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h4 class="font-medium md:text-lg text-white-1">How earnings are calculated</h4>
+                  <p class="text-[#9EA4B4] md:text-base text-xs">Based on $2 CPM to calculate revenue, then 20% Monetumo
+                    profit margin. You
+                    earn 30% of Monetumo's
+                    profit.</p>
+                </div>
+              </div>
+            </div>
+            <!-- range end  -->
+            <!-- your estimated earnings start -->
+            <div
+              class="bg-[#F1F5F8] bg-opacity-5 p-4 lg:p-6 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full duration-500 mx-auto w-full">
+              <div class="flex flex-row gap-3">
+                <img src="./images/landing/agency/your-estimated-earnings.svg" alt="your-estimated-earnings"
+                  class="md:w-auto w-7">
+                <h2 class="font-semibold text-lg md:text-[28px] text-white-1">Your Estimated Earnings</h2>
+              </div>
+              <div
+                class="bg-[#151515] bg-opacity-5 p-5 lg:p-6 rounded-xl flex flex-col gap-2 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  duration-500">
+                <p class="text-[#9EA4B4] md:text-base text-sm">Monthly Earnings</p>
+                <h4 class="text-[32px] md:text-4xl font-bold text-white-1">$180</h4>
+                <p class="text-white-1 md:text-base text-sm">For 3 publishers</p>
+
+              </div>
+              <div
+                class="bg-[#151515] bg-opacity-5 p-5 lg:p-6 rounded-xl flex flex-col gap-2 outline outline-1 outline-offset-[-1px] backdrop-blur-md h-full  outline-[#0DB368] duration-500">
+
+                <p class="text-[#9EA4B4] md:text-base text-sm">$ Total 12-Month Earnings</p>
+                <h4 class="text-[32px] md:text-4xl font-bold text-[#0DB368]">$2,160</h4>
+                <p class="text-white-1 md:text-base text-sm">$60/month per publisher</p>
+
+              </div>
+            </div>
+            <!-- your estimated earnings end -->
+          </div>
+          <!-- important start -->
+          <div class="border rounded-2xl border-[#DF6112] bg-[#DF6112] bg-opacity-10 p-4 md:p-6 mt-6 md:mt-10">
+            <p class="text-[#9EA4B4] md:text-base text-xs"> <strong>Important:</strong> Estimated earnings based on $2
+              CPM and up to 20%
+              Monetumo profit margin.
+              Actual CPM and profit margins may
+              vary (10-20%) depending on publisher traffic quality, geography, and negotiated terms. These calculations
+              are estimates
+              only and do not guarantee specific earnings.</p>
+          </div>
+          <!-- important end -->
+        </div>
+      </div>
+    </section>
+    <!-- calculate end -->
+
+
+    <!-- Why Partner With Us start  -->
+    <section class=" lg:py-[100px] py-12">
+      <div class="px-8 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[72px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[320px] md:w-[770px] mx-auto">
+          <h2 class="text-whitePure lg:text-[42px] text-[28px] font-avenir leading-tight text-center font-bold">
+            Why Partner With Us
+          </h2>
+          <p class="text-center justify-start text-whitePure lg:text-lg text-base font-normal leading-relaxed">
+            Earn
+            competitive commissions with full transparency, monthly payouts, and dedicated support for your
+            success.</p>
+        </div>
+        <!-- card item start  -->
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 items-center">
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/agency/dollar.svg" alt="dollar" class="w-8 h-8">
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Industry-Leading Profit Share</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Earn 30% of Monetumo's
+                profit from
+                every publisher you refer - one of the most competitive rates in AdTech.</p>
+            </div>
+          </div>
+
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/agency/clock.svg" alt="clock" class="w-8 h-8">
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Fast Monthly Payouts
+                (Net 30)</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Get paid monthly via
+                PayPal, Wise,
+                or bank transfer with just €25 minimum.</p>
+            </div>
+          </div>
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/agency/graphic.svg" alt="graphic" class="w-8 h-8">
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Full Transparency</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">60-day cookie window and
+                clear
+                tracking of all your referrals and earnings.</p>
+            </div>
+          </div>
+
+
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/agency/light.svg" alt="light" class="w-8 h-8">
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">12-Month Earning Period</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Predictable income stream
+                for one
+                full year from each publisher activation.</p>
+            </div>
+          </div>
+
+
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/agency/shield.svg" alt="shield" class="w-8 h-8">
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Dedicated Partner Support</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Slack/Discord community,
+                co-marketing assets, and quarterly leaderboards.</p>
+            </div>
+          </div>
+
+
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/agency/trending-up.svg" alt="trending-up" class="w-8 h-8">
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Flexible Payment Options</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Choose PayPal, Wise, or
+                bank
+                transfer - whatever works best for you.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- Why Partner With Us end -->
+
+    <!-- how it works start  -->
+    <section class="lg:py-[100px] py-12">
+      <div class="px-8 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[72px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[320px] md:w-[770px] mx-auto">
+          <h2 class="text-whitePure lg:text-[42px] text-[28px] font-avenir leading-tight text-center font-bold">
+            How It Works
+          </h2>
+          <p class="text-center justify-start text-whitePure lg:text-lg text-base font-normal leading-relaxed">Start
+            earning in three simple steps.</p>
+        </div>
+        <!-- card item start  -->
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 items-center text-center">
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] w-[60px] h-[60px] rounded-xl flex justify-center items-center text-[28px] font-medium text-white-1 mx-auto">
+              <span>1</span>
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Sign up & get approved</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Quick application process - most
+                approvals within 24-48 hours.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] w-[60px] h-[60px] rounded-xl flex justify-center items-center text-[28px] font-medium text-white-1 mx-auto">
+              <span>2</span>
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Share your referral link</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Promote Monetumo to website
+                publishers through your networks.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] w-[60px] h-[60px] rounded-xl flex justify-center items-center text-[28px] font-medium text-white-1 mx-auto">
+              <span>3</span>
+            </div>
+            <div class="flex flex-col gap-3">
+              <h4 class="text-xl lg:text-2xl font-medium leading-snug">Earn for 12 months</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Get paid monthly for every active
+                publisher - 30% of profit for one full year.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+
+
+        </div>
+
+      </div>
+    </section>
+    <!-- how it works end -->
+
+
+
+
+
+    <!-- Earning Potential start  -->
+    <section class="lg:py-[100px] py-12">
+      <div class="px-8 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[72px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[690px] mx-auto">
+          <h2 class="text-whitePure lg:text-5xl text-[28px] font-avenir leading-tight text-center font-bold">
+            Earning <strong class="text-[#0DB368]">Potential</strong>
+          </h2>
+          <p class="text-center justify-start text-whitePure lg:text-lg text-base font-normal leading-relaxed">See how
+            much you could earn with real examples.</p>
+        </div>
+
+        <!-- card item start  -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 items-center text-center">
+          <!-- singel item start  -->
+          <div class="">
+            <div
+              class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-6 rounded-xl flex flex-col gap-4 md:gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500 md:mx-0 mx-3">
+              <div class="border-b border-[#9ea4b41a] pb-4 md:pb-5">
+                <h3 class="font-roboto text-xl md:text-2xl font-bold mb-2 text-white-1">Small Publisher</h3>
+                <p class="text-[#9EA4B4] mb-4 md:mb-5 text-sm md:text-base">Publisher Revenue</p>
+                <h4 class="text-[32px] md:text-4xl font-bold text-white-1">$2,000</h4>
+              </div>
+
+              <div class="">
+                <p class="text-[#9EA4B4] text-sm md:text-base mb-2">Your Monthly Earnings</p>
+                <h4 class="text-[32px] md:text-4xl font-bold text-[#0DB368] mb-2">$120</h4>
+                <p class="text-[#9EA4B4] text-sm md:text-base">12-Month Total: $1,440)</p>
+              </div>
+            </div>
+          </div>
+          <!-- singel item end -->
+
+          <!-- singel item start  -->
+          <div class="">
+            <div
+              class="bg-[#F1F5F8] bg-opacity-5 p-7 lg:p-8 rounded-xl flex flex-col gap-4 md:gap-7 outline outline-1 outline-offset-[-1px] backdrop-blur-md h-full  outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <div class="border-b border-[#9ea4b41a] pb-4 md:pb-7">
+                <h3 class="font-roboto text-xl md:text-2xl font-bold mb-2 text-white-1">Medium Publisher</h3>
+                <p class="text-[#9EA4B4] text-sm md:text-base mb-4 md:mb-7">Publisher Revenue</p>
+                <h4 class="text-[32px] md:text-4xl font-bold text-white-1">$5,000</h4>
+              </div>
+
+              <div class="">
+                <p class="text-[#9EA4B4] text-sm md:text-base mb-2">Your Monthly Earnings</p>
+                <h4 class="text-[32px] md:text-4xl font-bold text-[#0DB368] mb-2">$300</h4>
+                <p class="text-[#9EA4B4] text-sm md:text-base">12-Month Total: $3,600</p>
+              </div>
+            </div>
+          </div>
+          <!-- singel item end -->
+          <!-- singel item start  -->
+          <div class="">
+            <div
+              class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-6 rounded-xl flex flex-col gap-4 md:gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500  md:mx-0 mx-3">
+              <div class="border-b border-[#9ea4b41a] pb-4 md:pb-5">
+                <h3 class="font-roboto text-xl md:text-2xl font-bold mb-2 text-white-1">Large Publisher</h3>
+                <p class="text-[#9EA4B4] mb-4 md:mb-5 text-sm md:text-base">Publisher Revenue</p>
+                <h4 class="text-[32px] md:text-4xl font-bold text-white-1">$15,000</h4>
+              </div>
+
+              <div class="">
+                <p class="text-[#9EA4B4]  text-sm md:text-base mb-2">Your Monthly Earnings</p>
+                <h4 class="text-[32px] md:text-4xl font-bold text-[#0DB368] mb-2">$900</h4>
+                <p class="text-[#9EA4B4]  text-sm md:text-base">12-Month Total: $10,800</p>
+              </div>
+            </div>
+          </div>
+          <!-- singel item end -->
+
+        </div>
+        <!-- card item end -->
+
+        <div class="border rounded-2xl border-[#0DB368] bg-[#0DB368] bg-opacity-10 p-5 md:p-6 max-w-[790px] mx-auto">
+          <p class="text-[#9EA4B4] text-sm md:text-base"><span class="text-[#DF1212]">*</span>Earnings based on 20%
+            profit margin. Actual
+            profit margins may vary (10-20%) based
+            on publisher size and negotiated
+            terms.</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- Earning Potential end -->
+
+
+    <!-- faq start  -->
+    <section class="lg:py-[80px] py-10">
+      <div class="px-4 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[72px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[690px] mx-auto">
+          <h2 class="text-whitePure lg:text-[42px] text-[28px] font-avenir leading-tight text-center font-bold">
+            <strong class="text-[#0DB368]">FAQ</strong> Monetumo Affiliate Program
+          </h2>
+          <p class="text-center justify-start text-whitePure lg:text-lg text-base font-normal leading-relaxed">Get
+            answers
+            to the most common questions about boosting your ad revenue
+            beyond AdSense.</p>
+        </div>
+
+        <!-- faq  -->
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-7">
+          <div class="flex flex-col gap-3 md:gap-5">
+            <!-- single item start  -->
+            <div
+              class="accordion-item border border-gray-700 overflow-hidden bg-[#F1F5F8] bg-opacity-5 px-3 py-4 lg:p-4 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <button
+                class="accordion-header w-full flex justify-between text-sm md:text-xl items-center text-start gap-1">
+                <span>How does the 30% profit share work?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                  stroke="currentColor">
+                  <path d="M1 1.5L10 10.5L19 1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p class="text-[#9EA4B4] lg:text-lg text-sm sm:text-base font-normal  leading-normal">Lorem ipsum dolor
+                  sit amet consectetur. Ultrices pulvinar amet lorem maecenas in odio sagittis pellentesque mauris.
+                  Dolor morbi arcu mi etiam interdum. Massa suspendisse justo neque urna eu eget aliquet.</p>
+              </div>
+            </div>
+            <!-- single item start  -->
+            <!-- single item start  -->
+            <div
+              class="accordion-item border border-gray-700 overflow-hidden bg-[#F1F5F8] bg-opacity-5 px-3 py-4 lg:p-4 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <button
+                class="accordion-header w-full flex justify-between text-sm md:text-xl items-center text-start gap-1">
+                <span>What are the publisher requirements?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                  stroke="currentColor">
+                  <path d="M1 1.5L10 10.5L19 1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p class="text-[#9EA4B4] lg:text-lg text-sm sm:text-base font-normal  leading-normal">Lorem ipsum dolor
+                  sit amet consectetur. Ultrices pulvinar amet lorem maecenas in odio sagittis pellentesque mauris.
+                  Dolor morbi arcu mi etiam interdum. Massa suspendisse justo neque urna eu eget aliquet.</p>
+              </div>
+            </div>
+            <!-- single item start  -->
+            <!-- single item start  -->
+            <div
+              class="accordion-item border border-gray-700 overflow-hidden bg-[#F1F5F8] bg-opacity-5 px-3 py-4 lg:p-4 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <button
+                class="accordion-header w-full flex justify-between text-sm md:text-xl items-center text-start gap-1">
+                <span>When do I get paid?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                  stroke="currentColor">
+                  <path d="M1 1.5L10 10.5L19 1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p class="text-[#9EA4B4] lg:text-lg text-sm sm:text-base font-normal  leading-normal">Lorem ipsum dolor
+                  sit amet consectetur. Ultrices pulvinar amet lorem maecenas in odio sagittis pellentesque mauris.
+                  Dolor morbi arcu mi etiam interdum. Massa suspendisse justo neque urna eu eget aliquet.</p>
+              </div>
+            </div>
+            <!-- single item start  -->
+            <!-- single item start  -->
+            <div
+              class="accordion-item border border-gray-700 overflow-hidden bg-[#F1F5F8] bg-opacity-5 px-3 py-4 lg:p-4 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <button
+                class="accordion-header w-full flex justify-between text-sm md:text-xl items-center text-start gap-1">
+                <span>How long do I earn commissions?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                  stroke="currentColor">
+                  <path d="M1 1.5L10 10.5L19 1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p class="text-[#9EA4B4] lg:text-lg text-sm sm:text-base font-normal  leading-normal">Lorem ipsum dolor
+                  sit amet consectetur. Ultrices pulvinar amet lorem maecenas in odio sagittis pellentesque mauris.
+                  Dolor morbi arcu mi etiam interdum. Massa suspendisse justo neque urna eu eget aliquet.</p>
+              </div>
+            </div>
+            <!-- single item start  -->
+
+            <!-- single item start  -->
+            <div
+              class="accordion-item border border-gray-700 overflow-hidden bg-[#F1F5F8] bg-opacity-5 px-3 py-4 lg:p-4 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <button
+                class="accordion-header w-full flex justify-between text-sm md:text-xl items-center text-start gap-1">
+                <span>What happens after 12 months?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                  stroke="currentColor">
+                  <path d="M1 1.5L10 10.5L19 1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p class="text-[#9EA4B4] lg:text-lg text-sm sm:text-base font-normal  leading-normal">Lorem ipsum dolor
+                  sit amet consectetur. Ultrices pulvinar amet lorem maecenas in odio sagittis pellentesque mauris.
+                  Dolor morbi arcu mi etiam interdum. Massa suspendisse justo neque urna eu eget aliquet.</p>
+              </div>
+            </div>
+            <!-- single item start  -->
+
+          </div>
+
+          <div class="flex flex-col gap-3 md:gap-5">
+            <!-- single item start  -->
+            <div
+              class="accordion-item border border-gray-700 overflow-hidden bg-[#F1F5F8] bg-opacity-5 px-3 py-4 lg:p-4 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <button
+                class="accordion-header w-full flex justify-between text-sm md:text-xl items-center text-start gap-1">
+                <span>Can I get an upfront payment instead?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                  stroke="currentColor">
+                  <path d="M1 1.5L10 10.5L19 1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p class="text-[#9EA4B4] lg:text-lg text-sm sm:text-base font-normal  leading-normal">Lorem ipsum dolor
+                  sit amet consectetur. Ultrices pulvinar amet lorem maecenas in odio sagittis pellentesque mauris.
+                  Dolor morbi arcu mi etiam interdum. Massa suspendisse justo neque urna eu eget aliquet.</p>
+              </div>
+            </div>
+            <!-- single item start  -->
+            <!-- single item start  -->
+            <div
+              class="accordion-item border border-gray-700 overflow-hidden bg-[#F1F5F8] bg-opacity-5 px-3 py-4 lg:p-4 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <button
+                class="accordion-header w-full flex justify-between text-sm md:text-xl items-center text-start gap-1">
+                <span>How do I track my earnings?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                  stroke="currentColor">
+                  <path d="M1 1.5L10 10.5L19 1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p class="text-[#9EA4B4] lg:text-lg text-sm sm:text-base font-normal  leading-normal">Lorem ipsum dolor
+                  sit amet consectetur. Ultrices pulvinar amet lorem maecenas in odio sagittis pellentesque mauris.
+                  Dolor morbi arcu mi etiam interdum. Massa suspendisse justo neque urna eu eget aliquet.</p>
+              </div>
+            </div>
+            <!-- single item start  -->
+            <!-- single item start  -->
+            <div
+              class="accordion-item border border-gray-700 overflow-hidden bg-[#F1F5F8] bg-opacity-5 px-3 py-4 lg:p-4 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <button
+                class="accordion-header w-full flex justify-between text-sm md:text-xl items-center text-start gap-1">
+                <span>What is Monetumo's profit margin??</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                  stroke="currentColor">
+                  <path d="M1 1.5L10 10.5L19 1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p class="text-[#9EA4B4] lg:text-lg text-sm sm:text-base font-normal  leading-normal">Lorem ipsum dolor
+                  sit amet consectetur. Ultrices pulvinar amet lorem maecenas in odio sagittis pellentesque mauris.
+                  Dolor morbi arcu mi etiam interdum. Massa suspendisse justo neque urna eu eget aliquet.</p>
+              </div>
+            </div>
+            <!-- single item start  -->
+            <!-- single item start  -->
+            <div
+              class="accordion-item border border-gray-700 overflow-hidden bg-[#F1F5F8] bg-opacity-5 px-3 py-4 lg:p-4 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <button
+                class="accordion-header w-full flex justify-between text-sm md:text-xl items-center text-start gap-1">
+                <span>Can I refer multiple publishers?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                  stroke="currentColor">
+                  <path d="M1 1.5L10 10.5L19 1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p class="text-[#9EA4B4] lg:text-lg text-sm sm:text-base font-normal  leading-normal">Lorem ipsum dolor
+                  sit amet consectetur. Ultrices pulvinar amet lorem maecenas in odio sagittis pellentesque mauris.
+                  Dolor morbi arcu mi etiam interdum. Massa suspendisse justo neque urna eu eget aliquet.</p>
+              </div>
+            </div>
+            <!-- single item start  -->
+
+            <!-- single item start  -->
+            <div
+              class="accordion-item border border-gray-700 overflow-hidden bg-[#F1F5F8] bg-opacity-5 px-3 py-4 lg:p-4 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+              <button
+                class="accordion-header w-full flex justify-between text-sm md:text-xl items-center text-start gap-1">
+                <span>How long does approval take?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                  stroke="currentColor">
+                  <path d="M1 1.5L10 10.5L19 1.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p class="text-[#9EA4B4] lg:text-lg text-sm sm:text-base font-normal  leading-normal">Lorem ipsum dolor
+                  sit amet consectetur. Ultrices pulvinar amet lorem maecenas in odio sagittis pellentesque mauris.
+                  Dolor morbi arcu mi etiam interdum. Massa suspendisse justo neque urna eu eget aliquet.</p>
+              </div>
+            </div>
+            <!-- single item start  -->
+
+          </div>
+
+        </div>
+        <div class="flex flex-col gap-4">
+          <div
+            class="flex flex-wrap flex-row items-center gap-4 justify-center md:w-auto w-[330px] mx-auto max-w-full text-center">
+            <a href="#"
+              class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 border border-[#00E980] md:w-[236px] w-full justify-center">
+              <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                  class="w-6 mt-1" alt="arrow-right"></span>
+            </a>
+            <a href="#" class="bg-transparent hover:bg-[#00E980] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#00E980] hover:text-[#132D46] transition-colors duration-300 border border-[#00E980] md:w-[236px] w-full justify-center
+              ">
+              <span>Get Revenue Estimation</span>
+            </a>
+          </div>
+          <div class="text-center">
+            <p class="text-[#9EA4B4]">No setup fees. We only win when you do.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- faq end -->
+    <!-- ready to start  -->
+    <section class="lg:py-[100px] py-12">
+      <div class="px-4 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[72px]">
+        <div
+          class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-6 rounded-xl flex flex-col justify-center text-center items-center gap-4 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500 max-w-[940px] mx-auto w-full">
+          <h2 class="md:text-[42px] text-[28px] leading-tight font-bold font-avenir">Ready to start earning <strong
+              class="text-[#0DB368]">with
+              Monetumo?</strong></h2>
+          <p class="text-sm md:text-lg">Join our affiliate program and start earning recurring revenue today.</p>
+          <a href="#"
+            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-1 md:px-[18px] tracking-[0.5px] text-base xl:text-lg font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 border border-[#00E980] justify-center w-[330px] max-w-full">
+            <span>Apply to Become an Affiliate</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                class="w-6 mt-1" alt="arrow-right"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ready to end -->
+
+
+  </main>
+
+  <!-- footer start  -->
+  <!-- footer start  -->
+  <footer class="pt-10 md:pt-[100px] pb-9 bg-[#F7FBFF] text-[#243C53]">
+    <div class="px-8 md:px-5 xl:max-w-[1240px] mx-auto">
+      <div
+        class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-5 lg:gap-[52px] pb-9 md:pb-11 border-b border-[#9EA4B4]">
+        <div class="md:col-span-4">
+          <div class="flex flex-col gap-4 ">
+            <a href="index.html"><img loading="lazy" src="./images/footer-logo.svg" class="w-[175px]" alt=""></a>
+            <p class="text-[#243C53] text-sm md:text-base font-normal leading-tight">The #1 ad
+              monetization platform helping publishers maximize their revenue with header bidding and premium demand
+              partners.</p>
+            <ul class="flex flex-col gap-2">
+              <li class="text-[#243C53] text-sm md:text-base font-normal leading-tight">Monetumo ApS
+              </li>
+              <li class="text-[#243C53] text-sm md:text-base leading-tight"> <span
+                  class="font-semibold">Copenhagen</span>, Denmark
+              </li>
+              <li class="text-[#243C53] text-sm md:text-base font-normal leading-tight">
+                CVR:
+                <span class="font-semibold"> 12345678</span>
+              </li>
+            </ul>
+            <ul class="flex flex-row gap-3 ">
+              <li>
+                <a href="">
+                  <img loading="lazy" src="./images/landing/facebook.svg" alt="facebook">
+                </a>
+              </li>
+
+              <li>
+                <a href="">
+                  <img loading="lazy" src="./images/landing/twitter.svg" alt="twitter">
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img loading="lazy" src="./images/landing/linkedin.svg" alt="linkedin">
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img loading="lazy" src="./images/landing/youtube.svg" alt="youtube">
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="md:col-span-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-4 md:gap-4 gap-6">
+            <!-- single item start  -->
+            <div class="flex flex-col gap-4">
+              <h4 class="text-[#243C53] text-base font-semibold leading-none">Solutions</h4>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Header
+                    Bidding Setup</a>
+                </li>
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Revenue
+                    Dashboard
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Ad
+                    Optimization</a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <div class="flex flex-col gap-4">
+              <h4 class="text-[#243C53] text-base font-semibold leading-none">Compare with</h4>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Header
+                    Bidding Setup</a>
+                </li>
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Revenue
+                    Dashboard
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Ad
+                    Optimization</a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <div class="flex flex-col gap-4">
+              <h4 class="text-[#243C53] text-base font-semibold leading-none">Resources</h4>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Header
+                    Bidding Setup</a>
+                </li>
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Revenue
+                    Dashboard
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Ad
+                    Optimization</a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <div class="flex flex-col gap-4">
+              <h4 class="text-[#243C53] text-base font-semibold leading-none">Company</h4>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Header
+                    Bidding Setup</a>
+                </li>
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Revenue
+                    Dashboard
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Ad
+                    Optimization</a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- single item end  -->
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="pt-9 md:pt-11 flex flex-row lg:justify-between md:justify-center flex-wrap gap-4 items-center">
+        <p class="text-sm md:text-sm">© 2025 Monetumo ApS. All rights reserved. | <a href="mailto:info@monetumo.com"
+            class="hover:text-[#0DB368] transition-all duration-200">info@monetumo.com</a> | <a href="tel:+45 1234 5678"
+            class="hover:text-[#0DB368] transition-all duration-200">+45 1234 5678</a></p>
+        <ul class="flex flex-row gap-8 items-center">
+          <li><a href="" class="hover:text-[#0DB368] transition-all duration-200 underline">Privacy Policy</a></li>
+          <li><a href="" class="hover:text-[#0DB368] transition-all duration-200 underline">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Script  -->
+  <script src="./script/momentuNavbar.js"></script>
+  <script>
+    // Dropdown toggler for Features menu
+    document.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const dropdown = btn.parentElement.querySelector('.dropDownItem');
+        const isOpen = dropdown.classList.contains('block');
+        // Close all dropdowns first
+        document.querySelectorAll('.dropDownItem').forEach(function (d) {
+          d.classList.add('hidden');
+          d.classList.remove('block');
+        });
+        // Toggle current dropdown
+        if (!isOpen) {
+          dropdown.classList.remove('hidden');
+          dropdown.classList.add('block');
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          dropdown.classList.add('hidden');
+          dropdown.classList.remove('block');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+  </script>
+  <script>
+    const accordions = document.querySelectorAll('.accordion-item');
+
+    accordions.forEach(item => {
+      const header = item.querySelector('.accordion-header');
+      const content = item.querySelector('.accordion-content');
+      const icon = header.querySelector('svg');
+
+      header.addEventListener('click', () => {
+        const isOpen = content.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+        document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+        document.querySelectorAll('.accordion-header svg').forEach(ic => ic.classList.remove('rotate-180'));
+
+        // Open clicked if not already open
+        if (!isOpen) {
+          content.classList.add('open');
+          item.classList.add('active');  // 🔥 add active class
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
