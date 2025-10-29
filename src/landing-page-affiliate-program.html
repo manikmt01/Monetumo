@@ -36,6 +36,63 @@
       src: url("./font/avenir-next-cyr-bold.ttf") format("truetype");
     }
 
+    /* Range Slider Styles */
+    .custom-range {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 4px;
+      background: #6A6E79;
+      border-radius: 2px;
+      outline: none;
+    }
+
+    /* Handle styles */
+    .custom-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 28px;
+      height: 28px;
+      background: white;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.1s;
+      position: relative;
+      top: -12px;
+    }
+
+    .custom-range::-moz-range-thumb {
+      width: 28px;
+      height: 28px;
+      background: white;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.1s;
+      position: relative;
+      top: -12px;
+    }
+
+    /* Track progress color */
+    .custom-range::-webkit-slider-runnable-track {
+      background: linear-gradient(to right, #0DB368 var(--value, 0%), #6A6E79 var(--value, 0%));
+      height: 4px;
+    }
+
+    .custom-range::-moz-range-progress {
+      background: #0DB368;
+      height: 4px;
+    }
+
+    /* Hover/Active states */
+    .custom-range::-webkit-slider-thumb:hover,
+    .custom-range::-webkit-slider-thumb:active {
+      transform: scale(1.1);
+    }
+
+    .custom-range::-moz-range-thumb:hover,
+    .custom-range::-moz-range-thumb:active {
+      transform: scale(1.1);
+    }
 
     body {
       font-family: "Inter", sans-serif;
@@ -55,10 +112,7 @@
       <!-- Desktop Logo -->
       <div class="block text-xl flex-1 lg:flex-none font-semibold text-center lg:text-left">
         <a href="index.html" class="block">
-
-          <img loading="lazy" src="./images/logo-2x.png"
-            srcset="./images/logo-1x.png 1x, ./images/logo-2x.png 2x, ./images/logo-3x.png 3x "
-            class="w-[124px] sm:w-[174px]" alt="Logo">
+          <img loading="lazy" src="./images/logo.svg" alt="Logo">
         </a>
       </div>
       <div class="">
@@ -392,39 +446,31 @@
             <!-- range start  -->
             <div class="">
               <!-- single item start    -->
-              <div class="">
+              <div class="range-slider mb-8">
                 <h4 class="mb-8 text-lg md:text-xl">Your Estimated Earnings</h4>
-                <!-- grray bar  -->
-                <div class="relative h-1 bg-[#6A6E79] w-full">
-                  <!-- green bar  -->
-                  <span class="w-[20%] h-1 bg-[#0DB368] block"></span>
-                  <span
-                    class="w-7 h-7 rounded-full bg-white-1 block absolute top-1/2 -translate-y-1/2 left-[20%]"></span>
+                <div class="slider-wrapper">
+                  <input type="range" min="1" max="20" value="4" class="custom-range">
+                  <div class="range-labels flex justify-between text-[#9EA4B4] mt-3">
+                    <span>1</span>
+                    <span>20</span>
+                  </div>
                 </div>
-                <div class="text-[#9EA4B4] flex flex-row justify-between items-center mt-3">
-                  <span>1</span>
-                  <span>20</span>
+              </div>
+              <!-- single item start    -->
+              <!-- single item start    -->
+              <div class="range-slider mt-6">
+                <h4 class="mb-8 text-lg md:text-xl">Average Monthly Page Views per <br class="lg:block hidden">
+                  Publisher: 100,000</h4>
+                <div class="slider-wrapper">
+                  <input type="range" min="100000" max="5000000" value="200000" class="custom-range">
+                  <div class="text-[#9EA4B4] flex flex-row justify-between items-center mt-3">
+                    <span>100k</span>
+                    <span>5M</span>
+                  </div>
                 </div>
               </div>
               <!-- single item start    -->
 
-              <!-- single item start    -->
-              <div class="mt-6">
-                <h4 class="mb-8 text-lg md:text-xl">Average Monthly Page Views per <br class="lg:block hidden">
-                  Publisher: 100,000</h4>
-                <!-- grray bar  -->
-                <div class="relative h-1 bg-[#6A6E79] w-full">
-                  <!-- green bar  -->
-                  <span class="w-[5%] h-1 bg-[#0DB368] block"></span>
-                  <span
-                    class="w-7 h-7 rounded-full bg-white-1 block absolute top-1/2 -translate-y-1/2 left-[5%]"></span>
-                </div>
-                <div class="text-[#9EA4B4] flex flex-row justify-between items-center mt-3">
-                  <span>100k</span>
-                  <span>5M</span>
-                </div>
-              </div>
-              <!-- single item start    -->
               <!-- How earnings are calculated  -->
               <div
                 class="border rounded-2xl border-[#0DB368] bg-[#0DB368] bg-opacity-10 p-4 md:p-6 flex flex-row gap-2 items-start mt-5 md:mt-7">
@@ -1222,6 +1268,17 @@
           icon.classList.add('rotate-180');
         }
       });
+    });
+  </script>
+  <script>
+    // Small script to update the progress color
+    document.querySelectorAll('.custom-range').forEach(range => {
+      const updateValue = () => {
+        const value = ((range.value - range.min) / (range.max - range.min)) * 100;
+        range.style.setProperty('--value', `${value}%`);
+      }
+      range.addEventListener('input', updateValue);
+      updateValue(); // Initial update
     });
   </script>
 </body>
