@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./images/fav.svg" sizes="16x16 32x32 48x48" type="image/x-icon" />
+  <link rel="icon" href="./images/fav-16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="./images/fav-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="./images/fav-32.png" sizes="192x192" type="image/png" />
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <title>Monetumo</title>
+
+  <style>
+    @font-face {
+      font-family: "Avenir Next Cyr";
+      src: url("./font/Avenir Next Cyr Medium.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "Avenir Next Cyr";
+      src: url("./font/avenir-next-cyr-bold.ttf") format("truetype");
+    }
+
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #132D46;
+      color: #fff;
+    }
+
+    .adFormatBg {
+      background-image: url(./images/landing/ad-format.png);
+      background-position: right center;
+    }
+
+    @media (min-width: 1024px) {
+      .standardBg {
+        background-image: url(./images/landing/Graphic-Element.png);
+        background-position: bottom right;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .adFormatBg {
+        background-size: 50% 100%;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .adFormatBg {
+        background-image: none;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- header start here  -->
+  <header class="sticky top-0 left-0 z-50 bg-[#132D46] momentoheader ">
+    <!-- Navbar -->
+    <div class="flex items-center justify-between px-5 max-w-[1240px] mx-auto py-5 lg:py-9 relative bg-[#132D46]"
+      id="nav-main">
+      <!-- Desktop Logo -->
+      <div class="block text-xl flex-1 lg:flex-none font-semibold text-center lg:text-left">
+        <a href="index.html" class="block">
+
+          <img loading="lazy" src="./images/logo-2x.png" srcset="
+                            ./images/logo-1x.png 1x,
+                            ./images/logo-2x.png 2x,
+                            ./images/logo-3x.png 3x
+                        " class="w-[124px] sm:w-[174px]" alt="Logo">
+        </a>
+      </div>
+      <div class="">
+        <!-- Desktop Menu Items (Visible on large screens) -->
+        <ul class="hidden lg:flex items-center gap-9">
+          <!-- ...existing code... -->
+          <li class="dropdown relative flex flex-col items-center">
+            <button
+              class="dropdown-toggle flex gap-2 items-center text-[#FCFEFD] font-medium text-sm xl:text-base  hover:text-[#00E980] capitalize tracking-[.50px] py-3 aria-expanded:text-[#00E980]"
+              aria-expanded="false" aria-controls="features-dropdown" type="button">
+              Features
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none" class="mt-1"
+                stroke="currentColor">
+                <path d="M1.5 0.75L6 5.25L10.5 0.75" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div id="features-dropdown"
+              class="dropDownItem min-w-[180px] bg-[#243C53] rounded-lg shadow-lg absolute left-0 top-full mt-2 z-10 hidden">
+              <ul class="py-2">
+                <li><a href="#"
+                    class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                    1</a>
+                </li>
+                <li><a href="#"
+                    class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                    2</a>
+                </li>
+                <li><a href="#"
+                    class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                    3</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- ...existing code... -->
+          <li><a href="#"
+              class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Pricing</a>
+          </li>
+          <li><a href="#"
+              class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Results</a>
+          </li>
+
+          <li><a href="#"
+              class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Agency</a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="flex justify-end lg:space-x-4 2xl:space-x-9 items-center">
+        <!-- Hamburger Icon (Visible only on mobile) -->
+        <button id="momentodrawer-button" class="lg:hidden me-3" aria-label="open sidebar">
+          <img loading="lazy" src="./images/hamburger.png" alt="Menu Icon">
+        </button>
+
+        <!-- Sign Up Button -->
+        <div class="hidden lg:flex lg:items-center lg:gap-4">
+          <a href="#"
+            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 border border-[#00E980]">
+            <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                class="w-6 mt-1" alt="arrow-right"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar Drawer -->
+    <div id="momentodrawer"
+      class="w-full fixed top-0 left-0 h-full bg-[#132D46] shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
+      <div class="p-5 h-screen flex flex-col">
+        <div class="flex-1">
+          <div class="flex items-center justify-between">
+            <div class="block text-xl flex-1 lg:flex-none font-semibold text-center lg:text-left">
+              <a href="index.html" class="block">
+                <img loading="lazy" src="./images/logo.svg" class="w-[124px]" alt="Logo">
+              </a>
+            </div>
+            <!-- Close Button -->
+            <button class="w-9" aria-label="close sidebar" onclick="closeMomentoDrawer()">
+              <img loading="lazy" src="./images/close.svg" alt="">
+            </button>
+          </div>
+          <!-- Sidebar Content -->
+          <ul class="flex flex-col gap-4 mt-10 items-center">
+            <!-- ...existing code... -->
+            <li class="dropdown relative flex flex-col items-center">
+              <button
+                class="dropdown-toggle flex gap-2 items-center text-[#FCFEFD] font-medium text-sm xl:text-base  hover:text-[#00E980] capitalize tracking-[.50px] aria-expanded:text-[#00E980]"
+                aria-expanded="false" aria-controls="features-dropdown" type="button">
+                Features
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                  class="mt-1" stroke="currentColor">
+                  <path d="M1.5 0.75L6 5.25L10.5 0.75" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="features-dropdown"
+                class="dropDownItem min-w-[180px] bg-[#243C53] rounded-lg shadow-lg mt-1 z-10 hidden text-center">
+                <ul class="py-2">
+                  <li><a href="#"
+                      class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                      1</a>
+                  </li>
+                  <li><a href="#"
+                      class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                      2</a>
+                  </li>
+                  <li><a href="#"
+                      class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                      3</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- ...existing code... -->
+            <li><a href="#"
+                class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Pricing</a>
+            </li>
+            <li><a href="#"
+                class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Results</a>
+            </li>
+
+            <li><a href="#"
+                class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Agency</a>
+            </li>
+
+            <li>
+              <a href="#"
+                class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 w-fit">
+                <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                    class="w-6 mt-1" alt="arrow-right"></span>
+              </a>
+
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- main content  -->
+  <main class="">
+
+    <!-- ad formats start  -->
+    <section class="lg:py-[100px] py-12 adFormatBg bg-no-repeat">
+      <div class="px-4 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[72px]">
+        <div class="w-[590px] max-w-full md:mx-0 mx-auto">
+          <h1
+            class="text-whitePure lg:text-[48px] text-[28px] font-avenir leading-tight md:text-start text-center font-bold">
+            All <strong class="text-[#00E980]">ad formats</strong>, live on your site <strong class="text-[#00E980]">in
+              minutes</strong></h1>
+          <ul class="flex flex-col gap-4 mt-9 md:w-auto w-[350px] max-w-full md:mx-0 mx-auto">
+            <li class="md:text-base text-sm flex gap-2 items-start">
+              <img src="./images/landing/agency/check-circle.svg" alt="check">
+              <span>Wide range of IAB-approved banner & video ads</span>
+            </li>
+            <li class="md:text-base text-sm flex gap-2 items-start">
+              <img src="./images/landing/agency/check-circle.svg" alt="check">
+              <span>Our experts help you pick what performs best</span>
+            </li>
+            <li class="md:text-base text-sm flex gap-2 items-start">
+              <img src="./images/landing/agency/check-circle.svg" alt="check">
+              <span>Mix high-impact and video ads for more revenue</span>
+            </li>
+            <li class="md:text-base text-sm flex gap-2 items-start">
+              <img src="./images/landing/agency/check-circle.svg" alt="check">
+              <span>Unlock your site’s full monetization potential</span>
+            </li>
+          </ul>
+          <div
+            class="flex flex-wrap flex-row items-center gap-4 justify-start md:w-auto w-[330px] mx-auto max-w-full text-center mt-9">
+            <a href="#"
+              class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 border border-[#00E980] md:w-[236px] w-full justify-center">
+              <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                  class="w-6 mt-1" alt="arrow-right"></span>
+            </a>
+            <a href="#" class="bg-transparent hover:bg-[#00E980] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#00E980] hover:text-[#132D46] transition-colors duration-300 border border-[#00E980] md:w-[236px] w-full justify-center
+                        ">
+              <span>Get Revenue Estimation</span>
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="relative animate-wiggle lg:hidden mt-12">
+        <!-- hero mobile  -->
+        <img loading="lazy" src="./images/landing/ad-format-mobile-1x.png" srcset="
+                                                            ./images/landing/ad-format-mobile-1x.png 1x,
+                                                            ./images/landing/ad-format-mobile-2x.png 2x,
+                                                            ./images/landing/ad-format-mobile-3x.png 3x
+                                                        " class="w-full" alt="ad-format-mobile">
+      </div>
+    </section>
+    <!-- ad formats end -->
+
+
+    <!-- Premium Formats start  -->
+    <section class="lg:py-[100px] py-12">
+      <div class="px-8 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[56px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[690px] mx-auto">
+          <h2 class="text-whitePure lg:text-5xl text-[28px] font-avenir leading-tight text-center font-bold">
+            Premium Formats
+          </h2>
+          <p
+            class="text-center justify-start text-whitePure lg:text-lg text-base font-normal leading-relaxed md:mx-0 -mx-4">
+            High-performing ad units with increased CPM.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-5">
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div class="flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/slide-in-1x.png" srcset="
+                                                                        ./images/landing/slide-in-1x.png 1x,
+                                                                        ./images/landing/slide-in-2x.png 2x,
+                                                                        ./images/landing/slide-in-3x.png 3x
+                                                                    " class="w-full" alt="slide-in">
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="text-xl lg:text-[28px] font-medium leading-snug">Slide-in</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">A subtle, non-intrusive ad that
+                smoothly appears from the side of the screen as users scroll through your content. Ideal
+                for grabbing attention without disrupting the reading experience. It performs exceptionally well for
+                mid-session
+                engagement and call-to-action campaigns.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div class="flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/slide-in-1x.png" srcset="
+                                                                                    ./images/landing/slide-in-1x.png 1x,
+                                                                                    ./images/landing/slide-in-2x.png 2x,
+                                                                                    ./images/landing/slide-in-3x.png 3x
+                                                                                " class="w-full" alt="slide-in">
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="text-xl lg:text-[28px] font-medium leading-snug">Recommended content</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">A personalized ad format that
+                suggests relevant articles, products, or offers based on user interests and browsing
+                behavior. It appears naturally at the end of articles or within content feeds, keeping visitors engaged
+                longer while
+                increasing page views and ad revenue.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div class="flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/exit-pop-up-1x.png" srcset="
+                                                                                  ./images/landing/exit-pop-up-1x.png 1x,
+                                                                                  ./images/landing/exit-pop-up-2x.png 2x,
+                                                                                  ./images/landing/exit-pop-up-3x.png 3x
+                                                                              " class="w-full" alt="exit-pop-up">
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="text-xl lg:text-[28px] font-medium leading-snug">Exit Pop-up</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Triggered when a user attempts to
+                leave the page, offering a final chance to convert visitors. Commonly used for
+                promoting special deals, newsletter sign-ups, or re-engagement campaigns to reduce bounce rates and
+                increase retention.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+
+        </div>
+        <div
+          class="flex flex-wrap flex-row items-center gap-4 justify-center md:w-auto w-[330px] mx-auto max-w-full text-center">
+          <a href="#"
+            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 border border-[#00E980] md:w-[236px] w-full justify-center">
+            <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                class="w-6 mt-1" alt="arrow-right"></span>
+          </a>
+          <a href="#" class="bg-transparent hover:bg-[#00E980] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#00E980] hover:text-[#132D46] transition-colors duration-300 border border-[#00E980] md:w-[236px] w-full justify-center
+                        ">
+            <span>Get Revenue Estimation</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Premium Formats end  -->
+
+
+
+    <!-- Standard Formats start  -->
+    <section class="lg:py-[100px] py-12 standardBg bg-no-repeat">
+      <div class="px-8 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[56px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[690px] mx-auto">
+          <h2 class="text-whitePure lg:text-5xl text-[28px] font-avenir leading-tight text-center font-bold">
+            Standard Formats
+          </h2>
+          <p
+            class="text-center justify-start text-whitePure lg:text-lg text-sm font-normal leading-relaxed md:mx-0 -mx-4">
+            Classic ad units that easily integrate into any website.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-5">
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div class="flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/Half-Page-1x.png" srcset="
+                                                                        ./images/landing/Half-Page-1x.png 1x,
+                                                                        ./images/landing/Half-Page-2x.png 2x,
+                                                                        ./images/landing/Half-Page-3x.png 3x
+                                                                    " class="w-full" alt="Half-Page">
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="text-xl lg:text-[28px] font-medium leading-snug">Half Page</h4>
+              <h5 class="text-[#0DB368] text-base md:text-lg">300x600</h5>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">A tall, impactful ad unit that
+                attracts user attention and delivers higher viewability. Perfect for premium advertisers
+                looking for strong visibility.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div class="flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/Leaderboard-1x.png" srcset="
+                                                                                    ./images/landing/pre-roll-1x.png 1x,
+                                                                                    ./images/landing/pre-roll-2x.png 2x,
+                                                                                    ./images/landing/pre-roll-3x.png 3x
+                                                                                " class="w-full" alt="pre-roll">
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="text-xl lg:text-[28px] font-medium leading-snug">Leaderboard</h4>
+              <h5 class="text-[#0DB368] text-base md:text-lg">728x900</h5>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">A wide banner that perfectly fits
+                the top section of your website. Ideal for brand awareness campaigns and driving
+                visibility right when visitors land on your page.
+              </p>
+            </div>
+          </div>
+          <!-- single item end  -->
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div class="flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/Rectangle-1x.png" srcset="
+                                                                                  ./images/landing/Rectangle-1x.png 1x,
+                                                                                  ./images/landing/Rectangle-2x.png 2x,
+                                                                                  ./images/landing/Rectangle-3x.png 3x
+                                                                              " class="w-full" alt="Rectangle">
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="text-xl lg:text-[28px] font-medium leading-snug">Rectangle</h4>
+              <h5 class="text-[#0DB368] text-base md:text-lg">300x250</h5>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">A flexible and high-performing ad
+                format that fits seamlessly within article content or sidebars. Great for increasing
+                engagement and click-through rates.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div class="flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/Skyscraper-1x.png" srcset="
+                                                                                  ./images/landing/Skyscraper-1x.png 1x,
+                                                                                  ./images/landing/Skyscraper-2x.png 2x,
+                                                                                  ./images/landing/Skyscraper-3x.png 3x
+                                                                              " class="w-full" alt="Skyscraper">
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="text-xl lg:text-[28px] font-medium leading-snug">Skyscraper</h4>
+              <h5 class="text-[#0DB368] text-base md:text-lg">160x600</h5>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">A vertical ad format designed for
+                sidebars. It stays in view while users scroll, ensuring consistent exposure throughout
+                the reading experience.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div class="flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/Billboard-1x.png" srcset="
+                                                                                  ./images/landing/Billboard-1x.png 1x,
+                                                                                  ./images/landing/Billboard-2x.png 2x,
+                                                                                  ./images/landing/Billboard-3x.png 3x
+                                                                              " class="w-full" alt="Billboard">
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="text-xl lg:text-[28px] font-medium leading-snug">Billboard</h4>
+              <h5 class="text-[#0DB368] text-base md:text-lg">970x250</h5>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">A large, eye-catching format
+                typically placed on the homepage or above the fold. Excellent for impactful branding and
+                major ad campaigns.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+
+
+        </div>
+        <div
+          class="flex flex-wrap flex-row items-center gap-4 justify-center md:w-auto w-[330px] mx-auto max-w-full text-center">
+          <a href="#"
+            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 border border-[#00E980] md:w-[236px] w-full justify-center">
+            <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                class="w-6 mt-1" alt="arrow-right"></span>
+          </a>
+          <a href="#" class="bg-transparent hover:bg-[#00E980] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#00E980] hover:text-[#132D46] transition-colors duration-300 border border-[#00E980] md:w-[236px] w-full justify-center
+                        ">
+            <span>Get Revenue Estimation</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Standard Formats end  -->
+
+
+
+    <!-- Video Advertising start  -->
+    <section class="lg:py-[100px] py-12">
+      <div class="px-8 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[56px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[690px] mx-auto">
+          <h2 class="text-whitePure lg:text-5xl text-[28px] font-avenir leading-tight text-center font-bold">
+            Video Advertising
+          </h2>
+          <p
+            class="text-center justify-start text-whitePure lg:text-lg text-sm font-normal leading-relaxed md:mx-0 -mx-4">
+            Video ads are the most profitable format for publishers.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-5">
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div class="flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/in-text-video-1x.png" srcset="
+                                                                        ./images/landing/in-text-video-1x.png 1x,
+                                                                        ./images/landing/in-text-video-2x.png 2x,
+                                                                        ./images/landing/in-text-video-3x.png 3x
+                                                                    " class="w-full" alt="in-text-video">
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="text-xl lg:text-[28px] font-medium leading-snug">In-Text Video</h4>
+              <h5 class="text-[#0DB368] text-base md:text-lg">640x320</h5>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Plays inside content between
+                paragraphs.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div class="flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/pre-roll-1x.png" srcset="
+                                                                                    ./images/landing/pre-roll-1x.png 1x,
+                                                                                    ./images/landing/pre-roll-2x.png 2x,
+                                                                                    ./images/landing/pre-roll-3x.png 3x
+                                                                                " class="w-full" alt="pre-roll">
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="text-xl lg:text-[28px] font-medium leading-snug">Pre-Roll / Mid-Roll</h4>
+              <h5 class="text-[#0DB368] text-base md:text-lg">640x320</h5>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Before or during video content.
+              </p>
+            </div>
+          </div>
+          <!-- single item end  -->
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div class="flex justify-center items-center">
+              <img loading="lazy" src="./images/landing/outstream-video-1x.png" srcset="
+                                                                                  ./images/landing/outstream-video-1x.png 1x,
+                                                                                  ./images/landing/outstream-video-2x.png 2x,
+                                                                                  ./images/landing/outstream-video-3x.png 3x
+                                                                              " class="w-full" alt="outstream-video">
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="text-xl lg:text-[28px] font-medium leading-snug">Outstream Video</h4>
+              <h5 class="text-[#0DB368] text-base md:text-lg">640x320</h5>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Placed anywhere on the page.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+
+        </div>
+        <div
+          class="flex flex-wrap flex-row items-center gap-4 justify-center md:w-auto w-[330px] mx-auto max-w-full text-center">
+          <a href="#"
+            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#132D46] transition-colors duration-300 border border-[#00E980] md:w-[236px] w-full justify-center">
+            <span>Start 30 Days Free</span> <span><img loading="lazy" src="./images/landing/arrow-right.svg"
+                class="w-6 mt-1" alt="arrow-right"></span>
+          </a>
+          <a href="#" class="bg-transparent hover:bg-[#00E980] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2 text-[#00E980] hover:text-[#132D46] transition-colors duration-300 border border-[#00E980] md:w-[236px] w-full justify-center
+                        ">
+            <span>Get Revenue Estimation</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Video Advertising end  -->
+
+
+
+
+
+
+    <!-- how it works start  -->
+    <section class="lg:py-[100px] py-12">
+      <div class="px-8 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col gap-6 lg:gap-[72px]">
+        <div class="flex flex-col gap-3 lg:gap-4 max-w-full w-[320px] md:w-[770px] mx-auto">
+          <h2 class="text-whitePure lg:text-[42px] text-[28px] font-avenir leading-tight text-center font-bold">
+            How Monetumo <strong class="text-[#0DB368]">Works</strong>
+          </h2>
+        </div>
+        <!-- card item start  -->
+        <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 items-center text-center">
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] w-[60px] h-[60px] rounded-xl flex justify-center items-center text-[28px] font-medium text-white-1 mx-auto">
+              <span>1</span>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="lg:text-xl font-medium leading-snug">Create your free account</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Get started in minutes — no setup
+                fees, no contracts. Just sign up and unlock access to our platform.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] w-[60px] h-[60px] rounded-xl flex justify-center items-center text-[28px] font-medium text-white-1 mx-auto">
+              <span>2</span>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="lg:text-xl font-medium leading-snug">Choose your ad formats</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Pick from premium display, native,
+                and video ads optimized to fit your website’s layout and audience.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] w-[60px] h-[60px] rounded-xl flex justify-center items-center text-[28px] font-medium text-white-1 mx-auto">
+              <span>3</span>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="lg:text-xl font-medium leading-snug">Add the Monetumo 1 line code</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Paste a single line of code — our
+                AI-powered system automatically tests and optimizes placements for maximum yield.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+          <!-- single item start  -->
+          <div
+            class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+            <div
+              class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] w-[60px] h-[60px] rounded-xl flex justify-center items-center text-[28px] font-medium text-white-1 mx-auto">
+              <span>4</span>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-3">
+              <h4 class="lg:text-xl font-medium leading-snug">Grow your ad revenue</h4>
+              <p class="text-[#9EA4B4] text-sm lg:text-base font-normal leading-snug">Track real-time performance, get
+                paid consistently, and watch your ad revenue scale effortlessly.</p>
+            </div>
+          </div>
+          <!-- single item end  -->
+
+
+        </div>
+
+      </div>
+    </section>
+    <!-- how it works end -->
+
+
+
+  </main>
+
+  <!-- footer start  -->
+  <!-- footer start  -->
+  <footer class="pt-10 md:pt-[100px] pb-9 bg-[#F7FBFF] text-[#243C53]">
+    <div class="px-8 md:px-5 xl:max-w-[1240px] mx-auto">
+      <div
+        class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-5 lg:gap-[52px] pb-9 md:pb-11 border-b border-[#9EA4B4]">
+        <div class="md:col-span-4">
+          <div class="flex flex-col gap-4 ">
+            <a href="index.html"><img loading="lazy" src="./images/footer-logo.svg" class="w-[175px]" alt=""></a>
+            <p class="text-[#243C53] text-sm md:text-base font-normal leading-tight">The #1 ad
+              monetization platform helping publishers maximize their revenue with header bidding and premium demand
+              partners.</p>
+            <ul class="flex flex-col gap-2">
+              <li class="text-[#243C53] text-sm md:text-base font-normal leading-tight">Monetumo ApS
+              </li>
+              <li class="text-[#243C53] text-sm md:text-base leading-tight"> <span
+                  class="font-semibold">Copenhagen</span>, Denmark
+              </li>
+              <li class="text-[#243C53] text-sm md:text-base font-normal leading-tight">
+                CVR:
+                <span class="font-semibold"> 12345678</span>
+              </li>
+            </ul>
+            <ul class="flex flex-row gap-3 ">
+              <li>
+                <a href="">
+                  <img loading="lazy" src="./images/landing/facebook.svg" alt="facebook">
+                </a>
+              </li>
+
+              <li>
+                <a href="">
+                  <img loading="lazy" src="./images/landing/twitter.svg" alt="twitter">
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img loading="lazy" src="./images/landing/linkedin.svg" alt="linkedin">
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img loading="lazy" src="./images/landing/youtube.svg" alt="youtube">
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="md:col-span-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-4 md:gap-4 gap-6">
+            <!-- single item start  -->
+            <div class="flex flex-col gap-4">
+              <h4 class="text-[#243C53] text-base font-semibold leading-none">Solutions</h4>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Header
+                    Bidding Setup</a>
+                </li>
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Revenue
+                    Dashboard
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Ad
+                    Optimization</a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <div class="flex flex-col gap-4">
+              <h4 class="text-[#243C53] text-base font-semibold leading-none">Compare with</h4>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Header
+                    Bidding Setup</a>
+                </li>
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Revenue
+                    Dashboard
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Ad
+                    Optimization</a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <div class="flex flex-col gap-4">
+              <h4 class="text-[#243C53] text-base font-semibold leading-none">Resources</h4>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Header
+                    Bidding Setup</a>
+                </li>
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Revenue
+                    Dashboard
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Ad
+                    Optimization</a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- single item end  -->
+            <!-- single item start  -->
+            <div class="flex flex-col gap-4">
+              <h4 class="text-[#243C53] text-base font-semibold leading-none">Company</h4>
+              <ul class="flex flex-col gap-4">
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Header
+                    Bidding Setup</a>
+                </li>
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Revenue
+                    Dashboard
+                <li>
+                  <a href=""
+                    class="hover:text-[#0DB368] transition-all duration-200 text-[#243C53] text-base font-normal leading-none">Ad
+                    Optimization</a>
+                </li>
+
+              </ul>
+            </div>
+            <!-- single item end  -->
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="pt-9 md:pt-11 flex flex-row lg:justify-between md:justify-center flex-wrap gap-4 items-center">
+        <p class="text-sm md:text-sm">© 2025 Monetumo ApS. All rights reserved. | <a href="mailto:info@monetumo.com"
+            class="hover:text-[#0DB368] transition-all duration-200">info@monetumo.com</a> | <a href="tel:+45 1234 5678"
+            class="hover:text-[#0DB368] transition-all duration-200">+45 1234 5678</a></p>
+        <ul class="flex flex-row gap-8 items-center">
+          <li><a href="" class="hover:text-[#0DB368] transition-all duration-200 underline">Privacy Policy</a></li>
+          <li><a href="" class="hover:text-[#0DB368] transition-all duration-200 underline">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Script  -->
+  <script src="./script/momentuNavbar.js"></script>
+  <script>
+    // Dropdown toggler for Features menu
+    document.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const dropdown = btn.parentElement.querySelector('.dropDownItem');
+        const isOpen = dropdown.classList.contains('block');
+        // Close all dropdowns first
+        document.querySelectorAll('.dropDownItem').forEach(function (d) {
+          d.classList.add('hidden');
+          d.classList.remove('block');
+        });
+        // Toggle current dropdown
+        if (!isOpen) {
+          dropdown.classList.remove('hidden');
+          dropdown.classList.add('block');
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          dropdown.classList.add('hidden');
+          dropdown.classList.remove('block');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+  </script>
+  <script>
+    const accordions = document.querySelectorAll('.accordion-item');
+
+    accordions.forEach(item => {
+      const header = item.querySelector('.accordion-header');
+      const content = item.querySelector('.accordion-content');
+      const icon = header.querySelector('svg');
+
+      header.addEventListener('click', () => {
+        const isOpen = content.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+        document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+        document.querySelectorAll('.accordion-header svg').forEach(ic => ic.classList.remove('rotate-180'));
+
+        // Open clicked if not already open
+        if (!isOpen) {
+          content.classList.add('open');
+          item.classList.add('active');  // 🔥 add active class
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
