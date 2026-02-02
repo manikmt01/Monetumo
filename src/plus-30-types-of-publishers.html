@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/fav.svg" sizes="16x16 32x32 48x48" type="image/x-icon" />
+    <link rel="icon" href="./images/fav-16.png" sizes="16x16" type="image/png" />
+    <link rel="icon" href="./images/fav-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="./images/fav-32.png" sizes="192x192" type="image/png" />
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <title>+30 Types of Publishers</title>
+
+    <style>
+        @font-face {
+            font-family: "Avenir Next Cyr Medium";
+            src: url("./font/Avenir Next Cyr Medium.ttf") format("truetype");
+        }
+
+        body {
+            font-family: "Avenir Next Cyr Medium", sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- header start here  -->
+    <header class="sticky top-0 left-0 z-50 bg-[#132D46] momentoheader">
+        <!-- Navbar -->
+        <div class="flex items-center justify-between px-5 max-w-[1240px] mx-auto py-5 lg:py-6 relative bg-[#132D46]"
+            id="nav-main">
+            <!-- Desktop Logo -->
+            <div class="block text-xl flex-1 lg:flex-none font-semibold text-center lg:text-left">
+                <a href="index.html" class="block">
+
+                    <img src="./images/logo-2x.png" srcset="
+                            ./images/logo-1x.png 1x,
+                            ./images/logo-2x.png 2x,
+                            ./images/Logo-3x.png 3x
+                        " class="w-[124px] sm:w-[174px]" alt="Logo">
+                </a>
+            </div>
+            <!-- menu -->
+            <div class="flex flex-1 lg:flex-none justify-end lg:space-x-4 2xl:space-x-9 items-center">
+                <!-- Hamburger Icon (Visible only on mobile) -->
+                <button id="momentodrawer-button" class="lg:hidden me-3" aria-label="open sidebar">
+                    <img src="./images/hamburger.png" alt="Menu Icon">
+                </button>
+                <!-- Desktop Menu Items (Visible on large screens) -->
+                <ul class="hidden lg:flex items-center gap-9">
+                    <!-- ...existing code... -->
+                    <li class="dropdown relative flex flex-col items-center">
+                        <button
+                            class="dropdown-toggle flex gap-2 items-center text-[#FCFEFD] font-medium text-sm xl:text-base  hover:text-[#00E980] capitalize tracking-[.50px] py-3 aria-expanded:text-[#00E980]"
+                            aria-expanded="false" aria-controls="features-dropdown" type="button">
+                            Features
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                                class="mt-1" stroke="currentColor">
+                                <path d="M1.5 0.75L6 5.25L10.5 0.75" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div id="features-dropdown"
+                            class="dropDownItem min-w-[180px] bg-[#243C53] rounded-lg shadow-lg absolute left-0 top-full mt-2 z-10 hidden">
+                            <ul class="py-2">
+                                <li><a href="#"
+                                        class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                                        1</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                                        2</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                                        3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- ...existing code... -->
+                    <li><a href="#"
+                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Pricing</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Results</a>
+                    </li>
+
+                    <li><a href="#"
+                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Agency</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- Sign Up Button -->
+            <div class="hidden lg:flex lg:items-center">
+                <a href="#"
+                    class="bg-[#00E980] hover:bg-[#FCFEFD] py-[16px] px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2">
+                    <span>Start 30 Days Free</span> <span><img src="./images/arr-sm-right.svg" class="w-[18px]"
+                            alt=""></span>
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar Drawer -->
+        <div id="momentodrawer"
+            class="w-full fixed top-0 left-0 h-full bg-[#132D46] shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="p-5 h-screen flex flex-col">
+                <div class="flex-1">
+                    <div class="flex items-center justify-between">
+                        <div class="block text-xl flex-1 lg:flex-none font-semibold text-center lg:text-left">
+                            <a href="index.html" class="block">
+                                <img src="./images/logo.svg" class="w-[124px]" alt="Logo">
+                            </a>
+                        </div>
+                        <!-- Close Button -->
+                        <button class="w-9" aria-label="close sidebar" onclick="closeMomentoDrawer()">
+                            <img src="./images/close.svg" alt="">
+                        </button>
+                    </div>
+                    <!-- Sidebar Content -->
+                    <ul class="space-y-5 mt-16">
+                        <li><a href="#"
+                                class="font-bold text-[28px] text-[#FCFEFD] hover:text-[#00E980] capitalize">Features</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-bold text-[28px] text-[#FCFEFD] hover:text-[#00E980] capitalize">Pricing</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-bold text-[28px] text-[#FCFEFD] hover:text-[#00E980] capitalize">Results</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-bold text-[28px] text-[#FCFEFD] hover:text-[#00E980] capitalize">Agency</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-[1px] rounded-xl bg-gradient-to-r from-[#526374] to-[#9ABADA66]">
+                    <div class="rounded-xl bg-[#243C53] p-5">
+                        <p class="text-base text-[#FCFEFD] font-semibold tracking-[1px]">Have any questions?</p>
+                        <form action="" class="mt-5 space-y-3">
+                            <div class="relative">
+                                <label for="subscribeInput"
+                                    class="absolute left-3 top-1/2 transform -translate-y-1/2 w-6 h-6">
+                                    <img src="./images/mail.svg" alt="Mail Icon" class="w-full h-full">
+                                </label>
+                                <input type="text" id="subscribeInput" placeholder="Enter your email..." class="pl-10 pr-3 py-[10px] bg-[#F2F4F8] font-medium text-base text-[#132D46] 
+                                           placeholder:text-[#697077] focus-visible:outline-none w-full rounded-md">
+                            </div>
+                            <button
+                                class="text-[#132D46] font-medium text-lg bg-[#00E980] hover:bg-[#FCFEFD] w-full py-[10px] rounded-lg tracking-[0.5px]">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main content  -->
+    <main class="">
+        <!-- hero section start here  -->
+        <section class="bg-[#132D46]">
+            <div
+                class="px-5 xl:max-w-[1240px] 2xl:max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-0 items-center justify-between py-12 lg:pt-[112px] lg:pb-[114px]">
+                <div class="w-full lg:w-[880px] mx-auto text-center">
+                    <div class="text-center space-y-5 lg:space-y-4">
+                        <h1 class="text-[#FCFEFD] font-inter font-bold text-[28px] lg:text-[64px] leading-[110%]">
+                            We Help <span class="text-[#0DB368]">+30 Types</span> of <span
+                                class="text-[#0DB368]">Publishers</span> Boost Ad Revenue by up to 40%</h1>
+                        <p
+                            class="w-full lg:block hidden lg:w-[740px] mx-auto text-[14px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%]">
+                            No matter
+                            your niche — if you run ads on your website, we can help you earn more. Premium header
+                            bidding technology for every type of publisher.</p>
+                        <p
+                            class="w-full lg:hidden block lg:w-[740px] mx-auto text-[14px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%]">
+                            Earn recurring revenue by referring website
+                            publishers to Monetumo.</p>
+                    </div>
+
+                    <div class="mt-6 lg:mt-9 flex flex-col md:flex-row w-full lg:w-[536px] mx-auto gap-4">
+                        <a href="#"
+                            class="bg-[#00E980] w-full hover:bg-[#FCFEFD] border-[1px] border-[#00E980] hover:border-[#FCFEFD] py-[16px] px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center justify-center gap-2 text-[#132D46]">
+                            <span>Get Free Revenue Audit</span> <span><img src="./images/arr-sm-right.svg"
+                                    class="w-[18px]" alt=""></span>
+                        </a>
+                        <a href="#"
+                            class="bg-transparent w-full hover:bg-[#FCFEFD] border-[1px] border-[#00E980] hover:border-[#FCFEFD] py-[16px] px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center justify-center gap-2 text-[#00E980] hover:text-[#132D46]">
+                            <span>See How It Works</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Publisher Support  -->
+        <section class="bg-[#132D46] py-12 lg:py-[100px]">
+            <div class="mx-auto py-8 px-5 max-w-[1240px]">
+                <div class="text-center space-y-3 md:space-y-4">
+                    <h2 class="font-bold text-[28px] lg:text-[42px] text-[#FCFEFD] md:font-inter">Publisher Types We
+                        Support</h2>
+                    <p
+                        class="text-[14px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%] max-w-[794px] mx-auto">
+                        From news sites to niche blogs, our AI-powered platform works for every publisher vertical.</p>
+                </div>
+                <!-- card -->
+                <div
+                    class="mt-6 lg:mt-[72px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-5 lg:gap-y-[56px]">
+                    <!-- 1 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-01.png" alt="tb-01" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            News Sites</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Newspapers & digital media</p>
+                    </a>
+                    <!-- 2 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-02.png" alt="tb-02" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Tech Blog</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Technology & software</p>
+                    </a>
+                    <!-- 3 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-03.png" alt="tb-03" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Finance Site</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Financiel news & advice</p>
+                    </a>
+                    <!-- 4 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-04.png" alt="tb-04" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Gaming Portal</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 4</p>
+                    </a>
+                    <!-- 5 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-05.png" alt="tb-05" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Sports Sites</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 5</p>
+                    </a>
+                    <!-- 6 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-06.png" alt="tb-06" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Entertainment & Media</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 6</p>
+                    </a>
+                    <!-- 7 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-07.png" alt="tb-07" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Entertainment & Media</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 7</p>
+                    </a>
+                    <!-- 8 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-08.png" alt="tb-08" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Travel Publisher</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 8</p>
+                    </a>
+                    <!-- 9 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-09.png" alt="tb-09" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Health & fitness site</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 9</p>
+                    </a>
+                    <!-- 10 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-10.png" alt="tb-10" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Parenting site</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 10</p>
+                    </a>
+                    <!-- 11 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-11.png" alt="tb-11" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Music & culture site</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 11</p>
+                    </a>
+                    <!-- 12 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-12.png" alt="tb-12" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Real estate</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 12</p>
+                    </a>
+                    <!-- 13 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-13.png" alt="tb-13" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Parenting site</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 13</p>
+                    </a>
+                    <!-- 14 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-14.png" alt="tb-14" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Parenting site</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 14</p>
+                    </a>
+                    <!-- 15 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-15.png" alt="tb-15" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Automotive</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 15</p>
+                    </a>
+                    <!-- 16 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-16.png" alt="tb-16" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Education</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 16</p>
+                    </a>
+                    <!-- 17 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-17.png" alt="tb-17" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Home & interior</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 17</p>
+                    </a>
+                    <!-- 18 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-18.png" alt="tb-18" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Esports & streaming</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 18</p>
+                    </a>
+                    <!-- 19 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-19.png" alt="tb-19" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Education</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 19</p>
+                    </a>
+                    <!-- 20 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-20.png" alt="tb-20" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Home & interior</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 20</p>
+                    </a>
+                    <!-- 21 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-21.png" alt="tb-21" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Esports & streaming</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 21</p>
+                    </a>
+                    <!-- 22 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-22.png" alt="tb-22" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Pet & animal blogs</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 22</p>
+                    </a>
+                    <!-- 23 -->
+                    <a href="#"
+                        class="bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:px-[28px] md:py-[44px] rounded-[12px] transition-all duration-300 hover:scale-[1.03] hover:bg-[rgba(255,255,255,0.06)] cursor-pointer block">
+                        <div>
+                            <img src="./images/tb-23.png" alt="tb-23" class="">
+                        </div>
+                        <h3
+                            class="text-[24px] lg:text-[28px] text-[#FCFEFD] font-semibold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Weather & climate</h3>
+                        <p class="text-[18px] text-[#0DB368] font-semibold font-inter leading-[140%] mt-[12px]">
+                            Description for type 23</p>
+                    </a>
+
+
+                </div>
+                <!-- button -->
+                <div class="mt-6 lg:mt-[56px] flex flex-col md:flex-row w-full lg:w-[488px] mx-auto gap-4">
+                    <a href="#"
+                        class="bg-[#00E980] w-full hover:bg-[#FCFEFD] border-[1px] border-[#00E980] hover:border-[#FCFEFD] py-[16px] px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center justify-center gap-2 text-[#132D46]">
+                        <span>Start 30 Days Free</span> <span><img src="./images/arr-sm-right.svg" class="w-[18px]"
+                                alt=""></span>
+                    </a>
+                    <a href="#"
+                        class="bg-transparent w-full hover:bg-[#FCFEFD] border-[1px] border-[#00E980] hover:border-[#FCFEFD] py-[16px] px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center justify-center gap-2 text-[#00E980] hover:text-[#132D46]">
+                        <span>Get Revenue Estimation</span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+        <!-- How Earn More -->
+        <section class="bg-[#132D46] py-12 lg:py-[100px]">
+            <div class="mx-auto py-8 px-5 max-w-[1240px]">
+                <div class="text-center space-y-3 md:space-y-4">
+                    <h2
+                        class="font-bold text-[28px] lg:text-[42px] text-[#FCFEFD] font-inter mx-auto max-w-[290px] md:max-w-full">
+                        How We Help You Earn More
+                    </h2>
+                    <p
+                        class="text-[16px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%] max-w-[323px] md:max-w-[794px] mx-auto md:w-full">
+                        Our system connects your ad inventory to 15+ premium demand partners through header bidding —
+                        letting them compete for your traffic, so you earn more.</p>
+                </div>
+                <!-- card -->
+                <div
+                    class="mt-6 lg:mt-[72px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-5 lg:gap-y-[56px]">
+                    <!-- 1 -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+                        <div>
+                            <span
+                                class="w-[60px] h-[60px] flex justify-center items-center rounded-[12px] bg-[#0DB368] text-[28px] text-[#ffffff] font-medium font-inter">1
+                            </span>
+                        </div>
+                        <h3
+                            class="text-[20px] lg:text-[24px] text-[#ffffff] font-medium font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Connect Your Site</h3>
+                        <p class="text-[14px] text-[#9EA4B4] font-normal font-inter leading-[140%] mt-[12px]">Simple
+                            integration with your existing ad setup - works alongside Google AdSense.</p>
+                    </div>
+                    <!-- 2 -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+                        <div>
+                            <span
+                                class="w-[60px] h-[60px] flex justify-center items-center rounded-[12px] bg-[#0DB368] text-[28px] text-[#ffffff] font-medium font-inter">2
+                            </span>
+                        </div>
+                        <h3
+                            class="text-[20px] lg:text-[24px] text-[#ffffff] font-medium font-inter leading-[110%] mt-4 lg:mt-[20px] max-w-[260px] md:max-w-full">
+                            15+ Demand Partners Compete</h3>
+                        <p class="text-[14px] text-[#9EA4B4] font-normal font-inter leading-[140%] mt-[12px]">Premium
+                            advertisers bid in real-time for your ad inventory through header bidding</p>
+                    </div>
+                    <!-- 3 -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+                        <div>
+                            <span
+                                class="w-[60px] h-[60px] flex justify-center items-center rounded-[12px] bg-[#0DB368] text-[28px] text-[#ffffff] font-medium font-inter">3
+                            </span>
+                        </div>
+                        <h3
+                            class="text-[20px] lg:text-[24px] text-[#ffffff] font-medium font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Maximize Revenue</h3>
+                        <p class="text-[14px] text-[#9EA4B4] font-normal font-inter leading-[140%] mt-[12px]">Higher
+                            bids = more revenue.
+                            AI-driven optimization ensures the best performing ads.</p>
+                    </div>
+                </div>
+                <!-- real time -->
+                <div
+                    class="mt-6 lg:mt-[72px] bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] p-5 md:p-[28px] rounded-[12px] grid grid-cols-1 md:grid-cols-3 items-center gap-4 md:gap-[28px] max-w-[996px] mx-auto w-full ">
+                    <!-- 1 -->
+                    <div>
+                        <div>
+                            <img src="./images/partner.png" alt="partner"
+                                class="max-w-[64px] max-h-[64px] object-cover">
+                        </div>
+                        <h3
+                            class="text-[20px] lg:text-[24px] text-[#ffffff] font-medium font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            15+ Demand Partners</h3>
+                        <p class="text-[14px] text-[#9EA4B4] font-normal font-inter leading-[140%] mt-[12px]">Google
+                            AdX, Amazon, Xandr, Index Exchange & more</p>
+                    </div>
+                    <!-- 2 -->
+                    <div class="flex flex-row justify-between items-center ">
+                        <div>
+                            <img src="./images/green-arr-left.svg" alt="green-arr-left" class="w-[32px] h-[32px]">
+                        </div>
+                        <h5 class="text-[20px] lg:text-[24px] text-[#0DB368] font-medium font-inter leading-[110%]">
+                            Real-time Bidding</h5>
+                        <div>
+                            <img src="./images/green-arr-right.svg" alt="green-arr-right" class="w-[32px] h-[32px]">
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div>
+                        <div>
+                            <img src="./images/saving-money-01.png" alt="saving-money-01"
+                                class="max-w-[64px] max-h-[64px] object-cover">
+                        </div>
+                        <h3
+                            class="text-[20px] lg:text-[24px] text-[#ffffff] font-medium font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Your Website</h3>
+                        <p class="text-[16px] text-[#9EA4B4] font-normal font-inter leading-[140%] mt-[12px]">Highest
+                            bid wins = Maximum revenue</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Curious Earn  -->
+        <section class="bg-[#132D46] py-12 lg:py-[100px]">
+            <div class="mx-auto py-8 px-5 max-w-[1240px]">
+                <!-- card -->
+                <div class="grid grid-cols-3 gap-4 justify-between items-center">
+                    <!-- 1 -->
+                    <div class="text-center">
+                        <h3
+                            class="text-[28px] lg:text-[56px] text-[#0DB368] font-semibold font-inter leading-[110%] italic">
+                            +40%</h3>
+                        <p class="text-[10px] md:text-[16px] text-[#9EA4B4] font-normal font-inter leading-[140%] mt-2 lg:mt-[12px]">Average
+                            Revenue Increase</p>
+                    </div>
+                    <!-- 2 -->
+                    <div class="text-center">
+                        <h3
+                            class="text-[28px] lg:text-[56px] text-[#0DB368] font-semibold font-inter leading-[110%] italic">
+                            15+</h3>
+                        <p class="text-[10px] md:text-[16px] text-[#9EA4B4] font-normal font-inter leading-[140%] mt-2 lg:mt-[12px]">Premium
+                            Demand Partners</p>
+                    </div>
+                    <!-- 3 -->
+                    <div class="text-center">
+                        <h3
+                            class="text-[28px] lg:text-[56px] text-[#0DB368] font-semibold font-inter leading-[110%] italic">
+                            30+</h3>
+                        <p class="text-[10px] md:text-[16px] text-[#9EA4B4] font-normal font-inter leading-[140%] mt-2 lg:mt-[12px]">Publisher
+                            Types Supported</p>
+                    </div>
+                </div>
+                <!-- more time -->
+                <div
+                    class="mt-6 lg:mt-[72px] bg-[rgba(255,255,255,0.04)] border-[1px] border-[#F1F5F81A] md:p-[36px] rounded-[20px] max-w-[866px] mx-auto w-full ">
+                    <!-- top -->
+                    <div class="text-center p-5 md:p-0">
+                        <h2
+                            class="text-[20px] lg:text-[42px] text-[#ffffff] font-bold leading-[110%] max-w-[270px] md:max-w-[694px] mx-auto w-full">
+                            Curious How Much More Your
+                            <span class="text-[#0DB368]">Website</span> Could <span class="text-[#0DB368]">Earn</span>?
+                        </h2>
+                        <p
+                            class="text-[14px] lg:text-[18px] text-center text-[#FCFEFD] font-normal font-inter leading-[140%] mt-[16px] max-w-[300px] md:max-w-full mx-auto w-full">Get a free audit and revenue estimation in 2 minutes. No commitment required.</p>
+
+                        <div class="mt-5 md:mt-[36px]">
+                            <a href="#"
+                                class="bg-[#00E980] hover:bg-[#FCFEFD] border-[1px] border-[#00E980] hover:border-[#FCFEFD] py-4 px-9 tracking-[0.5px] text-base font-medium rounded-lg w-full md:w-fit inline-flex items-center justify-center gap-2 text-[#132D46]">
+                                <span>Run Free Audit Now</span> <span><img src="./images/arr-sm-right.svg"
+                                        class="w-[18px]" alt=""></span>
+                            </a>
+                        </div>
+                        <div class=" hidden md:flex items-center gap-3 justify-center mt-5">
+                            <!-- 1 -->
+                            <div
+                                class="inline-flex items-center gap-1 py-2 px-4 rounded-full bg-[#0DB368]/10 border-[1px] border-[#0DB368]/20">
+                                <img src="./images/check-greeen.svg" alt="check-greeen" class="w-[20px] h-[20px]"><span
+                                    class="text-[14px] text-[#0DB368] font-normal font-inter leading-[110%]">Free
+                                    setup</span>
+                            </div>
+                            <!-- 2 -->
+                            <div
+                                class="inline-flex items-center gap-1 py-2 px-4 rounded-full bg-[#0DB368]/10 border-[1px] border-[#0DB368]/20">
+                                <img src="./images/check-greeen.svg" alt="check-greeen" class="w-[20px] h-[20px]"><span
+                                    class="text-[14px] text-[#0DB368] font-normal font-inter leading-[110%]">No
+                                    hidden fees</span>
+                            </div>
+                            <!-- 3 -->
+                            <div
+                                class="inline-flex items-center gap-1 py-2 px-4 rounded-full bg-[#0DB368]/10 border-[1px] border-[#0DB368]/20">
+                                <img src="./images/check-greeen.svg" alt="check-greeen" class="w-[20px] h-[20px]"><span
+                                    class="text-[14px] text-[#0DB368] font-normal font-inter leading-[110%]">Cancel
+                                    anytime</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- bottom -->
+                    <div class="block md:hidden">
+                        <div class="benefits-slider pb-5 px-0 md:p-0">
+                            <div class="mx-[6px]">
+                                <div
+                                    class="inline-flex flex-row items-center gap-1 py-2 px-4 rounded-full bg-[#0DB368]/10 border-[1px] border-[#0DB368]/20">
+                                    <img src="./images/check-greeen.svg" alt="check-greeen"
+                                        class="w-[20px] h-[20px]"><span
+                                        class="text-[14px] text-[#0DB368] font-normal font-inter leading-[110%] whitespace-nowrap">Free
+                                        setup</span>
+                                </div>
+                            </div>
+                            <div class="mx-[6px]">
+                                <div
+                                    class="inline-flex flex-row items-center gap-1 py-2 px-4 rounded-full bg-[#0DB368]/10 border-[1px] border-[#0DB368]/20 ">
+                                    <img src="./images/check-greeen.svg" alt="check-greeen"
+                                        class="w-[20px] h-[20px]"><span
+                                        class="text-[14px] text-[#0DB368] font-normal font-inter leading-[110%] whitespace-nowrap">No
+                                        hidden fees</span>
+                                </div>
+                            </div>
+                            <div class="mx-[6px]">
+                                <div
+                                    class="inline-flex flex-row items-center gap-1 py-2 px-4 rounded-full bg-[#0DB368]/10 border-[1px] border-[#0DB368]/20">
+                                    <img src="./images/check-greeen.svg" alt="check-greeen"
+                                        class="w-[20px] h-[20px]"><span
+                                        class="text-[14px] text-[#0DB368] font-normal font-inter leading-[110%] whitespace-nowrap">Cancel
+                                        anytime</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- footer  -->
+    <footer class="bg-[#F7FBFF] py-11 lg:py-[46px]">
+        <div class="mx-auto px-5 max-w-[1240px]">
+            <!-- footer menus -->
+            <div
+                class="border-b border-b-[#C1C7CD] pb-9 lg:pt-[54px] lg:pb-[44px]  flex md:flex-row flex-col justify-between gap-[36px] md:gap-[52px]">
+                <!-- 1 -->
+                <div class="w-full max-w-[336px] space-y-4">
+                    <div class="w-[124px] lg:w-[174px]">
+                        <img src="./images/footer-logo.svg" class="w-full" alt="">
+                    </div>
+                    <p class="text-[#243C53] font-normal font-roboto leading-[128%] text-[14px] md:text-[16px]">The #1
+                        ad monetization
+                        platform helping publishers maximize their revenue with header bidding and
+                        premium demand partners.</p>
+                    <ul
+                        class="flex flex-col gap-2 text-[#243C53] font-normal font-roboto leading-[128%] text-[14px] md:text-[16px]">
+                        <li>
+                            <p>Monetumo ApS</p>
+                        </li>
+                        <li>
+                            <p><span class="font-semibold">Copenhagen</span>, Denmark</p>
+                        </li>
+                        <li>
+                            <p>CVR: <span class="font-semibold">12345678</span></p>
+                        </li>
+                    </ul>
+                    <ul class="flex flex-row gap-3 items-center">
+                        <li><a href="#"><img src="./images/facebook-icon.svg" alt="facebook"
+                                    class="w-[28px] h-[28px] md:w-8 md:h-8 rounded-full"></a></li>
+                        <li><a href="#"><img src="./images/twitter-icon.svg" alt="twitter"
+                                    class="w-[28px] h-[28px] md:w-8 md:h-8 rounded-full"></a></li>
+                        <li><a href="#"><img src="./images/instagram-icon.svg" alt="instagram"
+                                    class="w-[28px] h-[28px] md:w-8 md:h-8 rounded-full"></a></li>
+                        <li><a href="#"><img src="./images/youtube-icon.svg" alt="youtube"
+                                    class="w-[28px] h-[28px] md:w-8 md:h-8 rounded-full"></a></li>
+                    </ul>
+                </div>
+                <!-- e2 -->
+                <div class="flex-1 hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
+                    <!-- 1 -->
+                    <div class="space-y-3">
+                        <span
+                            class="block text-[#243C53] font-semibold font-roboto leading-[128%] text-[14px] md:text-[16px]">
+                            Solutions</span>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Header
+                            Bidding Setup</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Revenue
+                            Dashboard</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Ad
+                            Optimization</a>
+                    </div>
+                    <!-- 2 -->
+                    <div class="space-y-3">
+                        <span
+                            class="block text-[#243C53] font-semibold font-roboto leading-[128%] text-[14px] md:text-[16px]">
+                            Compare with</span>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Header
+                            Bidding Setup</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Revenue
+                            Dashboard</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Ad
+                            Optimization</a>
+                    </div>
+                    <!-- 3 -->
+                    <div class="space-y-3">
+                        <span
+                            class="block text-[#243C53] font-semibold font-roboto leading-[128%] text-[14px] md:text-[16px]">Ad
+                            Optimization</span>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Header
+                            Bidding Setup</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Revenue
+                            Dashboard</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Ad
+                            Optimization</a>
+                    </div>
+                    <!-- 4 -->
+                    <div class="space-y-3">
+                        <span
+                            class="block text-[#243C53] font-semibold font-roboto leading-[128%] text-[14px] md:text-[16px]">Company</span>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Header
+                            Bidding Setup</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Revenue
+                            Dashboard</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Ad
+                            Optimization</a>
+                    </div>
+                </div>
+                <!-- e3 -->
+                <div class="space-y-3 block md:hidden">
+                    <a href="#"
+                        class="block font-semibold text-[#243C53] hover:text-[#2e865e] text-[16px]">Solutions</a>
+                    <a href="#" class="block font-semibold text-[#243C53] hover:text-[#2e865e] text-[16px]">Compare
+                        with</a>
+                    <a href="#"
+                        class="block font-semibold text-[#243C53] hover:text-[#2e865e] text-[16px]">Resources</a>
+                    <a href="#" class="block font-semibold text-[#243C53] hover:text-[#2e865e] text-[16px]">Company</a>
+                </div>
+            </div>
+            <!-- copy right  -->
+            <div class="pt-9 lg:pt-11 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+                <p class="font-normal text-[12px] md:text-[14px] text-[#243C53]">© 2025 Monetumo ApS. All rights
+                    reserved. | <a href="mailto:info@monetumo.com" class="hover:text-[#2e865e]">info@monetumo.com</a> |
+                    <a href="tel:+4512345678" class="hover:text-[#2e865e]">+45
+                        1234 5678</a>
+                </p>
+                <ul class="font-medium text-[14px] md:text-[16px] font-roboto text-[#243C53] flex flex-row gap-8">
+                    <li><a href="#" class="hover:text-[#2e865e] transition-all duration-300 underline">Privacy
+                            Policy</a></li>
+                    <li><a href="#" class="hover:text-[#2e865e] transition-all duration-300 underline">Terms of
+                            Service</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+    <!-- Script  -->
+    <script>
+        // Dropdown toggler for Features menu
+        document.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const dropdown = btn.parentElement.querySelector('.dropDownItem');
+                const isOpen = dropdown.classList.contains('block');
+                // Close all dropdowns first
+                document.querySelectorAll('.dropDownItem').forEach(function (d) {
+                    d.classList.add('hidden');
+                    d.classList.remove('block');
+                });
+                // Toggle current dropdown
+                if (!isOpen) {
+                    dropdown.classList.remove('hidden');
+                    dropdown.classList.add('block');
+                    btn.setAttribute('aria-expanded', 'true');
+                } else {
+                    dropdown.classList.add('hidden');
+                    dropdown.classList.remove('block');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+    </script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./script/momentuNavbar.js"></script>
+    <script src="./script/slider.js"></script>
+</body>
+
+</html>

@@ -1,10 +1,10 @@
 $(document).ready(function () {
-  $('.logos-slider').slick({
+  $(".logos-slider").slick({
     slidesToShow: 5,
     autoplay: true,
     autoplaySpeed: 0,
     speed: 4000,
-    cssEase: 'linear',
+    cssEase: "linear",
     infinite: true,
     arrows: false,
     pauseOnHover: false,
@@ -12,7 +12,7 @@ $(document).ready(function () {
     centerMode: true,
   });
 });
-$('.choose-slider').slick({
+$(".choose-slider").slick({
   dots: false,
   arrows: true,
   infinite: true,
@@ -20,10 +20,10 @@ $('.choose-slider').slick({
   slidesToShow: 1,
   adaptiveHeight: true,
   autoplay: false,
-  prevArrow: $('.choose-prev-arrow'),
-  nextArrow: $('.choose-next-arrow'),
+  prevArrow: $(".choose-prev-arrow"),
+  nextArrow: $(".choose-next-arrow"),
 });
-$('.revenue-slider').slick({
+$(".revenue-slider").slick({
   dots: true,
   arrows: false,
   infinite: true,
@@ -32,9 +32,9 @@ $('.revenue-slider').slick({
   adaptiveHeight: true,
   autoplay: false,
   centerMode: true,
-  centerPadding: '5%',
+  centerPadding: "5%",
 });
-$('.testimonial-slider').slick({
+$(".testimonial-slider").slick({
   dots: false,
   arrows: true,
   infinite: true,
@@ -42,8 +42,8 @@ $('.testimonial-slider').slick({
   slidesToShow: 2,
   adaptiveHeight: true,
   autoplay: true,
-  prevArrow: $('.testimonial-prev-arrow'),
-  nextArrow: $('.testimonial-next-arrow'),
+  prevArrow: $(".testimonial-prev-arrow"),
+  nextArrow: $(".testimonial-next-arrow"),
   responsive: [
     {
       breakpoint: 1024,
@@ -52,4 +52,35 @@ $('.testimonial-slider').slick({
       },
     },
   ],
+});
+
+$(".benefits-slider").slick({
+  speed: 5000,
+  autoplay: true,
+  autoplaySpeed: 0,
+
+  centerMode: true,
+  cssEase: "linear",
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  variableWidth: true,
+  infinite: true,
+  initialSlide: 1,
+  arrows: false,
+  buttons: false,
+});
+
+$(".checks-slider").slick({
+  speed: 5000,
+  autoplay: true,
+  autoplaySpeed: 0,
+  centerMode: true,
+  cssEase: "linear",
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  variableWidth: true,
+  infinite: true,
+  initialSlide: 1,
+  arrows: false,
+  buttons: false,
 });

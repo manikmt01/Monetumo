@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/fav.svg" sizes="16x16 32x32 48x48" type="image/x-icon" />
+    <link rel="icon" href="./images/fav-16.png" sizes="16x16" type="image/png" />
+    <link rel="icon" href="./images/fav-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="./images/fav-32.png" sizes="192x192" type="image/png" />
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <title>Pricing</title>
+
+    <style>
+        @font-face {
+            font-family: "Avenir Next Cyr Medium";
+            src: url("./font/Avenir Next Cyr Medium.ttf") format("truetype");
+        }
+
+        body {
+            font-family: "Avenir Next Cyr Medium", sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- header start here  -->
+    <header class="sticky top-0 left-0 z-50 bg-[#132D46] momentoheader">
+        <!-- Navbar -->
+        <div class="flex items-center justify-between px-5 max-w-[1240px] mx-auto py-5 lg:py-6 relative bg-[#132D46]"
+            id="nav-main">
+            <!-- Desktop Logo -->
+            <div class="block text-xl flex-1 lg:flex-none font-semibold text-center lg:text-left">
+                <a href="index.html" class="block">
+
+                    <img src="./images/logo-2x.png" srcset="
+                            ./images/logo-1x.png 1x,
+                            ./images/logo-2x.png 2x,
+                            ./images/Logo-3x.png 3x
+                        " class="w-[124px] sm:w-[174px]" alt="Logo">
+                </a>
+            </div>
+            <!-- menu -->
+            <div class="flex flex-1 lg:flex-none justify-end lg:space-x-4 2xl:space-x-9 items-center">
+                <!-- Hamburger Icon (Visible only on mobile) -->
+                <button id="momentodrawer-button" class="lg:hidden me-3" aria-label="open sidebar">
+                    <img src="./images/hamburger.png" alt="Menu Icon">
+                </button>
+                <!-- Desktop Menu Items (Visible on large screens) -->
+                <ul class="hidden lg:flex items-center gap-9">
+                    <!-- ...existing code... -->
+                    <li class="dropdown relative flex flex-col items-center">
+                        <button
+                            class="dropdown-toggle flex gap-2 items-center text-[#FCFEFD] font-medium text-sm xl:text-base  hover:text-[#00E980] capitalize tracking-[.50px] py-3 aria-expanded:text-[#00E980]"
+                            aria-expanded="false" aria-controls="features-dropdown" type="button">
+                            Features
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                                class="mt-1" stroke="currentColor">
+                                <path d="M1.5 0.75L6 5.25L10.5 0.75" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div id="features-dropdown"
+                            class="dropDownItem min-w-[180px] bg-[#243C53] rounded-lg shadow-lg absolute left-0 top-full mt-2 z-10 hidden">
+                            <ul class="py-2">
+                                <li><a href="#"
+                                        class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                                        1</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                                        2</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 text-[#FCFEFD] hover:bg-[#00E980] hover:text-[#132D46] rounded">Feature
+                                        3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- ...existing code... -->
+                    <li><a href="#"
+                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Pricing</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Results</a>
+                    </li>
+
+                    <li><a href="#"
+                            class="font-medium text-sm xl:text-base text-[#FCFEFD] hover:text-[#00E980] capitalize tracking-[.50px] py-3">Agency</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- Sign Up Button -->
+            <div class="hidden lg:flex lg:items-center">
+                <a href="#"
+                    class="bg-[#00E980] hover:bg-[#FCFEFD] py-[16px] px-[18px] tracking-[0.5px] text-base font-medium rounded-lg flex items-center gap-2">
+                    <span>Start 30 Days Free</span> <span><img src="./images/arr-sm-right.svg" class="w-[18px]"
+                            alt=""></span>
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar Drawer -->
+        <div id="momentodrawer"
+            class="w-full fixed top-0 left-0 h-full bg-[#132D46] shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="p-5 h-screen flex flex-col">
+                <div class="flex-1">
+                    <div class="flex items-center justify-between">
+                        <div class="block text-xl flex-1 lg:flex-none font-semibold text-center lg:text-left">
+                            <a href="index.html" class="block">
+                                <img src="./images/logo.svg" class="w-[124px]" alt="Logo">
+                            </a>
+                        </div>
+                        <!-- Close Button -->
+                        <button class="w-9" aria-label="close sidebar" onclick="closeMomentoDrawer()">
+                            <img src="./images/close.svg" alt="">
+                        </button>
+                    </div>
+                    <!-- Sidebar Content -->
+                    <ul class="space-y-5 mt-16">
+                        <li><a href="#"
+                                class="font-bold text-[28px] text-[#FCFEFD] hover:text-[#00E980] capitalize">Features</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-bold text-[28px] text-[#FCFEFD] hover:text-[#00E980] capitalize">Pricing</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-bold text-[28px] text-[#FCFEFD] hover:text-[#00E980] capitalize">Results</a>
+                        </li>
+                        <li><a href="#"
+                                class="font-bold text-[28px] text-[#FCFEFD] hover:text-[#00E980] capitalize">Agency</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-[1px] rounded-xl bg-gradient-to-r from-[#526374] to-[#9ABADA66]">
+                    <div class="rounded-xl bg-[#243C53] p-5">
+                        <p class="text-base text-[#FCFEFD] font-semibold tracking-[1px]">Have any questions?</p>
+                        <form action="" class="mt-5 space-y-3">
+                            <div class="relative">
+                                <label for="subscribeInput"
+                                    class="absolute left-3 top-1/2 transform -translate-y-1/2 w-6 h-6">
+                                    <img src="./images/mail.svg" alt="Mail Icon" class="w-full h-full">
+                                </label>
+                                <input type="text" id="subscribeInput" placeholder="Enter your email..." class="pl-10 pr-3 py-[10px] bg-[#F2F4F8] font-medium text-base text-[#132D46] 
+                                           placeholder:text-[#697077] focus-visible:outline-none w-full rounded-md">
+                            </div>
+                            <button
+                                class="text-[#132D46] font-medium text-lg bg-[#00E980] hover:bg-[#FCFEFD] w-full py-[10px] rounded-lg tracking-[0.5px]">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main content  -->
+    <main class="">
+        <!-- hero section start here  -->
+        <section class="bg-[#132D46]">
+            <div
+                class="px-5 xl:max-w-[1240px] 2xl:max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-0 items-center justify-between pt-[48px] pb-[24px] lg:pt-[80px] lg:pb-[48px]">
+                <div class="w-full lg:w-[958px] mx-auto text-center">
+                    <div class="text-center space-y-3 lg:space-y-4">
+                        <h3
+                            class="inline-block px-2 py-[7px] lg:px-[10px] lg:py-[11px] bg-[rgba(55,228,121,0.18)] rounded-[4px] font-inter font-bold text-[14px] tracking-[1px] text-[#0DB368] tracking-[1px] uppercase">
+                            100% Transparent</h3>
+                        <h1 class="text-[#FCFEFD] font-inter font-bold text-[28px] lg:text-[64px] leading-[110%] mt-4">
+                            The Most Transparent Pricing <span class="text-[#0DB368]">in the AdTech Industry</span></h1>
+                        <p
+                            class="w-full lg:max-w-[794px] mx-auto text-[14px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%]">
+                            <strong>No hidden costs. No upfront costs. No subscriptions. No commitment.</strong> You
+                            never pay from your own pocket — we only take a share of the <span
+                                class="text-[#0DB368]">revenue we help generate for you.</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- pricing  -->
+        <section class="bg-[#132D46] pb-12 lg:pb-[100px]">
+            <div class="mx-auto max-w-[1240px]">
+                <!-- price card -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  px-5">
+                    <!-- 1 -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+                        <!-- 1 -->
+                        <div>
+                            <h3 class="text-[24px] text-[#ffffff] font-bold font-roboto leading-[110%] text-center">
+                                Standard</h3>
+                            <p
+                                class="text-[16px] text-[#9EA4B4] font-normal font-inter leading-[140%] mt-[8px] text-center">
+                                Up to
+                                $100k/month revenue</p>
+                        </div>
+                        <!-- 2 -->
+                        <div>
+                            <h2 class="text-[48px] text-[#ffffff] font-bold font-roboto leading-[110%] text-center">
+                                20%</h2>
+                            <p
+                                class="text-[16px] text-[#9EA4B4] font-normal font-inter leading-[140%] mt-[4px] text-center">
+                                revenue
+                                share</p>
+                        </div>
+                        <!-- 3 -->
+                        <ul class="flex flex-col gap-[16px]">
+                            <li class="flex items-center gap-[8px]"><img src="./images/circle-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Full header
+                                    bidding setup</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/circle-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Premium
+                                    demand
+                                    partners</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/circle-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Real-time
+                                    analytics dashboard</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/circle-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">GDPR
+                                    support</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/circle-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">30-day free
+                                    trial</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/circle-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Cancel
+                                    anytime</span></li>
+                        </ul>
+                        <!-- 4 -->
+                        <div>
+                            <button
+                                class="text-[#132D46] font-medium text-base font-inter bg-[#00E980] border-[1px] border-[#0DB368] hover:bg-[#FCFEFD] w-full py-[16px] rounded-lg tracking-[0.5px] flex flex-row items-center justify-center gap-[8px]">Start
+                                Free Trial <img src="./images/arr-ford.svg" alt="forword" class="w-[18px]"></button>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div
+                        class="bg-[#0DB368] p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#ffffff] duration-500">
+                        <!-- 1 -->
+                        <div>
+                            <h3 class="text-[24px] text-[#ffffff] font-bold font-roboto leading-[110%] text-center">
+                                Elite</h3>
+                            <p
+                                class="text-[16px] text-[#ffffff] font-normal font-inter leading-[140%] mt-[8px] text-center">
+                                $100k – $500k/month revenue</p>
+                        </div>
+                        <!-- 2 -->
+                        <div>
+                            <h2 class="text-[48px] text-[#ffffff] font-bold font-roboto leading-[110%] text-center">15%
+                            </h2>
+                            <p
+                                class="text-[16px] text-[#ffffff] font-normal font-inter leading-[140%] mt-[4px] text-center">
+                                revenue share</p>
+                        </div>
+                        <!-- 3 -->
+                        <ul class="flex flex-col gap-[16px]">
+                            <li class="flex items-center gap-[8px]"><img src="./images/white-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Everything
+                                    in Standard</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/white-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Lower
+                                    revenue share</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/white-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Priority
+                                    support</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/white-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Advanced
+                                    analytics</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/white-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Dedicated
+                                    account manager</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/white-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Cancel
+                                    anytime</span></li>
+                        </ul>
+                        <!-- 4 -->
+                        <div>
+                            <button
+                                class="text-[#132D46] font-medium text-base font-inter bg-[#ffffff] border-[1px] border-[#0DB368] hover:bg-[#FCFEFD] w-full py-[16px] rounded-lg tracking-[0.5px] flex flex-row items-center justify-center gap-[8px]">Start
+                                Free Trial <img src="./images/arr-ford.svg" alt="forword" class="w-[18px]"></button>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+                        <!-- 1 -->
+                        <div>
+                            <h3 class="text-[24px] text-[#ffffff] font-bold font-roboto leading-[110%] text-center">
+                                Enterprise</h3>
+                            <p
+                                class="text-[16px] text-[#9EA4B4] font-normal font-inter leading-[140%] mt-[8px] text-center">
+                                $500k+/month revenue</p>
+                        </div>
+                        <!-- 2 -->
+                        <div>
+                            <h2 class="text-[48px] text-[#ffffff] font-bold font-roboto leading-[110%] text-center">
+                                Custom</h2>
+                            <p
+                                class="text-[16px] text-[#9EA4B4] font-normal font-inter leading-[140%] mt-[4px] text-center">
+                                revenue share</p>
+                        </div>
+                        <!-- 3 -->
+                        <ul class="flex flex-col gap-[16px]">
+                            <li class="flex items-center gap-[8px]"><img src="./images/circle-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Everything
+                                    in Elite</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/circle-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Competitive
+                                    revenue share</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/circle-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Dedicated
+                                    technical team</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/circle-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Dedicated
+                                    AdOps specialist</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/circle-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Customized
+                                    assistance</span></li>
+                            <li class="flex items-center gap-[8px]"><img src="./images/circle-check.svg" alt="check"
+                                    class="w-5 h-5"><span
+                                    class="text-[#ffffff] text-[14px] font-inter font-normal leading-[140%]">Cancel
+                                    anytime</span></li>
+                        </ul>
+                        <!-- 4 -->
+                        <div>
+                            <button
+                                class="text-[#0DB368] font-medium text-base font-inter bg-transparent border-[1px] border-[#0DB368] hover:text-[#132D46] hover:bg-[#FCFEFD] w-full py-[16px] rounded-lg tracking-[0.5px] flex flex-row items-center justify-center gap-[8px]">Contact
+                                Sales</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- checks -->
+                <div class="hidden md:flex justify-center items-center gap-6 py-[48px] px-5">
+                    <div class="inline-flex flex-row items-center gap-[8px]">
+                        <img src="./images/check-greeen.svg" alt="check" class="w-5 h-5">
+                        <span class="text-[#BEC2CC] font-normal font-inter leading-[110%] text-[14px]">No setup
+                            fees</span>
+                    </div>
+                    <div class="inline-flex flex-row items-center gap-[8px]">
+                        <img src="./images/check-greeen.svg" alt="check" class="w-5 h-5">
+                        <span class="text-[#BEC2CC] font-normal font-inter leading-[110%] text-[14px]">No fixed
+                            costs</span>
+                    </div>
+                    <div class="inline-flex flex-row items-center gap-[8px]">
+                        <img src="./images/check-greeen.svg" alt="check" class="w-5 h-5">
+                        <span class="text-[#BEC2CC] font-normal font-inter leading-[110%] text-[14px]">No long-term
+                            lock-in</span>
+                    </div>
+                </div>
+                <!-- check slider -->
+                <div class="block md:hidden">
+                    <div class="checks-slider p-0 mt-[21px] mb-[25px]">
+                        <div class="mx-[6px]">
+                            <div class="inline-flex flex-row items-center gap-[8px]">
+                                <img src="./images/check-greeen.svg" alt="check" class="w-5 h-5">
+                                <span class="text-[#BEC2CC] font-normal font-inter leading-[110%] text-[14px]">No setup
+                                    fees</span>
+                            </div>
+                        </div>
+                        <div class="mx-[6px]">
+                            <div class="inline-flex flex-row items-center gap-[8px]">
+                                <img src="./images/check-greeen.svg" alt="check" class="w-5 h-5">
+                                <span class="text-[#BEC2CC] font-normal font-inter leading-[110%] text-[14px]">No fixed
+                                    costs</span>
+                            </div>
+                        </div>
+                        <div class="mx-[6px]">
+                            <div class="inline-flex flex-row items-center gap-[8px]">
+                                <img src="./images/check-greeen.svg" alt="check" class="w-5 h-5">
+                                <span class="text-[#BEC2CC] font-normal font-inter leading-[110%] text-[14px]">No
+                                    long-term
+                                    lock-in</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card item start  -->
+                <div
+                    class="grid lg:grid-cols-3 grid-cols-1 gap-5 items-center max-w-[860px] mx-auto w-full px-5 lg:px-0">
+                    <!-- single item 1  -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col items-center gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+                        <div
+                            class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+                            <img loading="lazy" src="./images/landing/agency/calander.svg" alt="calander"
+                                class="w-8 h-8">
+                        </div>
+                        <div class="flex flex-col text-center gap-3">
+                            <h4 class="text-xl font-inter font-semibold leading-[110%] text-[#ffffff]">
+                                Monthly Payouts</h4>
+                            <p class="text-[#F1F5F8] text-base font-normal font-inter leading-[140%]">
+                                Reliable payments every month</p>
+                        </div>
+                    </div>
+                    <!-- single item 2  -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col items-center gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+                        <div
+                            class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+                            <img loading="lazy" src="./images/landing/agency/dollar.svg" alt="dollar" class="w-8 h-8">
+                        </div>
+                        <div class="flex flex-col text-center gap-3">
+                            <h4 class="text-xl font-inter font-semibold leading-[110%] text-[#ffffff]">$50 Minimum
+                                Threshold</h4>
+                            <p class="text-[#F1F5F8] text-base font-normal font-inter leading-[140%]">Low payout minimum
+                            </p>
+                        </div>
+                    </div>
+                    <!-- single item 3  -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5  lg:p-7 rounded-xl flex flex-col items-center gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+                        <div
+                            class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+                            <img loading="lazy" src="./images/landing/agency/cards.svg" alt="cards" class="w-8 h-8">
+                        </div>
+                        <div class="flex flex-col text-center gap-3">
+                            <h4 class="text-xl font-inter font-semibold leading-[110%] text-[#ffffff]">Payout Method
+                            </h4>
+                            <p class="text-[#F1F5F8] text-base font-normal font-inter leading-[140%]">Secure bank
+                                transfer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- price match -->
+                <div class="max-w-[860px] mx-auto w-full px-5 lg:px-0 pt-6 lg:pt-[48px] block">
+                    <div
+                        class="bg-[#0DB368] p-5 lg:p-7 rounded-xl flex flex-col gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full ">
+                        <div class="flex flex-col text-start">
+                            <h3
+                                class="inline-block w-fit px-2 py-[7px] lg:px-[10px] lg:py-[11px] bg-[rgba(255,255,255,0.16)] border-[1px] border-[rgba(255,255,255,0.20)] rounded-[4px] font-inter font-bold text-[14px] text-[#ffffff] tracking-[1px] uppercase">
+                                Best Price Promise</h3>
+                            <h2
+                                class="text-[#ffffff] text-[28px] lg:text-[32px] font-roboto font-bold leading-[110%] mt-5 mb-2 max-w-[289px] md:max-w-full">
+                                We Always Price Match</h2>
+                            <div
+                                class="text-[#F1F5F8] text-[14px] md:text-base font-normal font-inter leading-[140%] space-y-2 max-w-[289px] md:max-w-full">
+                                <p class="">Found a better
+                                    revenue share with another ad network? We'll match it.</p>
+                                <p class="">Our team continuously monitors market rates to ensure you always get the
+                                    most competitive deal. We're confident in our technology and results.</p>
+                                <p class=""><strong>We're committed to delivering premium quality at prices that won't
+                                        break the bank!</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- How Earn More  -->
+        <section class="bg-[#132D46] py-12 lg:py-[100px]">
+            <div class="mx-auto py-8 px-5 max-w-[1240px]">
+                <div class="px-5 xl:px-0 text-center space-y-3 lg:space-y-4">
+                    <h2 class="font-bold text-[28px] lg:text-[42px] text-[#FCFEFD] font-inter">How It Works</h2>
+                    <div class="max-w-[794px] mx-auto">
+                        <p class="text-[16px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%]">We
+                            take a percentage of the ad revenue we generate for you.</p>
+                        <p class="text-[16px] lg:text-[18px] text-[#0DB368] font-inter font-bold leadind-[140%] ">As
+                            your monthly revenue grows, our percentage goes down.</p>
+                    </div>
+                </div>
+                <!-- card -->
+                <div
+                    class="mt-6 lg:mt-[72px] grid grid-cols-1 lg:grid-cols-[590px_1fr] gap-6 max-w-[949px] mx-auto w-full">
+                    <!-- 1 -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+                        <h3
+                            class="text-[20px] lg:text-[24px] text-[#ffffff] font-bold font-inter leading-[110%] mt-4 lg:mt-[20px]">
+                            Revenue Share <span class="text-[#0DB368]">Decreases</span> As You Scale</h3>
+
+                        <!-- chart -->
+                        <!-- chart -->
+                        <div id="revenueShareChart" class="w-full h-[222px]"></div>
+
+
+                    </div>
+                    <!-- 2 -->
+                    <div class="grid grid-cols-1 gap-6">
+                        <!-- 1 -->
+                        <div
+                            class="bg-[#F1F5F8] bg-opacity-5 p-5 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+                            <p class="text-[16px] text-[#9EA4B4] font-normal font-inter leading-[140%]">
+                                Early-stage publishers</p>
+                            <h3 class="text-[18px] text-[#ffffff] font-medium font-inter leading-[110%] mt-[8px]">
+                                We take more risk → higher share</h3>
+
+                        </div>
+                        <!-- 2 -->
+                        <div
+                            class="bg-[#F1F5F8] bg-opacity-5 p-5 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+                            <p class="text-[16px] text-[#9EA4B4] font-normal font-inter leading-[140%]">Scaled
+                                publishers</p>
+                            <h3 class="text-[18px] text-[#ffffff] font-medium font-inter leading-[110%] mt-[8px]">Lower
+                                friction → lower share</h3>
+
+                        </div>
+                        <!-- 3 -->
+                        <div
+                            class="bg-[#0DB368] bg-opacity-5 p-5 rounded-xl flex flex-col outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+                            <p class="text-[16px] text-[#9EA4B4] font-normal font-inter leading-[140%]">Always</p>
+                            <h3 class="text-[18px] text-[#0DB368] font-medium font-inter leading-[110%] mt-[8px]">
+                                We take more risk → higher share</h3>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- Why We Price  -->
+        <section class="bg-[#132D46] py-12 lg:py-[100px]">
+            <div class="mx-auto py-8 px-5 max-w-[1240px]">
+                <div class="text-center space-y-4">
+                    <h2 class="font-bold text-[28px] lg:text-[42px] text-[#FCFEFD] md:font-inter">Why We <span
+                            class="text-[#FCFEFD] md:text-[#0DB368]">Price It</span> This Way</h2>
+                    <div class="max-w-[794px] mx-auto block md:hidden">
+                        <p class="text-[14px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%]">Three
+                            simple steps to start earning with Monetumo.</p>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="pt-[24px] md:pt-[72px] grid lg:grid-cols-4 grid-cols-1 gap-5 items-center w-full">
+                    <!-- single item 1  -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col items-center gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+                        <div
+                            class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+                            <img loading="lazy" src="./images/landing/agency/handshake.svg" alt="handshake"
+                                class="w-8 h-8">
+                        </div>
+                        <div class="flex flex-col text-center gap-3">
+                            <h4 class="text-xl font-inter font-semibold leading-[110%] text-[#ffffff]">We grow with you
+                            </h4>
+                            <p class="text-[#9EA4B4] text-base font-normal font-inter leading-[140%]">Our success
+                                depends on your success.</p>
+                        </div>
+                    </div>
+                    <!-- single item 2  -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col items-center gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+                        <div
+                            class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+                            <img loading="lazy" src="./images/landing/agency/dollar.svg" alt="dollar" class="w-8 h-8">
+                        </div>
+                        <div class="flex flex-col text-center gap-3">
+                            <h4 class="text-xl font-inter font-semibold leading-[110%] text-[#ffffff]">No upfront costs
+                            </h4>
+                            <p class="text-[#9EA4B4] text-base font-normal font-inter leading-[140%]">Small publishers
+                                get access without barriers.</p>
+                        </div>
+                    </div>
+                    <!-- single item 3  -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col items-center gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+                        <div
+                            class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+                            <img loading="lazy" src="./images/landing/agency/trending-up.svg" alt="trending-up"
+                                class="w-8 h-8">
+                        </div>
+                        <div class="flex flex-col text-center gap-3">
+                            <h4 class="text-xl font-inter font-semibold leading-[110%] text-[#ffffff]">More upside at
+                                scale</h4>
+                            <p class="text-[#9EA4B4] text-base font-normal font-inter leading-[140%]">Large publishers
+                                keep more of their revenue</p>
+                        </div>
+                    </div>
+                    <!-- single item 4  -->
+                    <div
+                        class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-7 rounded-xl flex flex-col items-center gap-5 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500">
+
+                        <div
+                            class="border border-[#f1f5f81a] backdrop-blur-md bg-[#0DB368] bg-opacity-10 w-[60px] h-[60px] rounded-xl flex justify-center items-center">
+                            <img loading="lazy" src="./images/landing/agency/eye.svg" alt="eye" class="w-8 h-8">
+                        </div>
+                        <div class="flex flex-col text-center gap-3">
+                            <h4 class="text-xl font-inter font-semibold leading-[110%] text-[#ffffff]">Complete
+                                transparency</h4>
+                            <p class="text-[#9EA4B4] text-base font-normal font-inter leading-[140%]">Same technology.
+                                Same optimization. Fairer split.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- info -->
+                <div class="max-w-[794px] mx-auto text-center pt-[52px] hidden md:block">
+                    <p class="text-[16px] lg:text-[18px] text-[#FCFEFD] font-inter font-normal leadind-[140%]">Same
+                        technology. Same optimization. <span class="text-[#0DB368] font-bold">Just a fairer split as you
+                            grow.</span></p>
+                </div>
+            </div>
+
+        </section>
+        <!-- ready to start  -->
+        <section class="bg-[#132D46] py-12 lg:py-[80px] text-[#ffffff]">
+            <div class="px-4 md:px-5 xl:max-w-[1240px] mx-auto flex flex-col">
+                <div
+                    class="bg-[#F1F5F8] bg-opacity-5 p-5 lg:p-[36px] rounded-xl flex flex-col justify-center text-center items-center gap-4 outline outline-1 outline-offset-[-1px] outline-slate-100/10 backdrop-blur-md h-full  hover:outline-[#0DB368] hover:bg-opacity-0 duration-500  w-full">
+                    <h2 class="md:text-[42px] text-[28px] leading-tight font-bold ">Ready to Maximize Your Ad Revenue?
+                    </h2>
+                    <p class="text-sm md:text-lg font-inter">Start your 30-day free trial today — no credit card required.</p>
+                    <div class="flex flex-col lg:flex-row items-center gap-4 w-full max-w-[660px] mx-auto pt-1">
+                        <a href="#"
+                            class="bg-[#00E980] hover:bg-[#FCFEFD] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg gap-2 text-[#132D46] transition-colors duration-300 border border-[#00E980] w-full inline-flex justify-center items-center ">
+                            <span>Start 30-Day Free Trial</span> <span><img loading="lazy"
+                                    src="./images/landing/arrow-right.svg" class="w-6 mt-1" alt="arrow-right"></span>
+                        </a>
+                        <a href="#"
+                            class="bg-transparent hover:bg-[#00E980] py-4 px-[18px] tracking-[0.5px] text-base font-medium rounded-lg gap-2 text-[#00E980] hover:text-[#132D46] transition-colors duration-300 border border-[#00E980] w-full inline-flex justify-center items-center">
+                            <span>Talk to Sales</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ready to end -->
+    </main>
+
+
+    <!-- footer  -->
+    <footer class="bg-[#F7FBFF] py-11 lg:py-[46px]">
+        <div class="mx-auto px-5 max-w-[1240px]">
+            <!-- footer menus -->
+            <div
+                class="border-b border-b-[#C1C7CD] pb-9 lg:pt-[54px] lg:pb-[44px]  flex md:flex-row flex-col justify-between gap-[36px] md:gap-[52px]">
+                <!-- 1 -->
+                <div class="w-full max-w-[336px] space-y-4">
+                    <div class="w-[124px] lg:w-[174px]">
+                        <img src="./images/footer-logo.svg" class="w-full" alt="">
+                    </div>
+                    <p class="text-[#243C53] font-normal font-roboto leading-[128%] text-[14px] md:text-[16px]">The #1
+                        ad monetization
+                        platform helping publishers maximize their revenue with header bidding and
+                        premium demand partners.</p>
+                    <ul
+                        class="flex flex-col gap-2 text-[#243C53] font-normal font-roboto leading-[128%] text-[14px] md:text-[16px]">
+                        <li>
+                            <p>Monetumo ApS</p>
+                        </li>
+                        <li>
+                            <p><span class="font-semibold">Copenhagen</span>, Denmark</p>
+                        </li>
+                        <li>
+                            <p>CVR: <span class="font-semibold">12345678</span></p>
+                        </li>
+                    </ul>
+                    <ul class="flex flex-row gap-3 items-center">
+                        <li><a href="#"><img src="./images/facebook-icon.svg" alt="facebook"
+                                    class="w-[28px] h-[28px] md:w-8 md:h-8 rounded-full"></a></li>
+                        <li><a href="#"><img src="./images/twitter-icon.svg" alt="twitter"
+                                    class="w-[28px] h-[28px] md:w-8 md:h-8 rounded-full"></a></li>
+                        <li><a href="#"><img src="./images/instagram-icon.svg" alt="instagram"
+                                    class="w-[28px] h-[28px] md:w-8 md:h-8 rounded-full"></a></li>
+                        <li><a href="#"><img src="./images/youtube-icon.svg" alt="youtube"
+                                    class="w-[28px] h-[28px] md:w-8 md:h-8 rounded-full"></a></li>
+                    </ul>
+                </div>
+                <!-- e2 -->
+                <div class="flex-1 hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
+                    <!-- 1 -->
+                    <div class="space-y-3">
+                        <span
+                            class="block text-[#243C53] font-semibold font-roboto leading-[128%] text-[14px] md:text-[16px]">
+                            Solutions</span>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Header
+                            Bidding Setup</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Revenue
+                            Dashboard</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Ad
+                            Optimization</a>
+                    </div>
+                    <!-- 2 -->
+                    <div class="space-y-3">
+                        <span
+                            class="block text-[#243C53] font-semibold font-roboto leading-[128%] text-[14px] md:text-[16px]">
+                            Compare with</span>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Header
+                            Bidding Setup</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Revenue
+                            Dashboard</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Ad
+                            Optimization</a>
+                    </div>
+                    <!-- 3 -->
+                    <div class="space-y-3">
+                        <span
+                            class="block text-[#243C53] font-semibold font-roboto leading-[128%] text-[14px] md:text-[16px]">Ad
+                            Optimization</span>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Header
+                            Bidding Setup</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Revenue
+                            Dashboard</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Ad
+                            Optimization</a>
+                    </div>
+                    <!-- 4 -->
+                    <div class="space-y-3">
+                        <span
+                            class="block text-[#243C53] font-semibold font-roboto leading-[128%] text-[14px] md:text-[16px]">Company</span>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Header
+                            Bidding Setup</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Revenue
+                            Dashboard</a>
+                        <a href="#" class="block font-normal text-[#243C53] hover:text-[#2e865e] text-[16px]">Ad
+                            Optimization</a>
+                    </div>
+                </div>
+                <!-- e3 -->
+                <div class="space-y-3 block md:hidden">
+                    <a href="#"
+                        class="block font-semibold text-[#243C53] hover:text-[#2e865e] text-[16px]">Solutions</a>
+                    <a href="#" class="block font-semibold text-[#243C53] hover:text-[#2e865e] text-[16px]">Compare
+                        with</a>
+                    <a href="#"
+                        class="block font-semibold text-[#243C53] hover:text-[#2e865e] text-[16px]">Resources</a>
+                    <a href="#" class="block font-semibold text-[#243C53] hover:text-[#2e865e] text-[16px]">Company</a>
+                </div>
+            </div>
+            <!-- copy right  -->
+            <div class="pt-9 lg:pt-11 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+                <p class="font-normal text-[12px] md:text-[14px] text-[#243C53]">© 2025 Monetumo ApS. All rights
+                    reserved. | <a href="mailto:info@monetumo.com" class="hover:text-[#2e865e]">info@monetumo.com</a> |
+                    <a href="tel:+4512345678" class="hover:text-[#2e865e]">+45
+                        1234 5678</a>
+                </p>
+                <ul class="font-medium text-[14px] md:text-[16px] font-roboto text-[#243C53] flex flex-row gap-8">
+                    <li><a href="#" class="hover:text-[#2e865e] transition-all duration-300 underline">Privacy
+                            Policy</a></li>
+                    <li><a href="#" class="hover:text-[#2e865e] transition-all duration-300 underline">Terms of
+                            Service</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+    <!-- Script  -->
+    <script>
+        // Dropdown toggler for Features menu
+        document.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const dropdown = btn.parentElement.querySelector('.dropDownItem');
+                const isOpen = dropdown.classList.contains('block');
+                // Close all dropdowns first
+                document.querySelectorAll('.dropDownItem').forEach(function (d) {
+                    d.classList.add('hidden');
+                    d.classList.remove('block');
+                });
+                // Toggle current dropdown
+                if (!isOpen) {
+                    dropdown.classList.remove('hidden');
+                    dropdown.classList.add('block');
+                    btn.setAttribute('aria-expanded', 'true');
+                } else {
+                    dropdown.classList.add('hidden');
+                    dropdown.classList.remove('block');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+    </script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./script/momentuNavbar.js"></script>
+    <script src="./script/slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        var options = {
+            series: [{
+                name: 'Revenue Share',
+                data: [20, 20, 20, 15, 10, 8, 0]
+            }],
+            chart: {
+                type: 'area',
+                height: 222,
+                width: '100%',
+                parentHeightOffset: 0,
+                toolbar: {
+                    show: false
+                },
+                background: 'transparent'
+            },
+            colors: ['#0DB368'],
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shadeIntensity: 1,
+                    opacityFrom: 0.7,
+                    opacityTo: 0.05,
+                    stops: [0, 90, 100]
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'straight',
+                width: 2
+            },
+            grid: {
+                borderColor: 'rgba(255, 255, 255, 0.1)',
+                padding: {
+                    left: 16,
+                    right: 16,
+                },
+                xaxis: {
+                    lines: {
+                        show: true
+                    }
+                },
+                yaxis: {
+                    lines: {
+                        show: true
+                    }
+                },
+            },
+            xaxis: {
+                categories: ['$50k', '$100k', '$200k', '$300k', '$400k', '$500k', '$700k', '$800k', '$900k'],
+                axisBorder: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false
+                },
+                labels: {
+                    style: {
+                        colors: '#9EA4B4',
+                        fontSize: '12px',
+                        fontFamily: 'Inter, sans-serif',
+                        fontWeight: '500',
+                    }
+                }
+            },
+            yaxis: {
+                min: 0,
+                max: 20,
+                tickAmount: 4,
+                labels: {
+                    formatter: function (value) {
+                        return value + "%";
+                    },
+                    style: {
+                        colors: '#9EA4B4',
+                        fontSize: '12px',
+                        fontFamily: 'Inter, sans-serif',
+                        fontWeight: '500',
+                    }
+                }
+            },
+            tooltip: {
+                theme: 'dark',
+                y: {
+                    formatter: function (val) {
+                        return val + "%"
+                    }
+                }
+            },
+        };
+
+        var chart = new ApexCharts(document.querySelector("#revenueShareChart"), options);
+        chart.render();
+    </script>
+</body>
+
+</html>
